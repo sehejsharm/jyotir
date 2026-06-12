@@ -1,0 +1,129 @@
+// Prisma mirror of supabase/migrations/0001_init.sql.
+//
+// The SQL migration is the source of truth (it carries RLS policies and
+// triggers Prisma can't express); this schema exists for type-safe server
+// access from Next.js. Run `prisma db pull` after future SQL migrations
+// rather than `prisma migrate`.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Exam {
+  id         String    @id
+  name       String
+  slug       String    @unique
+  tagline    String    @default("")
+  orderIndex Int       @default(0) @map("order_index")
+  createdAt  DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  subjects   Subject[]
+
+  @@map("exams")
+}
+
+model Subject {
+  id         String   @id
+  examId     String   @map("exam_id")
+  name       String
+  slug       String
+  orderIndex Int      @default(0) @map("order_index")
+  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  exam       Exam     @relation(fields: [examId], references: [id], onDelete: Cascade)
+  topics     Topic[]
+
+  @@unique([examId, slug])
+  @@index([examId, orderIndex])
+  @@map("subjects")
+}
+
+model Topic {
+  id         String          @id
+  subjectId  String          @map("subject_id")
+  name       String
+  slug       String
+  orderIndex Int             @default(0) @map("order_index")
+  createdAt  DateTime        @default(now()) @map("created_at") @db.Timestamptz(6)
+  subject    Subject         @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  materials  StudyMaterial[]
+  questions  Question[]
+
+  @@unique([subjectId, slug])
+  @@index([subjectId, orderIndex])
+  @@map("topics")
+}
+
+model StudyMaterial {
+  id                   String            @id
+  topicId              String            @map("topic_id")
+  title                String
+  /// Markdown micro-note, <= 2 minute read.
+  content              String
+  estimatedReadTime    Int               @default(2) @map("estimated_read_time")
+  /// Maintained by DB trigger; read-only for application code.
+  totalLinkedQuestions Int               @default(0) @map("total_linked_questions")
+  orderIndex           Int               @default(0) @map("order_index")
+  createdAt            DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+  topic                Topic             @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  readHistory          UserReadHistory[]
+
+  @@index([topicId, orderIndex])
+  @@map("study_materials")
+}
+
+model Question {
+  id            String         @id
+  topicId       String         @map("topic_id")
+  text          String
+  optionA       String         @map("option_a")
+  optionB       String         @map("option_b")
+  optionC       String         @map("option_c")
+  optionD       String         @map("option_d")
+  /// 'A' | 'B' | 'C' | 'D'
+  correctOption String         @map("correct_option") @db.Char(1)
+  explanation   String
+  orderIndex    Int            @default(0) @map("order_index")
+  createdAt     DateTime       @default(now()) @map("created_at") @db.Timestamptz(6)
+  topic         Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  progress      UserProgress[]
+
+  @@index([topicId, orderIndex])
+  @@map("questions")
+}
+
+/// SM-2 state per (user, question). user_id references auth.users (managed
+/// by Supabase Auth, outside this schema).
+model UserProgress {
+  id             String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId         String   @map("user_id") @db.Uuid
+  questionId     String   @map("question_id")
+  nextReviewDate DateTime @map("next_review_date") @db.Timestamptz(6)
+  intervalDays   Int      @default(0) @map("interval_days")
+  easeFactor     Decimal  @default(2.50) @map("ease_factor") @db.Decimal(4, 2)
+  repetitions    Int      @default(0)
+  lapses         Int      @default(0)
+  lastReviewedAt DateTime @default(now()) @map("last_reviewed_at") @db.Timestamptz(6)
+  updatedAt      DateTime @default(now()) @map("updated_at") @db.Timestamptz(6)
+  question       Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, questionId])
+  @@index([userId, nextReviewDate])
+  @@map("user_progress")
+}
+
+model UserReadHistory {
+  id                String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId            String        @map("user_id") @db.Uuid
+  materialId        String        @map("material_id")
+  markedCompletedAt DateTime      @default(now()) @map("marked_completed_at") @db.Timestamptz(6)
+  material          StudyMaterial @relation(fields: [materialId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, materialId])
+  @@index([userId])
+  @@map("user_read_history")
+}

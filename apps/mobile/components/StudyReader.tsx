@@ -1,0 +1,109 @@
+import { ScrollView, Pressable, Text, View } from "react-native";
+import Markdown from "react-native-markdown-display";
+import type { StudyMaterial } from "@jyotir/core";
+import { useJyotir } from "@/lib/store-provider";
+
+const markdownStyles = {
+  body: { color: "#FAFAFA", fontSize: 15, lineHeight: 23 },
+  heading2: { color: "#FAFAFA", fontSize: 18, fontWeight: "700" as const, marginTop: 20, marginBottom: 8 },
+  heading3: { color: "#FAFAFA", fontSize: 15, fontWeight: "700" as const, marginTop: 14, marginBottom: 6 },
+  strong: { color: "#34D399", fontWeight: "700" as const },
+  em: { color: "#FAFAFA", fontStyle: "italic" as const },
+  paragraph: { marginTop: 0, marginBottom: 14 },
+  bullet_list: { marginBottom: 14 },
+  ordered_list: { marginBottom: 14 },
+  list_item: { marginBottom: 5 },
+  bullet_list_icon: { color: "#8B8B93" },
+  table: { borderWidth: 1, borderColor: "#26262B", borderRadius: 10, marginBottom: 14 },
+  thead: { backgroundColor: "#131316" },
+  th: { padding: 8, color: "#FAFAFA", fontWeight: "700" as const },
+  td: { padding: 8, borderColor: "#26262B", color: "#FAFAFA" },
+  tr: { borderColor: "#26262B" },
+  code_inline: {
+    backgroundColor: "#131316",
+    color: "#34D399",
+    borderRadius: 4,
+    paddingHorizontal: 4,
+    fontFamily: "monospace"
+  },
+  fence: { backgroundColor: "#131316", borderColor: "#26262B", borderRadius: 10, padding: 10 },
+  code_block: { backgroundColor: "#131316", borderColor: "#26262B", borderRadius: 10, padding: 10 },
+  blockquote: {
+    backgroundColor: "transparent",
+    borderLeftWidth: 2,
+    borderLeftColor: "#10B981",
+    paddingLeft: 10,
+    marginBottom: 14
+  },
+  hr: { backgroundColor: "#26262B", marginVertical: 14 }
+};
+
+/**
+ * The micro-note reader: pure Markdown, ends in the giant sticky
+ * "Drill This Topic Now (X Cards Due)" CTA that flips straight into the
+ * drill engine — the queue is already in memory, so the switch is 0ms.
+ */
+export function StudyReader({
+  material,
+  onDrill
+}: {
+  material: StudyMaterial;
+  onDrill: () => void;
+}) {
+  const counts = useJyotir((s) => s.countsForTopic(material.topicId));
+  const isRead = useJyotir((s) => Boolean(s.reads[material.id]));
+  const markRead = useJyotir((s) => s.markRead);
+
+  const pending = counts.due + counts.fresh;
+  const ctaLabel =
+    pending > 0
+      ? `Drill This Topic Now (${pending} ${pending === 1 ? "Card" : "Cards"} Due)`
+      : "Drill This Topic Now (All Caught Up)";
+
+  const handleDrill = () => {
+    if (!isRead) markRead(material.id);
+    onDrill();
+  };
+
+  return (
+    <View className="flex-1">
+      <View className="mb-3 flex-row items-center justify-between">
+        <Text className="text-xs text-muted">
+          {material.title} · {material.estimatedReadTime} min read
+        </Text>
+        {isRead ? (
+          <Text className="text-xs font-semibold text-correct">read ✓</Text>
+        ) : (
+          <Pressable onPress={() => markRead(material.id)} hitSlop={8}>
+            <Text className="text-xs text-muted">mark as read</Text>
+          </Pressable>
+        )}
+      </View>
+
+      <ScrollView
+        className="flex-1"
+        contentContainerClassName="pb-28"
+        showsVerticalScrollIndicator={false}
+      >
+        <Markdown style={markdownStyles}>{material.content}</Markdown>
+      </ScrollView>
+
+      {/* Sticky Read-to-Drill CTA */}
+      <View className="absolute inset-x-0 bottom-0 pb-2 pt-3">
+        <Pressable
+          onPress={handleDrill}
+          className="items-center rounded-2xl bg-correct py-4 active:scale-[0.98]"
+          style={{
+            shadowColor: "#10B981",
+            shadowOpacity: 0.35,
+            shadowRadius: 16,
+            shadowOffset: { width: 0, height: 0 },
+            elevation: 8
+          }}
+        >
+          <Text className="text-base font-bold text-black">{ctaLabel}</Text>
+        </Pressable>
+      </View>
+    </View>
+  );
+}

@@ -1,0 +1,93 @@
+"use client";
+
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import type { StudyMaterial } from "@jyotir/core";
+import { useJyotir } from "@/lib/store-provider";
+
+/**
+ * The micro-note reader. Markdown only — no PDFs, ever. Ends in the
+ * product's signature move: a giant sticky "Drill This Topic Now (X Cards
+ * Due)" button that flips straight into the drill engine.
+ */
+export function StudyReader({
+  material,
+  onDrill
+}: {
+  material: StudyMaterial;
+  onDrill: () => void;
+}) {
+  const counts = useJyotir((s) => s.countsForTopic(material.topicId));
+  const isRead = useJyotir((s) => Boolean(s.reads[material.id]));
+  const markRead = useJyotir((s) => s.markRead);
+
+  const pending = counts.due + counts.fresh;
+  const ctaLabel =
+    pending > 0
+      ? `Drill This Topic Now (${pending} ${pending === 1 ? "Card" : "Cards"} Due)`
+      : "Drill This Topic Now (All Caught Up)";
+
+  const handleDrill = () => {
+    if (!isRead) markRead(material.id);
+    onDrill();
+  };
+
+  return (
+    <div className="flex flex-1 flex-col">
+      <div className="mb-4 flex items-center justify-between text-xs text-muted">
+        <span>
+          {material.title} · {material.estimatedReadTime} min read
+        </span>
+        {isRead ? (
+          <span className="font-semibold text-correct">read ✓</span>
+        ) : (
+          <button onClick={() => markRead(material.id)} className="hover:text-ink">
+            mark as read
+          </button>
+        )}
+      </div>
+
+      <article className="flex-1 pb-28">
+        <Markdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            h2: (props) => (
+              <h2 className="mb-3 mt-7 text-lg font-bold tracking-tight first:mt-0" {...props} />
+            ),
+            h3: (props) => <h3 className="mb-2 mt-5 font-bold" {...props} />,
+            p: (props) => <p className="mb-4 text-[15px] leading-relaxed text-ink/90" {...props} />,
+            strong: (props) => <strong className="font-bold text-correct-bright" {...props} />,
+            ul: (props) => <ul className="mb-4 ml-5 list-disc space-y-1.5 text-[15px] leading-relaxed text-ink/90" {...props} />,
+            ol: (props) => <ol className="mb-4 ml-5 list-decimal space-y-1.5 text-[15px] leading-relaxed text-ink/90" {...props} />,
+            table: (props) => (
+              <div className="mb-4 overflow-x-auto rounded-xl border border-edge">
+                <table className="w-full border-collapse text-sm" {...props} />
+              </div>
+            ),
+            thead: (props) => <thead className="bg-raised text-left" {...props} />,
+            th: (props) => <th className="border-b border-edge px-3 py-2 font-bold" {...props} />,
+            td: (props) => <td className="border-b border-edge/50 px-3 py-2 text-ink/90" {...props} />,
+            code: (props) => (
+              <code className="rounded bg-raised px-1.5 py-0.5 font-mono text-[13px] text-correct-bright" {...props} />
+            ),
+            blockquote: (props) => (
+              <blockquote className="mb-4 border-l-2 border-correct pl-3 text-sm text-muted" {...props} />
+            )
+          }}
+        >
+          {material.content}
+        </Markdown>
+      </article>
+
+      {/* The "Read to Drill" CTA — sticky, giant, impossible to miss. */}
+      <div className="fixed inset-x-0 bottom-0 bg-gradient-to-t from-oled via-oled/95 to-transparent px-5 pb-5 pt-8">
+        <button
+          onClick={handleDrill}
+          className="mx-auto block w-full max-w-xl rounded-2xl bg-correct py-4 text-base font-bold text-black shadow-[0_0_32px_rgba(16,185,129,0.25)] transition-transform active:scale-[0.98]"
+        >
+          {ctaLabel}
+        </button>
+      </div>
+    </div>
+  );
+}
