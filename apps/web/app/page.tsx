@@ -6,11 +6,19 @@ export default function ExamPickerPage() {
   const exams = repo.exams();
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-xl flex-col px-5 py-14">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">Jyotir</h1>
-        <p className="mt-1.5 text-sm text-muted">
-          Drill. Read. Repeat. Nothing else.
-        </p>
+      <header className="mb-8 flex items-start justify-between">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Jyotir</h1>
+          <p className="mt-1.5 text-sm text-muted">
+            Drill. Read. Repeat. Nothing else.
+          </p>
+        </div>
+        <Link
+          href="/account"
+          className="mt-1 rounded-full border border-edge px-3 py-1.5 text-xs font-semibold text-muted transition-colors hover:text-ink"
+        >
+          Account
+        </Link>
       </header>
 
       <ReviewBanner />

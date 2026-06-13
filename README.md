@@ -47,16 +47,21 @@ pnpm dev:mobile           # Expo dev server (press i / a, scan QR)
 The apps run fully **offline and anonymous by default** — content is bundled,
 progress persists locally (localStorage on web, SQLite on mobile).
 
+## Deploy
+
+- **Web → Vercel:** see [`DEPLOY.md`](DEPLOY.md). One import, set Root Directory
+  to `apps/web`, deploy. Installable as a mobile PWA.
+- **Mobile → Expo:** `pnpm --filter @jyotir/mobile exec eas build` (or run in
+  Expo Go via `pnpm dev:mobile`).
+
 ## Supabase (optional, for auth + cross-device sync)
 
-```bash
-supabase db push                       # applies supabase/migrations
-pnpm seed:generate                     # emits supabase/seed.sql from @jyotir/content
-psql "$DATABASE_URL" -f supabase/seed.sql
-cp .env.example apps/web/.env.local    # fill in project URL + anon key
-```
+Full click-by-click setup in [`SUPABASE.md`](SUPABASE.md). In short: run
+`supabase/migrations/0001_init.sql` then `supabase/seed.sql` in the SQL editor,
+enable email auth, and add `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 
-Signed-in users sync via `store.syncNow(supabase, userId)`: rows with
+Once configured, the **Account** page offers magic-link sign-in and
+`SyncProvider` syncs automatically on load, tab focus and reconnect. Rows with
 `synced=false` are pushed (upsert on `user_id,question_id`), then remote rows
 are merged last-write-wins on `updated_at` — a DB trigger enforces LWW on the
 server too, so a stale device can never clobber newer progress.
