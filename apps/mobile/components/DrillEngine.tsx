@@ -12,18 +12,26 @@ import { useJyotir, useJyotirStore } from "@/lib/store-provider";
  */
 export function DrillEngine({
   topicId,
-  onStudy
+  onStudy,
+  reviewMode = false,
+  onExit
 }: {
   topicId: string;
   onStudy?: () => void;
+  /** Cross-exam review: due-only queue, no study tab. */
+  reviewMode?: boolean;
+  /** Secondary action on the completion screen (e.g. back to home). */
+  onExit?: () => void;
 }) {
   const store = useJyotirStore();
   const drill = useJyotir((s) => s.drill);
   const ready = useJyotir((s) => s.ready);
 
+  const start = () => (reviewMode ? store.getState().startReview() : store.getState().startDrill(topicId));
+
   useEffect(() => {
-    if (ready) store.getState().startDrill(topicId);
-  }, [ready, topicId, store]);
+    if (ready) (reviewMode ? store.getState().startReview() : store.getState().startDrill(topicId));
+  }, [ready, topicId, reviewMode, store]);
 
   const pan = useRef(new Animated.Value(0)).current;
   const panResponder = useMemo(
@@ -56,31 +64,56 @@ export function DrillEngine({
   if (drill.phase === "complete" || !card) {
     const { knew, wrong } = drill.stats;
     const total = knew + wrong;
+    const caughtUp = reviewMode && total === 0;
     return (
       <View className="flex-1 items-center justify-center gap-6">
         <View className="items-center">
-          <Text className="text-5xl font-bold text-ink">
-            {total > 0 ? Math.round((knew / total) * 100) : 100}%
-          </Text>
-          <Text className="mt-2 text-sm text-muted">
-            <Text className="font-semibold text-correct">{knew} knew</Text>
-            {" · "}
-            <Text className="font-semibold text-wrong-bright">{wrong} missed</Text>
-          </Text>
+          {caughtUp ? (
+            <>
+              <Text className="text-5xl font-bold text-correct">✓</Text>
+              <Text className="mt-3 text-base font-semibold text-ink">All caught up</Text>
+              <Text className="mt-1 text-center text-sm text-muted">
+                No cards due across your exams.
+              </Text>
+            </>
+          ) : (
+            <>
+              <Text className="text-5xl font-bold text-ink">
+                {total > 0 ? Math.round((knew / total) * 100) : 100}%
+              </Text>
+              <Text className="mt-2 text-sm text-muted">
+                <Text className="font-semibold text-correct">{knew} knew</Text>
+                {" · "}
+                <Text className="font-semibold text-wrong-bright">{wrong} missed</Text>
+              </Text>
+            </>
+          )}
         </View>
         <View className="w-full max-w-xs gap-2.5">
-          <Pressable
-            onPress={() => store.getState().startDrill(topicId)}
-            className="items-center rounded-xl bg-ink py-3.5 active:scale-[0.98]"
-          >
-            <Text className="font-bold text-black">Drill Again</Text>
-          </Pressable>
+          {!caughtUp && (
+            <Pressable
+              onPress={start}
+              className="items-center rounded-xl bg-ink py-3.5 active:scale-[0.98]"
+            >
+              <Text className="font-bold text-black">
+                {reviewMode ? "Review Again" : "Drill Again"}
+              </Text>
+            </Pressable>
+          )}
           {onStudy && (
             <Pressable
               onPress={onStudy}
               className="items-center rounded-xl border border-edge py-3.5"
             >
               <Text className="font-semibold text-muted">Back to the notes</Text>
+            </Pressable>
+          )}
+          {onExit && (
+            <Pressable
+              onPress={onExit}
+              className="items-center rounded-xl border border-edge py-3.5"
+            >
+              <Text className="font-semibold text-muted">Done</Text>
             </Pressable>
           )}
         </View>

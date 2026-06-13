@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createJyotirStore } from "../src/store";
+import { createJyotirStore, REVIEW_SCOPE } from "../src/store";
 import { MemoryStorageAdapter } from "../src/storage";
 import type { ContentSource } from "../src/content-repo";
 import type { Question } from "../src/types";
@@ -109,5 +109,52 @@ describe("drill loop", () => {
     const store = makeStore();
     store.getState().markRead("t1-m01");
     expect(store.getState().reads["t1-m01"]?.synced).toBe(false);
+  });
+});
+
+describe("cross-exam review", () => {
+  it("dueTotal and startReview surface only cards whose review date has passed", async () => {
+    const adapter = new MemoryStorageAdapter();
+    // Pre-seed one overdue card and one scheduled far ahead.
+    await adapter.saveProgress({
+      questionId: "q1",
+      repetitions: 2,
+      easeFactor: 2.5,
+      intervalDays: 6,
+      nextReviewDate: "2000-01-01T00:00:00.000Z",
+      lapses: 0,
+      lastReviewedAt: "2000-01-01T00:00:00.000Z",
+      updatedAt: "2000-01-01T00:00:00.000Z",
+      synced: true
+    });
+    await adapter.saveProgress({
+      questionId: "q2",
+      repetitions: 2,
+      easeFactor: 2.5,
+      intervalDays: 6,
+      nextReviewDate: "2999-01-01T00:00:00.000Z",
+      lapses: 0,
+      lastReviewedAt: "2000-01-01T00:00:00.000Z",
+      updatedAt: "2000-01-01T00:00:00.000Z",
+      synced: true
+    });
+
+    const store = createJyotirStore({ adapter, content });
+    await store.getState().hydrate();
+
+    expect(store.getState().dueTotal()).toBe(1);
+
+    store.getState().startReview();
+    const { drill } = store.getState();
+    expect(drill.topicId).toBe(REVIEW_SCOPE);
+    expect(drill.queue.map((c) => c.question.id)).toEqual(["q1"]);
+    expect(drill.phase).toBe("question");
+  });
+
+  it("starts in the complete phase when nothing is due", () => {
+    const store = makeStore();
+    store.getState().startReview();
+    expect(store.getState().drill.phase).toBe("complete");
+    expect(store.getState().dueTotal()).toBe(0);
   });
 });

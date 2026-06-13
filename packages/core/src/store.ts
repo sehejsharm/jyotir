@@ -1,12 +1,19 @@
 import { createStore, type StoreApi } from "zustand";
 import { createContentRepo, type ContentRepo, type ContentSource } from "./content-repo";
-import { buildQueue, topicCounts, DEFAULT_QUEUE_LIMIT } from "./scheduler";
+import { buildQueue, buildReviewQueue, dueCount, topicCounts, DEFAULT_QUEUE_LIMIT } from "./scheduler";
 import { gradeBinary } from "./sm2";
 import type { StorageAdapter } from "./storage";
 import { syncUserData, type SupabaseLike, type SyncResult } from "./sync";
 import type { DrillCard, ProgressRecord, ReadRecord, TopicCounts } from "./types";
 
 export type DrillPhase = "idle" | "question" | "revealed" | "complete";
+
+/**
+ * Sentinel `drill.topicId` for a cross-exam review session (not tied to any
+ * single topic). Lets the existing DrillEngine identity guard
+ * (`drill.topicId !== id`) work unchanged for both modes.
+ */
+export const REVIEW_SCOPE = "__review__";
 
 export interface DrillSession {
   topicId: string | null;
@@ -30,12 +37,16 @@ export interface JyotirState {
 
   /** Builds the full in-memory queue for a topic. Everything after this is 0ms. */
   startDrill(topicId: string, limit?: number): void;
+  /** Builds a due-only queue spanning every exam (the daily review). */
+  startReview(limit?: number): void;
   reveal(): void;
   grade(knewIt: boolean): void;
   exitDrill(): void;
 
   markRead(materialId: string): void;
   countsForTopic(topicId: string): TopicCounts;
+  /** Total due cards across all exams — drives the home "Review" badge. */
+  dueTotal(): number;
 
   syncNow(supabase: SupabaseLike, userId: string): Promise<SyncResult>;
 }
@@ -88,6 +99,18 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
         drill: {
           ...emptyDrill(),
           topicId,
+          queue,
+          phase: queue.length > 0 ? "question" : "complete"
+        }
+      });
+    },
+
+    startReview(limit = DEFAULT_QUEUE_LIMIT) {
+      const queue = buildReviewQueue(repo.allQuestions(), get().progress, new Date(), limit);
+      set({
+        drill: {
+          ...emptyDrill(),
+          topicId: REVIEW_SCOPE,
           queue,
           phase: queue.length > 0 ? "question" : "complete"
         }
@@ -158,6 +181,10 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
 
     countsForTopic(topicId) {
       return topicCounts(repo.questionsByTopic(topicId), get().progress);
+    },
+
+    dueTotal() {
+      return dueCount(repo.allQuestions(), get().progress);
     },
 
     async syncNow(supabase, userId) {

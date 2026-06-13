@@ -64,3 +64,40 @@ export function topicCounts(
   }
   return { due, fresh, total: questions.length };
 }
+
+/**
+ * Cross-topic review queue: ONLY cards that are actually due (seen before,
+ * nextReviewDate <= now), most overdue first. This is the frictionless
+ * "drill everything due across all my exams" entry point — it never
+ * surfaces brand-new cards, so the daily review can reach zero.
+ */
+export function buildReviewQueue(
+  questions: Question[],
+  progress: Record<string, ProgressRecord>,
+  now: Date = new Date(),
+  limit: number = DEFAULT_QUEUE_LIMIT
+): DrillCard[] {
+  const nowIso = now.toISOString();
+  const due: { q: Question; at: string }[] = [];
+  for (const q of questions) {
+    const p = progress[q.id];
+    if (p && p.nextReviewDate <= nowIso) due.push({ q, at: p.nextReviewDate });
+  }
+  due.sort((a, b) => a.at.localeCompare(b.at));
+  return due.slice(0, limit).map(({ q }) => ({ question: q, reason: "due" as const }));
+}
+
+/** Total number of due cards across an arbitrary question set (drives the home badge). */
+export function dueCount(
+  questions: Question[],
+  progress: Record<string, ProgressRecord>,
+  now: Date = new Date()
+): number {
+  const nowIso = now.toISOString();
+  let n = 0;
+  for (const q of questions) {
+    const p = progress[q.id];
+    if (p && p.nextReviewDate <= nowIso) n += 1;
+  }
+  return n;
+}

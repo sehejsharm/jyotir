@@ -16,6 +16,8 @@ export interface ContentRepo {
   topicById(topicId: string): Topic | undefined;
   materialByTopic(topicId: string): StudyMaterial | undefined;
   questionsByTopic(topicId: string): Question[];
+  /** Every question across every exam — backs the cross-exam review queue. */
+  allQuestions(): Question[];
 }
 
 export interface ContentSource {
@@ -66,6 +68,7 @@ export function createContentRepo(source: ContentSource): ContentRepo {
       (topicsBySubject.get(subjectId) ?? []).find((t) => t.slug === slug),
     topicById: (topicId) => topicById.get(topicId),
     materialByTopic: (topicId) => materialByTopic.get(topicId),
-    questionsByTopic: (topicId) => questionsByTopic.get(topicId) ?? []
+    questionsByTopic: (topicId) => questionsByTopic.get(topicId) ?? [],
+    allQuestions: () => source.questions
   };
 }

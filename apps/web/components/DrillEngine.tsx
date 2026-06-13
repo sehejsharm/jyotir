@@ -13,21 +13,30 @@ import { useJyotir } from "@/lib/store-provider";
  */
 export function DrillEngine({
   topicId,
-  onStudy
+  onStudy,
+  reviewMode = false,
+  onExit
 }: {
   topicId: string;
   onStudy?: () => void;
+  /** Cross-exam review: due-only queue, no study tab. */
+  reviewMode?: boolean;
+  /** Secondary action on the completion screen (e.g. back to home). */
+  onExit?: () => void;
 }) {
   const drill = useJyotir((s) => s.drill);
   const ready = useJyotir((s) => s.ready);
   const startDrill = useJyotir((s) => s.startDrill);
+  const startReview = useJyotir((s) => s.startReview);
   const reveal = useJyotir((s) => s.reveal);
   const grade = useJyotir((s) => s.grade);
 
+  const start = () => (reviewMode ? startReview() : startDrill(topicId));
+
   // (Re)build the queue once local progress has hydrated.
   useEffect(() => {
-    if (ready) startDrill(topicId);
-  }, [ready, topicId, startDrill]);
+    if (ready) (reviewMode ? startReview() : startDrill(topicId));
+  }, [ready, topicId, reviewMode, startDrill, startReview]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -69,31 +78,53 @@ export function DrillEngine({
   if (drill.phase === "complete" || !card) {
     const { knew, wrong } = drill.stats;
     const total = knew + wrong;
+    // Review mode that opened with nothing due: a clean "inbox zero" state.
+    const caughtUp = reviewMode && total === 0;
     return (
       <div className="flex flex-1 flex-col items-center justify-center gap-6 text-center">
         <div>
-          <p className="text-5xl font-bold tabular-nums">
-            {total > 0 ? Math.round((knew / total) * 100) : 100}%
-          </p>
-          <p className="mt-2 text-sm text-muted">
-            <span className="font-semibold text-correct">{knew} knew</span>
-            {" · "}
-            <span className="font-semibold text-wrong-bright">{wrong} missed</span>
-          </p>
+          {caughtUp ? (
+            <>
+              <p className="text-5xl font-bold text-correct">✓</p>
+              <p className="mt-3 text-base font-semibold">All caught up</p>
+              <p className="mt-1 text-sm text-muted">No cards due across your exams. Come back later.</p>
+            </>
+          ) : (
+            <>
+              <p className="text-5xl font-bold tabular-nums">
+                {total > 0 ? Math.round((knew / total) * 100) : 100}%
+              </p>
+              <p className="mt-2 text-sm text-muted">
+                <span className="font-semibold text-correct">{knew} knew</span>
+                {" · "}
+                <span className="font-semibold text-wrong-bright">{wrong} missed</span>
+              </p>
+            </>
+          )}
         </div>
         <div className="flex w-full max-w-xs flex-col gap-2.5">
-          <button
-            onClick={() => startDrill(topicId)}
-            className="w-full rounded-xl bg-ink py-3.5 font-bold text-black transition-transform active:scale-[0.98]"
-          >
-            Drill Again
-          </button>
+          {!caughtUp && (
+            <button
+              onClick={start}
+              className="w-full rounded-xl bg-ink py-3.5 font-bold text-black transition-transform active:scale-[0.98]"
+            >
+              {reviewMode ? "Review Again" : "Drill Again"}
+            </button>
+          )}
           {onStudy && (
             <button
               onClick={onStudy}
               className="w-full rounded-xl border border-edge py-3.5 font-semibold text-muted transition-colors hover:text-ink"
             >
               Back to the notes
+            </button>
+          )}
+          {onExit && (
+            <button
+              onClick={onExit}
+              className="w-full rounded-xl border border-edge py-3.5 font-semibold text-muted transition-colors hover:text-ink"
+            >
+              Done
             </button>
           )}
         </div>

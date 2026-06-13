@@ -16,6 +16,11 @@ with its question bank. The sticky CTA at the bottom of every note —
 **"Drill This Topic Now (X Cards Due)"** — flips the topic view from Study to
 Drill instantly: notes and the next 30 due cards are already local.
 
+**Daily Review.** The home screen surfaces a single **"Start Daily Review
+(N due)"** entry — a due-only queue spanning *every* exam, so you can open the
+app, clear what's scheduled, and leave. It reaches inbox-zero ("all caught
+up") rather than padding with new cards.
+
 ## Monorepo layout
 
 ```

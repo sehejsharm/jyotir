@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildQueue, topicCounts } from "../src/scheduler";
+import { buildQueue, buildReviewQueue, dueCount, topicCounts } from "../src/scheduler";
 import type { ProgressRecord, Question } from "../src/types";
 
 const NOW = new Date("2026-06-12T12:00:00.000Z");
@@ -57,5 +57,46 @@ describe("topicCounts", () => {
       b: prog("b", "2026-07-01T00:00:00.000Z") // scheduled ahead
     };
     expect(topicCounts(questions, progress, NOW)).toEqual({ due: 1, fresh: 1, total: 3 });
+  });
+});
+
+describe("buildReviewQueue", () => {
+  it("includes only due cards, most overdue first, and never new cards", () => {
+    const questions = [q("fresh", 0), q("due-old", 1), q("ahead", 2), q("due-new", 3)];
+    const progress = {
+      "due-old": prog("due-old", "2026-06-01T00:00:00.000Z"),
+      "due-new": prog("due-new", "2026-06-12T00:00:00.000Z"),
+      ahead: prog("ahead", "2026-07-01T00:00:00.000Z")
+      // "fresh" intentionally has no progress row
+    };
+    const queue = buildReviewQueue(questions, progress, NOW);
+    expect(queue.map((c) => c.question.id)).toEqual(["due-old", "due-new"]);
+    expect(queue.every((c) => c.reason === "due")).toBe(true);
+  });
+
+  it("can reach an empty queue when nothing is due (review hits zero)", () => {
+    const questions = [q("a", 0), q("b", 1)];
+    const progress = { a: prog("a", "2026-07-01T00:00:00.000Z") };
+    expect(buildReviewQueue(questions, progress, NOW)).toEqual([]);
+  });
+
+  it("respects the prefetch limit", () => {
+    const questions = Array.from({ length: 40 }, (_, i) => q(`q${i}`, i));
+    const progress = Object.fromEntries(
+      questions.map((x) => [x.id, prog(x.id, "2026-06-01T00:00:00.000Z")])
+    );
+    expect(buildReviewQueue(questions, progress, NOW, 30)).toHaveLength(30);
+  });
+});
+
+describe("dueCount", () => {
+  it("counts only due cards across the set", () => {
+    const questions = [q("a", 0), q("b", 1), q("c", 2)];
+    const progress = {
+      a: prog("a", "2026-06-01T00:00:00.000Z"),
+      b: prog("b", "2026-06-11T00:00:00.000Z"),
+      c: prog("c", "2026-07-01T00:00:00.000Z")
+    };
+    expect(dueCount(questions, progress, NOW)).toBe(2);
   });
 });
