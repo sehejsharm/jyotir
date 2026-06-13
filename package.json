@@ -19,6 +19,10 @@
     "typescript": "~5.9.3"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"]
+    "onlyBuiltDependencies": ["esbuild", "sharp"],
+    "overrides": {
+      "react": "19.2.7",
+      "react-dom": "19.2.7"
+    }
   }
 }
