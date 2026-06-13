@@ -39,8 +39,13 @@ Takes ~10 minutes on the free tier.
 
 **Project Settings → API**:
 
-- **Project URL** → `NEXT_PUBLIC_SUPABASE_URL`
-- **anon / public key** → `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- **Project URL** (e.g. `https://abcdxyz.supabase.co`) → `NEXT_PUBLIC_SUPABASE_URL`
+- **anon / public key** _or_ the new **publishable key** (`sb_publishable_…`) →
+  `NEXT_PUBLIC_SUPABASE_ANON_KEY` (the app also accepts
+  `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`)
+
+  > The publishable/anon key is client-safe (protected by row-level security).
+  > Never put the **service_role** / **secret** key in a `NEXT_PUBLIC_*` var.
 
 For local server use (Prisma / re-seeding), also from **Settings → Database**:
 

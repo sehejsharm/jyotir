@@ -11,8 +11,11 @@ let cached: SupabaseClient | null | undefined;
 export function getSupabase(): SupabaseClient | null {
   if (cached !== undefined) return cached;
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  cached = url && anonKey ? createClient(url, anonKey) : null;
+  // Accept either the legacy anon key or the new publishable key name.
+  const key =
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+  cached = url && key ? createClient(url, key) : null;
   return cached;
 }
 
