@@ -1,7 +1,8 @@
-import type { ProgressRecord, ReadRecord, StorageAdapter } from "@jyotir/core";
+import type { GamificationState, ProgressRecord, ReadRecord, StorageAdapter } from "@jyotir/core";
 
 const PROGRESS_KEY = "jyotir.progress.v1";
 const READS_KEY = "jyotir.reads.v1";
+const STATS_KEY = "jyotir.stats.v1";
 
 /**
  * localStorage-backed StorageAdapter. Progress is a few KB even after
@@ -43,6 +44,21 @@ export class WebStorageAdapter implements StorageAdapter {
     const all = this.read<ReadRecord>(READS_KEY);
     all[record.materialId] = record;
     this.write(READS_KEY, all);
+  }
+
+  async loadStats(): Promise<GamificationState | null> {
+    if (typeof window === "undefined") return null;
+    try {
+      const raw = window.localStorage.getItem(STATS_KEY);
+      return raw ? (JSON.parse(raw) as GamificationState) : null;
+    } catch {
+      return null;
+    }
+  }
+
+  async saveStats(state: GamificationState): Promise<void> {
+    if (typeof window === "undefined") return;
+    window.localStorage.setItem(STATS_KEY, JSON.stringify(state));
   }
 
   async markProgressSynced(questionIds: string[]): Promise<void> {

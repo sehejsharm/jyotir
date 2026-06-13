@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { OPTION_KEYS, optionText } from "@jyotir/core";
+import { achievementById, OPTION_KEYS, optionText } from "@jyotir/core";
 import { useJyotir } from "@/lib/store-provider";
+import { BoltIcon, TrophyIcon } from "./icons";
 
 /**
  * The drill loop:
@@ -30,6 +31,8 @@ export function DrillEngine({
   const startReview = useJyotir((s) => s.startReview);
   const reveal = useJyotir((s) => s.reveal);
   const grade = useJyotir((s) => s.grade);
+  const newlyUnlocked = useJyotir((s) => s.newlyUnlocked);
+  const clearNewlyUnlocked = useJyotir((s) => s.clearNewlyUnlocked);
 
   const start = () => (reviewMode ? startReview() : startDrill(topicId));
 
@@ -80,13 +83,16 @@ export function DrillEngine({
     const total = knew + wrong;
     // Review mode that opened with nothing due: a clean "inbox zero" state.
     const caughtUp = reviewMode && total === 0;
+    const dismiss = (fn?: () => void) => () => {
+      clearNewlyUnlocked();
+      fn?.();
+    };
     return (
       <div className="flex flex-1 flex-col items-center justify-center gap-6 text-center">
         <div>
           {caughtUp ? (
             <>
-              <p className="text-5xl font-bold text-correct">✓</p>
-              <p className="mt-3 text-base font-semibold">All caught up</p>
+              <p className="text-base font-semibold text-correct">All caught up</p>
               <p className="mt-1 text-sm text-muted">No cards due across your exams. Come back later.</p>
             </>
           ) : (
@@ -99,13 +105,36 @@ export function DrillEngine({
                 {" · "}
                 <span className="font-semibold text-wrong-bright">{wrong} missed</span>
               </p>
+              {drill.sessionXp > 0 && (
+                <p className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-correct-dim/50 px-3 py-1 text-sm font-bold text-correct-bright">
+                  <BoltIcon className="h-3.5 w-3.5" />+{drill.sessionXp} XP
+                </p>
+              )}
             </>
           )}
         </div>
+
+        {newlyUnlocked.length > 0 && (
+          <div className="w-full max-w-xs animate-pop-in rounded-2xl border border-correct/40 bg-correct-dim/30 p-3">
+            <div className="mb-2 flex items-center justify-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-correct">
+              <TrophyIcon className="h-3.5 w-3.5" /> Achievement unlocked
+            </div>
+            {newlyUnlocked.map((id) => {
+              const a = achievementById(id);
+              return a ? (
+                <div key={id} className="text-sm">
+                  <span className="font-bold text-correct-bright">{a.name}</span>
+                  <span className="text-muted"> — {a.description}</span>
+                </div>
+              ) : null;
+            })}
+          </div>
+        )}
+
         <div className="flex w-full max-w-xs flex-col gap-2.5">
           {!caughtUp && (
             <button
-              onClick={start}
+              onClick={dismiss(start)}
               className="w-full rounded-xl bg-ink py-3.5 font-bold text-black transition-transform active:scale-[0.98]"
             >
               {reviewMode ? "Review Again" : "Drill Again"}
@@ -113,7 +142,7 @@ export function DrillEngine({
           )}
           {onStudy && (
             <button
-              onClick={onStudy}
+              onClick={dismiss(onStudy)}
               className="w-full rounded-xl border border-edge py-3.5 font-semibold text-muted transition-colors hover:text-ink"
             >
               Back to the notes
@@ -121,7 +150,7 @@ export function DrillEngine({
           )}
           {onExit && (
             <button
-              onClick={onExit}
+              onClick={dismiss(onExit)}
               className="w-full rounded-xl border border-edge py-3.5 font-semibold text-muted transition-colors hover:text-ink"
             >
               Done
@@ -137,14 +166,37 @@ export function DrillEngine({
   const progressPct = (drill.index / drill.queue.length) * 100;
 
   return (
-    <div className="flex flex-1 flex-col">
-      {/* progress hairline */}
-      <div className="mb-6 h-0.5 w-full overflow-hidden rounded-full bg-raised">
-        <div
-          className="h-full bg-correct transition-[width] duration-200"
-          style={{ width: `${progressPct}%` }}
-        />
+    <div className="relative flex flex-1 flex-col">
+      {/* progress hairline + combo badge */}
+      <div className="mb-6 flex items-center gap-3">
+        <div className="h-0.5 flex-1 overflow-hidden rounded-full bg-raised">
+          <div
+            className="h-full bg-correct transition-[width] duration-200"
+            style={{ width: `${progressPct}%` }}
+          />
+        </div>
+        {drill.combo >= 2 && (
+          <span
+            key={drill.combo}
+            className="animate-combo inline-flex items-center gap-1 rounded-full bg-correct-dim/60 px-2 py-0.5 text-[11px] font-bold text-correct-bright"
+          >
+            <BoltIcon className="h-3 w-3" />
+            {drill.combo}x
+          </span>
+        )}
       </div>
+
+      {/* floating XP award on grade */}
+      {drill.lastXpAward > 0 && (
+        <span
+          key={drill.index}
+          className={`animate-xp-float pointer-events-none absolute right-0 top-4 text-sm font-bold ${
+            drill.lastGrade ? "text-correct-bright" : "text-muted"
+          }`}
+        >
+          +{drill.lastXpAward}
+        </span>
+      )}
 
       <div
         onClick={() => !revealed && reveal()}

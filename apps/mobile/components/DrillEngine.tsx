@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Animated, PanResponder, Pressable, Text, View } from "react-native";
-import { OPTION_KEYS, optionText } from "@jyotir/core";
+import { achievementById, OPTION_KEYS, optionText } from "@jyotir/core";
 import { useJyotir, useJyotirStore } from "@/lib/store-provider";
 
 /**
@@ -26,8 +26,16 @@ export function DrillEngine({
   const store = useJyotirStore();
   const drill = useJyotir((s) => s.drill);
   const ready = useJyotir((s) => s.ready);
+  const newlyUnlocked = useJyotir((s) => s.newlyUnlocked);
 
-  const start = () => (reviewMode ? store.getState().startReview() : store.getState().startDrill(topicId));
+  const start = () => {
+    store.getState().clearNewlyUnlocked();
+    reviewMode ? store.getState().startReview() : store.getState().startDrill(topicId);
+  };
+  const leave = (fn?: () => void) => {
+    store.getState().clearNewlyUnlocked();
+    fn?.();
+  };
 
   useEffect(() => {
     if (ready) (reviewMode ? store.getState().startReview() : store.getState().startDrill(topicId));
@@ -86,9 +94,32 @@ export function DrillEngine({
                 {" · "}
                 <Text className="font-semibold text-wrong-bright">{wrong} missed</Text>
               </Text>
+              {drill.sessionXp > 0 && (
+                <View className="mt-4 rounded-full bg-correct-dim/50 px-3 py-1">
+                  <Text className="text-sm font-bold text-correct-bright">+{drill.sessionXp} XP</Text>
+                </View>
+              )}
             </>
           )}
         </View>
+
+        {newlyUnlocked.length > 0 && (
+          <View className="w-full max-w-xs rounded-2xl border border-correct/40 bg-correct-dim/30 p-3">
+            <Text className="mb-2 text-center text-xs font-semibold uppercase tracking-wider text-correct">
+              Achievement unlocked
+            </Text>
+            {newlyUnlocked.map((id) => {
+              const a = achievementById(id);
+              return a ? (
+                <Text key={id} className="text-center text-sm">
+                  <Text className="font-bold text-correct-bright">{a.name}</Text>
+                  <Text className="text-muted"> — {a.description}</Text>
+                </Text>
+              ) : null;
+            })}
+          </View>
+        )}
+
         <View className="w-full max-w-xs gap-2.5">
           {!caughtUp && (
             <Pressable
@@ -102,7 +133,7 @@ export function DrillEngine({
           )}
           {onStudy && (
             <Pressable
-              onPress={onStudy}
+              onPress={() => leave(onStudy)}
               className="items-center rounded-xl border border-edge py-3.5"
             >
               <Text className="font-semibold text-muted">Back to the notes</Text>
@@ -110,7 +141,7 @@ export function DrillEngine({
           )}
           {onExit && (
             <Pressable
-              onPress={onExit}
+              onPress={() => leave(onExit)}
               className="items-center rounded-xl border border-edge py-3.5"
             >
               <Text className="font-semibold text-muted">Done</Text>
@@ -127,8 +158,15 @@ export function DrillEngine({
 
   return (
     <View className="flex-1">
-      <View className="mb-5 h-0.5 w-full overflow-hidden rounded-full bg-raised">
-        <View className="h-full bg-correct" style={{ width: `${progressPct}%` }} />
+      <View className="mb-5 flex-row items-center gap-3">
+        <View className="h-0.5 flex-1 overflow-hidden rounded-full bg-raised">
+          <View className="h-full bg-correct" style={{ width: `${progressPct}%` }} />
+        </View>
+        {drill.combo >= 2 && (
+          <View className="rounded-full bg-correct-dim/60 px-2 py-0.5">
+            <Text className="text-[11px] font-bold text-correct-bright">{drill.combo}x</Text>
+          </View>
+        )}
       </View>
 
       <Animated.View

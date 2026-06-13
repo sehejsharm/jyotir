@@ -3,6 +3,7 @@ import { Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { repo } from "@/lib/content";
 import { useJyotir } from "@/lib/store-provider";
+import { ProfileStrip } from "@/components/ProfileStrip";
 
 export default function ExamPickerScreen() {
   const router = useRouter();
@@ -13,9 +14,11 @@ export default function ExamPickerScreen() {
     <SafeAreaView className="flex-1 bg-oled">
       <ScrollView className="flex-1 px-5" contentContainerClassName="py-8">
         <Text className="text-3xl font-bold tracking-tight text-ink">Jyotir</Text>
-        <Text className="mb-6 mt-1 text-sm text-muted">
+        <Text className="mb-5 mt-1 text-sm text-muted">
           Drill. Read. Repeat. Nothing else.
         </Text>
+
+        <ProfileStrip />
 
         {/* Cross-exam daily review entry */}
         {ready && due > 0 ? (

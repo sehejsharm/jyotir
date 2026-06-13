@@ -1,10 +1,20 @@
 import { createStore, type StoreApi } from "zustand";
 import { createContentRepo, type ContentRepo, type ContentSource } from "./content-repo";
+import {
+  applyGradeToStats,
+  dayKey,
+  evaluateAchievements,
+  initialGamification,
+  type GamificationState
+} from "./gamification";
 import { buildQueue, buildReviewQueue, dueCount, topicCounts, DEFAULT_QUEUE_LIMIT } from "./scheduler";
 import { gradeBinary } from "./sm2";
 import type { StorageAdapter } from "./storage";
 import { syncUserData, type SupabaseLike, type SyncResult } from "./sync";
 import type { DrillCard, ProgressRecord, ReadRecord, TopicCounts } from "./types";
+
+/** repetitions threshold at which a card counts as "mastered". */
+const MASTERY_REPETITIONS = 3;
 
 export type DrillPhase = "idle" | "question" | "revealed" | "complete";
 
@@ -23,6 +33,12 @@ export interface DrillSession {
   /** The grade just given, kept for the brief reveal/flash on the card. */
   lastGrade: boolean | null;
   stats: { knew: number; wrong: number };
+  /** Consecutive "Knew It" run in this session (drives combo UI + bonus XP). */
+  combo: number;
+  /** Total XP earned this session. */
+  sessionXp: number;
+  /** XP awarded by the most recent grade (drives the "+N" float). */
+  lastXpAward: number;
   /** Lapsed cards re-enter the back of the queue once per session. */
   requeued: Record<string, true>;
 }
@@ -31,6 +47,9 @@ export interface JyotirState {
   ready: boolean;
   progress: Record<string, ProgressRecord>;
   reads: Record<string, ReadRecord>;
+  stats: GamificationState;
+  /** Achievement ids unlocked since the UI last consumed them (for toasts). */
+  newlyUnlocked: string[];
   drill: DrillSession;
 
   hydrate(): Promise<void>;
@@ -47,6 +66,10 @@ export interface JyotirState {
   countsForTopic(topicId: string): TopicCounts;
   /** Total due cards across all exams — drives the home "Review" badge. */
   dueTotal(): number;
+  /** Count of mastered cards (3+ clean recalls) — for the stats screen. */
+  masteredCount(): number;
+  /** UI consumed the unlock toasts. */
+  clearNewlyUnlocked(): void;
 
   syncNow(supabase: SupabaseLike, userId: string): Promise<SyncResult>;
 }
@@ -66,8 +89,17 @@ const emptyDrill = (): DrillSession => ({
   phase: "idle",
   lastGrade: null,
   stats: { knew: 0, wrong: 0 },
+  combo: 0,
+  sessionXp: 0,
+  lastXpAward: 0,
   requeued: {}
 });
+
+const countMastered = (progress: Record<string, ProgressRecord>): number => {
+  let n = 0;
+  for (const p of Object.values(progress)) if (p.repetitions >= MASTERY_REPETITIONS) n += 1;
+  return n;
+};
 
 export type JyotirStore = StoreApi<JyotirState> & { repo: ContentRepo };
 
@@ -82,14 +114,17 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
     ready: false,
     progress: {},
     reads: {},
+    stats: initialGamification(),
+    newlyUnlocked: [],
     drill: emptyDrill(),
 
     async hydrate() {
-      const [progress, reads] = await Promise.all([
+      const [progress, reads, stats] = await Promise.all([
         adapter.loadProgress(),
-        adapter.loadReadHistory()
+        adapter.loadReadHistory(),
+        adapter.loadStats()
       ]);
-      set({ progress, reads, ready: true });
+      set({ progress, reads, stats: stats ?? initialGamification(), ready: true });
     },
 
     startDrill(topicId, limit = DEFAULT_QUEUE_LIMIT) {
@@ -125,7 +160,7 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
     },
 
     grade(knewIt) {
-      const { drill, progress } = get();
+      const { drill, progress, stats } = get();
       if (drill.phase !== "revealed") return;
       const card = drill.queue[drill.index];
       if (!card) return;
@@ -134,6 +169,7 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
 
       const qid = card.question.id;
       const record = gradeBinary(qid, progress[qid], knewIt);
+      const nextProgress = { ...progress, [qid]: record };
 
       // Lapsed card relearns within the session: re-queue at the back, once.
       let queue = drill.queue;
@@ -144,25 +180,49 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
       }
 
       const index = drill.index + 1;
+      const phase = index >= queue.length ? "complete" : "question";
+      const sessionStats = {
+        knew: drill.stats.knew + (knewIt ? 1 : 0),
+        wrong: drill.stats.wrong + (knewIt ? 0 : 1)
+      };
+      const combo = knewIt ? drill.combo + 1 : 0;
+
+      // --- gamification ---
+      const outcome = applyGradeToStats(stats, knewIt, combo, dayKey());
+      const sessionSize = sessionStats.knew + sessionStats.wrong;
+      const unlocked = evaluateAchievements({
+        state: outcome.state,
+        masteredCount: countMastered(nextProgress),
+        sessionComplete: phase === "complete",
+        sessionSize,
+        sessionAccuracy: sessionSize > 0 ? (sessionStats.knew / sessionSize) * 100 : 0
+      });
+      const nextStats: GamificationState = unlocked.length
+        ? { ...outcome.state, achievements: [...outcome.state.achievements, ...unlocked] }
+        : outcome.state;
+
       set({
-        progress: { ...progress, [qid]: record },
+        progress: nextProgress,
+        stats: nextStats,
+        newlyUnlocked: [...get().newlyUnlocked, ...unlocked],
         drill: {
           ...drill,
           queue,
           requeued,
           index,
           lastGrade: knewIt,
-          phase: index >= queue.length ? "complete" : "question",
-          stats: {
-            knew: drill.stats.knew + (knewIt ? 1 : 0),
-            wrong: drill.stats.wrong + (knewIt ? 0 : 1)
-          }
+          phase,
+          stats: sessionStats,
+          combo,
+          sessionXp: drill.sessionXp + outcome.xpAwarded,
+          lastXpAward: outcome.xpAwarded
         }
       });
 
       // I/O strictly after the synchronous state transition: the next card
-      // is already on screen before this write begins.
+      // is already on screen before these writes begin.
       persist(adapter.saveProgress(record));
+      persist(adapter.saveStats(nextStats));
     },
 
     exitDrill() {
@@ -185,6 +245,14 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
 
     dueTotal() {
       return dueCount(repo.allQuestions(), get().progress);
+    },
+
+    masteredCount() {
+      return countMastered(get().progress);
+    },
+
+    clearNewlyUnlocked() {
+      if (get().newlyUnlocked.length > 0) set({ newlyUnlocked: [] });
     },
 
     async syncNow(supabase, userId) {

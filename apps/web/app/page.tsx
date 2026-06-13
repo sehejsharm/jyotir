@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { repo } from "@/lib/content";
+import { ProfileStrip } from "@/components/ProfileStrip";
 import { ReviewBanner } from "@/components/ReviewBanner";
 
 export default function ExamPickerPage() {
@@ -21,6 +22,7 @@ export default function ExamPickerPage() {
         </Link>
       </header>
 
+      <ProfileStrip />
       <ReviewBanner />
 
       <h2 className="mb-3 text-xs font-semibold uppercase tracking-wider text-faint">Exams</h2>

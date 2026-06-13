@@ -1,3 +1,4 @@
+import type { GamificationState } from "./gamification";
 import type { ProgressRecord, ReadRecord } from "./types";
 
 /**
@@ -19,6 +20,10 @@ export interface StorageAdapter {
   loadReadHistory(): Promise<Record<string, ReadRecord>>;
   saveReadRecord(record: ReadRecord): Promise<void>;
 
+  /** XP / streak / achievements. null until the first card is graded. */
+  loadStats(): Promise<GamificationState | null>;
+  saveStats(state: GamificationState): Promise<void>;
+
   /** Mark records as pushed after a successful sync. */
   markProgressSynced(questionIds: string[]): Promise<void>;
   markReadsSynced(materialIds: string[]): Promise<void>;
@@ -28,6 +33,7 @@ export interface StorageAdapter {
 export class MemoryStorageAdapter implements StorageAdapter {
   private progress: Record<string, ProgressRecord> = {};
   private reads: Record<string, ReadRecord> = {};
+  private stats: GamificationState | null = null;
 
   async loadProgress() {
     return { ...this.progress };
@@ -40,6 +46,12 @@ export class MemoryStorageAdapter implements StorageAdapter {
   }
   async saveReadRecord(record: ReadRecord) {
     this.reads[record.materialId] = record;
+  }
+  async loadStats() {
+    return this.stats;
+  }
+  async saveStats(state: GamificationState) {
+    this.stats = state;
   }
   async markProgressSynced(questionIds: string[]) {
     for (const id of questionIds) {

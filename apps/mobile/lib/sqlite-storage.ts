@@ -1,5 +1,5 @@
 import * as SQLite from "expo-sqlite";
-import type { ProgressRecord, ReadRecord, StorageAdapter } from "@jyotir/core";
+import type { GamificationState, ProgressRecord, ReadRecord, StorageAdapter } from "@jyotir/core";
 
 /**
  * expo-sqlite StorageAdapter: SM-2 state and read history survive app
@@ -33,6 +33,11 @@ export class SqliteStorageAdapter implements StorageAdapter {
         material_id         TEXT PRIMARY KEY,
         marked_completed_at TEXT NOT NULL,
         synced              INTEGER NOT NULL DEFAULT 0
+      );
+      -- Single-row gamification blob (id is always 1).
+      CREATE TABLE IF NOT EXISTS stats (
+        id    INTEGER PRIMARY KEY CHECK (id = 1),
+        json  TEXT NOT NULL
       );
     `);
   }
@@ -118,6 +123,19 @@ export class SqliteStorageAdapter implements StorageAdapter {
          marked_completed_at = excluded.marked_completed_at,
          synced = excluded.synced`,
       [r.materialId, r.markedCompletedAt, r.synced ? 1 : 0]
+    );
+  }
+
+  async loadStats(): Promise<GamificationState | null> {
+    const row = this.db.getFirstSync<{ json: string }>("SELECT json FROM stats WHERE id = 1");
+    return row ? (JSON.parse(row.json) as GamificationState) : null;
+  }
+
+  async saveStats(state: GamificationState): Promise<void> {
+    this.db.runSync(
+      `INSERT INTO stats (id, json) VALUES (1, ?)
+       ON CONFLICT(id) DO UPDATE SET json = excluded.json`,
+      [JSON.stringify(state)]
     );
   }
 
