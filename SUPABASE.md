@@ -13,16 +13,21 @@ Takes ~10 minutes on the free tier.
 
 ## 2. Create the schema + seed the content
 
-1. In the dashboard, open **SQL Editor** → **New query**.
-2. Paste the entire contents of [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql)
-   and click **Run**. This creates all tables, RLS policies, triggers and the
-   due-counts view.
-3. New query again → paste [`supabase/seed.sql`](supabase/seed.sql) → **Run**.
-   This inserts all 5 exams, 23 micro-notes and 184 questions. It's idempotent,
-   so re-running after a content change just updates rows.
+**One paste (recommended):** open **SQL Editor → New query**, paste the entire
+contents of [`supabase/setup.sql`](supabase/setup.sql) and click **Run**. That
+single file creates every table, RLS policy, trigger and view, then inserts all
+5 exams, 23 micro-notes and 184 questions. Run it once on a fresh project.
 
-   > Regenerate `supabase/seed.sql` any time you edit content with
-   > `pnpm seed:generate`.
+<details>
+<summary>Or run the two files separately</summary>
+
+1. **SQL Editor → New query** → paste
+   [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) → **Run**.
+2. New query → paste [`supabase/seed.sql`](supabase/seed.sql) → **Run**. The seed
+   is idempotent, so re-running after a content change just updates rows.
+</details>
+
+> Regenerate both files any time you edit content with `pnpm seed:generate`.
 
 ## 3. Enable email magic-link auth
 
