@@ -1,6 +1,7 @@
 import { ScrollView, Pressable, Text, View } from "react-native";
 import Markdown from "react-native-markdown-display";
-import type { StudyMaterial } from "@jyotir/core";
+import { topicCounts, type StudyMaterial } from "@jyotir/core";
+import { repo } from "@/lib/content";
 import { useJyotir } from "@/lib/store-provider";
 
 const markdownStyles = {
@@ -50,7 +51,10 @@ export function StudyReader({
   material: StudyMaterial;
   onDrill: () => void;
 }) {
-  const counts = useJyotir((s) => s.countsForTopic(material.topicId));
+  // Select the stable `progress` reference and derive counts in render —
+  // never return a fresh object from a Zustand selector (infinite loop).
+  const progress = useJyotir((s) => s.progress);
+  const counts = topicCounts(repo.questionsByTopic(material.topicId), progress);
   const isRead = useJyotir((s) => Boolean(s.reads[material.id]));
   const markRead = useJyotir((s) => s.markRead);
 
