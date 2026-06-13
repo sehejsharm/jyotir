@@ -1,5 +1,9 @@
 -- Jyotir: MCQ drilling + micro-learning for Indian competitive exams.
 --
+-- Idempotent: safe to run any number of times (uses IF NOT EXISTS / OR
+-- REPLACE / DROP-then-CREATE throughout), so pasting it into the Supabase
+-- SQL editor always converges to the same schema regardless of prior state.
+--
 -- Design notes:
 --   * Content tables use stable human-readable TEXT primary keys (e.g.
 --     'upsc-polity-fundamental-rights-q01'). Ids are identical in the
@@ -11,7 +15,7 @@
 
 -- ============================== content ===============================
 
-create table public.exams (
+create table if not exists public.exams (
   id          text primary key,
   name        text not null,
   slug        text not null unique,
@@ -20,7 +24,7 @@ create table public.exams (
   created_at  timestamptz not null default now()
 );
 
-create table public.subjects (
+create table if not exists public.subjects (
   id          text primary key,
   exam_id     text not null references public.exams (id) on delete cascade,
   name        text not null,
@@ -30,7 +34,7 @@ create table public.subjects (
   unique (exam_id, slug)
 );
 
-create table public.topics (
+create table if not exists public.topics (
   id          text primary key,
   subject_id  text not null references public.subjects (id) on delete cascade,
   name        text not null,
@@ -40,7 +44,7 @@ create table public.topics (
   unique (subject_id, slug)
 );
 
-create table public.study_materials (
+create table if not exists public.study_materials (
   id                     text primary key,
   topic_id               text not null references public.topics (id) on delete cascade,
   title                  text not null,
@@ -54,7 +58,7 @@ create table public.study_materials (
   created_at             timestamptz not null default now()
 );
 
-create table public.questions (
+create table if not exists public.questions (
   id             text primary key,
   topic_id       text not null references public.topics (id) on delete cascade,
   text           text not null,
@@ -69,10 +73,10 @@ create table public.questions (
   created_at     timestamptz not null default now()
 );
 
-create index subjects_exam_idx on public.subjects (exam_id, order_index);
-create index topics_subject_idx on public.topics (subject_id, order_index);
-create index study_materials_topic_idx on public.study_materials (topic_id, order_index);
-create index questions_topic_idx on public.questions (topic_id, order_index);
+create index if not exists subjects_exam_idx on public.subjects (exam_id, order_index);
+create index if not exists topics_subject_idx on public.topics (subject_id, order_index);
+create index if not exists study_materials_topic_idx on public.study_materials (topic_id, order_index);
+create index if not exists questions_topic_idx on public.questions (topic_id, order_index);
 
 -- Keep study_materials.total_linked_questions in sync with the question bank.
 create or replace function public.refresh_linked_question_count()
@@ -94,6 +98,7 @@ begin
 end;
 $$;
 
+drop trigger if exists questions_count_sync on public.questions;
 create trigger questions_count_sync
 after insert or update of topic_id or delete on public.questions
 for each row execute function public.refresh_linked_question_count();
@@ -101,7 +106,7 @@ for each row execute function public.refresh_linked_question_count();
 -- ============================ user progress ===========================
 
 -- SM-2 state per (user, question). One row per card the user has ever seen.
-create table public.user_progress (
+create table if not exists public.user_progress (
   id               uuid primary key default gen_random_uuid(),
   user_id          uuid not null references auth.users (id) on delete cascade,
   question_id      text not null references public.questions (id) on delete cascade,
@@ -115,7 +120,7 @@ create table public.user_progress (
   unique (user_id, question_id)
 );
 
-create table public.user_read_history (
+create table if not exists public.user_read_history (
   id                  uuid primary key default gen_random_uuid(),
   user_id             uuid not null references auth.users (id) on delete cascade,
   material_id         text not null references public.study_materials (id) on delete cascade,
@@ -124,8 +129,8 @@ create table public.user_read_history (
 );
 
 -- The hot path for review scheduling: "what is due for me, now".
-create index user_progress_due_idx on public.user_progress (user_id, next_review_date);
-create index user_read_history_user_idx on public.user_read_history (user_id);
+create index if not exists user_progress_due_idx on public.user_progress (user_id, next_review_date);
+create index if not exists user_read_history_user_idx on public.user_read_history (user_id);
 
 -- Offline-first last-write-wins: an upsert from a stale device must not
 -- clobber newer state that another device already pushed.
@@ -141,13 +146,14 @@ begin
 end;
 $$;
 
+drop trigger if exists user_progress_lww on public.user_progress;
 create trigger user_progress_lww
 before update on public.user_progress
 for each row execute function public.user_progress_lww_guard();
 
 -- Server-side due counts per topic (client computes these locally; this view
 -- backs dashboards / notifications).
-create view public.user_due_counts
+create or replace view public.user_due_counts
 with (security_invoker = true) as
 select
   up.user_id,
@@ -170,27 +176,40 @@ alter table public.user_read_history enable row level security;
 
 -- Content: world-readable (the app must work before sign-in); writes only
 -- via service_role (which bypasses RLS), i.e. the seed/CMS pipeline.
+drop policy if exists "content readable" on public.exams;
 create policy "content readable" on public.exams for select using (true);
+drop policy if exists "content readable" on public.subjects;
 create policy "content readable" on public.subjects for select using (true);
+drop policy if exists "content readable" on public.topics;
 create policy "content readable" on public.topics for select using (true);
+drop policy if exists "content readable" on public.study_materials;
 create policy "content readable" on public.study_materials for select using (true);
+drop policy if exists "content readable" on public.questions;
 create policy "content readable" on public.questions for select using (true);
 
 -- User data: row owner only, all verbs.
+drop policy if exists "own progress select" on public.user_progress;
 create policy "own progress select" on public.user_progress
   for select using (auth.uid() = user_id);
+drop policy if exists "own progress insert" on public.user_progress;
 create policy "own progress insert" on public.user_progress
   for insert with check (auth.uid() = user_id);
+drop policy if exists "own progress update" on public.user_progress;
 create policy "own progress update" on public.user_progress
   for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+drop policy if exists "own progress delete" on public.user_progress;
 create policy "own progress delete" on public.user_progress
   for delete using (auth.uid() = user_id);
 
+drop policy if exists "own reads select" on public.user_read_history;
 create policy "own reads select" on public.user_read_history
   for select using (auth.uid() = user_id);
+drop policy if exists "own reads insert" on public.user_read_history;
 create policy "own reads insert" on public.user_read_history
   for insert with check (auth.uid() = user_id);
+drop policy if exists "own reads update" on public.user_read_history;
 create policy "own reads update" on public.user_read_history
   for update using (auth.uid() = user_id) with check (auth.uid() = user_id);
+drop policy if exists "own reads delete" on public.user_read_history;
 create policy "own reads delete" on public.user_read_history
   for delete using (auth.uid() = user_id);
