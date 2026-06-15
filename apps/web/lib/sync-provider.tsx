@@ -3,6 +3,7 @@
 import { useEffect, type ReactNode } from "react";
 import type { SupabaseLike } from "@jyotir/core";
 import { getSupabase } from "./supabase";
+import { pushStats } from "./leaderboard";
 import { useJyotirStore } from "./store-provider";
 
 /**
@@ -31,8 +32,9 @@ export function SyncProvider({ children }: { children: ReactNode }) {
       inFlight = true;
       try {
         await store.getState().syncNow(supabase as unknown as SupabaseLike, userId);
+        await pushStats(supabase, userId, store.getState().stats);
       } catch (err) {
-        console.error("[jyotir] sync failed:", err);
+        console.error("[recall] sync failed:", err);
       } finally {
         inFlight = false;
       }

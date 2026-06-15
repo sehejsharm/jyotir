@@ -1,19 +1,21 @@
 import type { Metadata, Viewport } from "next";
 import { StoreProvider } from "@/lib/store-provider";
 import { SyncProvider } from "@/lib/sync-provider";
+import { Splash } from "@/components/Splash";
+import { BottomNav } from "@/components/BottomNav";
 import "./globals.css";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Jyotir — Drill. Read. Repeat.",
+  title: "Recall — Drill. Read. Repeat.",
   description:
-    "Frictionless MCQ drilling and 2-minute micro-notes for UPSC, JEE, NEET, SSC CGL and GATE. Spaced repetition, fully offline.",
-  applicationName: "Jyotir",
+    "Frictionless MCQ drilling and 2-minute micro-notes for UPSC, JEE, NEET, SSC CGL, GATE, CFA and FRM. Spaced repetition, gamified, fully offline.",
+  applicationName: "Recall",
   appleWebApp: {
     capable: true,
-    title: "Jyotir",
+    title: "Recall",
     statusBarStyle: "black-translucent"
   },
   icons: {
@@ -34,7 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="dark">
       <body className="min-h-screen bg-oled font-sans text-ink antialiased">
         <StoreProvider>
-          <SyncProvider>{children}</SyncProvider>
+          <SyncProvider>
+            <Splash />
+            {children}
+            <BottomNav />
+          </SyncProvider>
         </StoreProvider>
       </body>
     </html>

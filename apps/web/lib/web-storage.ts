@@ -78,4 +78,9 @@ export class WebStorageAdapter implements StorageAdapter {
     }
     this.write(READS_KEY, all);
   }
+
+  async clearAll(): Promise<void> {
+    if (typeof window === "undefined") return;
+    for (const k of [PROGRESS_KEY, READS_KEY, STATS_KEY]) window.localStorage.removeItem(k);
+  }
 }

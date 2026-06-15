@@ -27,6 +27,9 @@ export interface StorageAdapter {
   /** Mark records as pushed after a successful sync. */
   markProgressSynced(questionIds: string[]): Promise<void>;
   markReadsSynced(materialIds: string[]): Promise<void>;
+
+  /** Wipe all local data (progress, reads, stats) for "reset progress". */
+  clearAll(): Promise<void>;
 }
 
 /** In-memory adapter for tests and SSR render passes. */
@@ -64,5 +67,10 @@ export class MemoryStorageAdapter implements StorageAdapter {
       const rec = this.reads[id];
       if (rec) rec.synced = true;
     }
+  }
+  async clearAll() {
+    this.progress = {};
+    this.reads = {};
+    this.stats = null;
   }
 }

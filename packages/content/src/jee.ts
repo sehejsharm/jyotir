@@ -251,6 +251,230 @@ export const jee = defineBundle({
       name: "Probability",
       slug: "probability",
       orderIndex: 10
+    },
+    {
+      id: "jee-physics-units-dimensions",
+      subjectId: "jee-physics",
+      name: "Units, Dimensions & Measurement",
+      slug: "units-dimensions",
+      orderIndex: 12
+    },
+    {
+      id: "jee-physics-fluid-mechanics",
+      subjectId: "jee-physics",
+      name: "Fluid Mechanics",
+      slug: "fluid-mechanics",
+      orderIndex: 13
+    },
+    {
+      id: "jee-physics-thermal-properties",
+      subjectId: "jee-physics",
+      name: "Thermal Properties & Calorimetry",
+      slug: "thermal-properties",
+      orderIndex: 14
+    },
+    {
+      id: "jee-physics-kinetic-theory",
+      subjectId: "jee-physics",
+      name: "Kinetic Theory of Gases",
+      slug: "kinetic-theory",
+      orderIndex: 15
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension",
+      subjectId: "jee-physics",
+      name: "Elasticity & Surface Tension",
+      slug: "elasticity-surface-tension",
+      orderIndex: 16
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions",
+      subjectId: "jee-physics",
+      name: "Centre of Mass & Collisions",
+      slug: "centre-of-mass-collisions",
+      orderIndex: 17
+    },
+    {
+      id: "jee-physics-electromagnetic-waves",
+      subjectId: "jee-physics",
+      name: "Electromagnetic Waves",
+      slug: "electromagnetic-waves",
+      orderIndex: 18
+    },
+    {
+      id: "jee-physics-semiconductors",
+      subjectId: "jee-physics",
+      name: "Semiconductors & Logic Gates",
+      slug: "semiconductors",
+      orderIndex: 19
+    },
+    {
+      id: "jee-physics-communication-systems",
+      subjectId: "jee-physics",
+      name: "Communication Systems",
+      slug: "communication-systems",
+      orderIndex: 20
+    },
+    {
+      id: "jee-chemistry-redox-reactions",
+      subjectId: "jee-chemistry",
+      name: "Redox Reactions",
+      slug: "redox-reactions",
+      orderIndex: 11
+    },
+    {
+      id: "jee-chemistry-solutions",
+      subjectId: "jee-chemistry",
+      name: "Solutions & Colligative Properties",
+      slug: "solutions",
+      orderIndex: 12
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics",
+      subjectId: "jee-chemistry",
+      name: "Chemical Kinetics",
+      slug: "chemical-kinetics",
+      orderIndex: 13
+    },
+    {
+      id: "jee-chemistry-surface-chemistry",
+      subjectId: "jee-chemistry",
+      name: "Surface Chemistry",
+      slug: "surface-chemistry",
+      orderIndex: 14
+    },
+    {
+      id: "jee-chemistry-s-block",
+      subjectId: "jee-chemistry",
+      name: "s-Block Elements",
+      slug: "s-block",
+      orderIndex: 15
+    },
+    {
+      id: "jee-chemistry-p-block",
+      subjectId: "jee-chemistry",
+      name: "p-Block Elements",
+      slug: "p-block",
+      orderIndex: 16
+    },
+    {
+      id: "jee-chemistry-d-f-block",
+      subjectId: "jee-chemistry",
+      name: "d & f Block Elements",
+      slug: "d-f-block",
+      orderIndex: 17
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes",
+      subjectId: "jee-chemistry",
+      name: "Haloalkanes & Haloarenes",
+      slug: "haloalkanes-haloarenes",
+      orderIndex: 18
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers",
+      subjectId: "jee-chemistry",
+      name: "Alcohols, Phenols & Ethers",
+      slug: "alcohols-phenols-ethers",
+      orderIndex: 19
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids",
+      subjectId: "jee-chemistry",
+      name: "Aldehydes, Ketones & Carboxylic Acids",
+      slug: "aldehydes-ketones-acids",
+      orderIndex: 20
+    },
+    {
+      id: "jee-chemistry-amines",
+      subjectId: "jee-chemistry",
+      name: "Amines",
+      slug: "amines",
+      orderIndex: 21
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers",
+      subjectId: "jee-chemistry",
+      name: "Biomolecules & Polymers",
+      slug: "biomolecules-polymers",
+      orderIndex: 22
+    },
+    {
+      id: "jee-chemistry-metallurgy",
+      subjectId: "jee-chemistry",
+      name: "Metallurgy",
+      slug: "metallurgy",
+      orderIndex: 23
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry",
+      subjectId: "jee-chemistry",
+      name: "Environmental Chemistry",
+      slug: "environmental-chemistry",
+      orderIndex: 24
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions",
+      subjectId: "jee-mathematics",
+      name: "Sets, Relations & Functions",
+      slug: "sets-relations-functions",
+      orderIndex: 11
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities",
+      subjectId: "jee-mathematics",
+      name: "Trigonometric Identities",
+      slug: "trigonometric-identities",
+      orderIndex: 12
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry",
+      subjectId: "jee-mathematics",
+      name: "Inverse Trigonometric Functions",
+      slug: "inverse-trigonometry",
+      orderIndex: 13
+    },
+    {
+      id: "jee-mathematics-conic-sections",
+      subjectId: "jee-mathematics",
+      name: "Conic Sections",
+      slug: "conic-sections",
+      orderIndex: 14
+    },
+    {
+      id: "jee-mathematics-differential-equations",
+      subjectId: "jee-mathematics",
+      name: "Differential Equations",
+      slug: "differential-equations",
+      orderIndex: 15
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives",
+      subjectId: "jee-mathematics",
+      name: "Application of Derivatives",
+      slug: "application-of-derivatives",
+      orderIndex: 16
+    },
+    {
+      id: "jee-mathematics-area-under-curves",
+      subjectId: "jee-mathematics",
+      name: "Area Under Curves",
+      slug: "area-under-curves",
+      orderIndex: 17
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning",
+      subjectId: "jee-mathematics",
+      name: "Statistics & Mathematical Reasoning",
+      slug: "statistics-reasoning",
+      orderIndex: 18
+    },
+    {
+      id: "jee-mathematics-heights-distances",
+      subjectId: "jee-mathematics",
+      name: "Heights & Distances",
+      slug: "heights-distances",
+      orderIndex: 19
     }
   ],
   materials: [
@@ -1537,6 +1761,1305 @@ P(A|B) = P(B|A)·P(A) / P(B)
 - Identify whether events are **independent or mutually exclusive** before combining them; these are different conditions and rarely both hold.`,
       estimatedReadTime: 2,
       orderIndex: 0
+    },
+    {
+      id: "jee-physics-units-dimensions-m01",
+      topicId: "jee-physics-units-dimensions",
+      title: "Units, Dimensions & Measurement",
+      content: `**Dimensional analysis** checks equations and converts units by tracking the powers of base quantities.
+
+## Base Quantities
+The SI system has seven base units. The three mechanical ones are **mass [M], length [L] and time [T]**.
+
+\`\`\`
+Force    = [M L T^-2]
+Energy   = [M L^2 T^-2]
+Power    = [M L^2 T^-3]
+Pressure = [M L^-1 T^-2]
+\`\`\`
+
+## Uses of Dimensions
+- **Checking equations**: both sides must have identical dimensions (principle of homogeneity).
+- **Deriving relations**: a quantity's dependence on others can be guessed up to a constant.
+- **Unit conversion**: scale by ratios of base units.
+
+## Significant Figures and Errors
+| Quantity | Rule |
+| --- | --- |
+| Addition/subtraction | Keep least decimal places |
+| Multiplication/division | Keep least significant figures |
+| Relative error of product | Sum of relative errors |
+
+For Z = A^p B^q / C^r, the fractional error combines as below.
+
+\`\`\`
+dZ/Z = p(dA/A) + q(dB/B) + r(dC/C)
+\`\`\`
+
+### Key Points
+- **Dimensionless constants** (like 2 or pi) are invisible to dimensional analysis.
+- Quantities with the **same dimensions** can be added; force and energy cannot.
+- The **least count** of an instrument fixes the smallest reliable reading and the absolute error.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-fluid-mechanics-m01",
+      topicId: "jee-physics-fluid-mechanics",
+      title: "Fluid Mechanics",
+      content: `**Fluid mechanics** studies liquids and gases at rest (statics) and in motion (dynamics).
+
+## Pressure in Fluids
+\`\`\`
+P = P0 + rho*g*h        (hydrostatic pressure)
+\`\`\`
+
+- **Pascal's law**: pressure applied to a confined fluid is transmitted equally in all directions (hydraulic lift).
+- **Buoyancy (Archimedes)**: upthrust = weight of displaced fluid = rho*V*g.
+
+## Floating and Sinking
+| Condition | Result |
+| --- | --- |
+| Object density < fluid | Floats |
+| Object density = fluid | Suspended |
+| Object density > fluid | Sinks |
+
+## Fluid Dynamics
+For ideal flow, the **continuity equation** conserves mass:
+
+\`\`\`
+A1*v1 = A2*v2          (continuity)
+P + (1/2)rho*v^2 + rho*g*h = constant   (Bernoulli)
+\`\`\`
+
+**Bernoulli's theorem** states that faster flow means lower pressure, explaining aerofoil lift and the venturimeter.
+
+## Viscosity
+- **Stokes' law**: viscous drag F = 6*pi*eta*r*v on a small sphere.
+- A sphere falling through a fluid reaches a constant **terminal velocity** when drag plus buoyancy balance weight.
+
+### Key Points
+- **Reynolds number** decides laminar versus turbulent flow.
+- Streamlines crowd where speed is high; pressure there is low.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-thermal-properties-m01",
+      topicId: "jee-physics-thermal-properties",
+      title: "Thermal Properties & Calorimetry",
+      content: `**Thermal physics** covers how matter expands, stores heat and transfers energy.
+
+## Thermal Expansion
+\`\`\`
+Linear:  dL = L0 * alpha * dT
+Area:    beta = 2*alpha
+Volume:  gamma = 3*alpha
+\`\`\`
+
+A metal rod lengthens on heating; a hole in a plate **expands** like the surrounding material.
+
+## Calorimetry
+\`\`\`
+Q = m * c * dT        (sensible heat)
+Q = m * L             (latent heat)
+\`\`\`
+
+- **Specific heat c** is heat per unit mass per degree; water has an unusually high c.
+- **Latent heat L** is absorbed during a phase change at constant temperature.
+
+## Principle of Calorimetry
+| Statement | Meaning |
+| --- | --- |
+| Heat lost = heat gained | No loss to surroundings |
+
+## Heat Transfer
+- **Conduction**: rate dQ/dt = k*A*dT/L through a solid.
+- **Convection**: bulk movement of a heated fluid.
+- **Radiation**: Stefan's law gives emitted power as below.
+
+\`\`\`
+P = sigma * e * A * T^4      (Stefan-Boltzmann)
+\`\`\`
+
+### Key Points
+- **Newton's law of cooling**: cooling rate is proportional to the temperature excess for small differences.
+- **Wien's law**: the wavelength of peak emission shifts shorter as temperature rises.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-kinetic-theory-m01",
+      topicId: "jee-physics-kinetic-theory",
+      title: "Kinetic Theory of Gases",
+      content: `**Kinetic theory** models a gas as many tiny particles in random motion, linking pressure and temperature to molecular speeds.
+
+## Pressure of an Ideal Gas
+\`\`\`
+P = (1/3) * rho * v_rms^2
+P*V = (1/3) * N * m * v_rms^2
+\`\`\`
+
+## Molecular Speeds
+\`\`\`
+v_rms = sqrt(3*R*T / M)
+v_avg = sqrt(8*R*T / (pi*M))
+v_mp  = sqrt(2*R*T / M)
+\`\`\`
+
+These rank as **v_mp < v_avg < v_rms**.
+
+## Temperature and Energy
+- Average translational KE per molecule **= (3/2)*k*T**, depending only on temperature.
+- The **degrees of freedom f** set the energy: (f/2)*k*T per molecule.
+
+| Gas type | Degrees of freedom | Cv |
+| --- | --- | --- |
+| Monatomic | 3 | (3/2)R |
+| Diatomic | 5 | (5/2)R |
+| Triatomic (linear) | 7 | (7/2)R |
+
+## Equipartition and Ratios
+\`\`\`
+gamma = Cp/Cv = 1 + 2/f
+\`\`\`
+
+### Key Points
+- The **mean free path** grows as pressure falls and as molecular size shrinks.
+- Real gases approach ideal behaviour at **low pressure and high temperature**.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-m01",
+      topicId: "jee-physics-elasticity-surface-tension",
+      title: "Elasticity & Surface Tension",
+      content: `**Elasticity** describes how solids resist deformation, while **surface tension** governs liquid surfaces.
+
+## Stress, Strain and Moduli
+\`\`\`
+Stress = Force / Area
+Strain = change / original
+Young's modulus Y = stress / strain
+\`\`\`
+
+| Modulus | Deformation |
+| --- | --- |
+| Young's (Y) | Length |
+| Bulk (B) | Volume |
+| Shear (eta) | Shape |
+
+- **Hooke's law** holds within the elastic limit: stress is proportional to strain.
+- Elastic potential energy per unit volume **= (1/2) * stress * strain**.
+
+## Surface Tension
+- **Surface tension T** is force per unit length along a liquid surface; it minimises surface area.
+- Excess pressure inside a **drop** is 2T/R; inside a **soap bubble** it is 4T/R (two surfaces).
+
+\`\`\`
+Drop:   dP = 2T/R
+Bubble: dP = 4T/R
+\`\`\`
+
+## Capillarity
+\`\`\`
+h = (2*T*cos(theta)) / (rho*g*r)
+\`\`\`
+
+A narrow tube raises water (theta < 90 degrees) but depresses mercury (theta > 90 degrees).
+
+### Key Points
+- A **steel wire is more elastic than rubber** because it returns to shape with a larger restoring stress.
+- Surface tension **decreases** as temperature rises.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-m01",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      title: "Centre of Mass & Collisions",
+      content: `The **centre of mass (COM)** moves as if all mass and external force acted there.
+
+## Locating the COM
+\`\`\`
+x_cm = (sum m_i * x_i) / (sum m_i)
+\`\`\`
+
+- For symmetric uniform bodies the COM lies at the **geometric centre**.
+- Internal forces never shift the COM; only **external forces** do.
+
+## Momentum Conservation
+\`\`\`
+p_total = sum m_i * v_i = constant   (no external force)
+\`\`\`
+
+When no external force acts, the COM moves with constant velocity even as parts move and collide.
+
+## Collisions
+| Type | Momentum | Kinetic energy |
+| --- | --- | --- |
+| Elastic | Conserved | Conserved |
+| Inelastic | Conserved | Partly lost |
+| Perfectly inelastic | Conserved | Maximum loss |
+
+\`\`\`
+e = (relative velocity of separation) / (relative velocity of approach)
+\`\`\`
+
+- **e = 1** is perfectly elastic; **e = 0** is perfectly inelastic.
+- In a 1D elastic collision of **equal masses**, the bodies exchange velocities.
+
+### Key Points
+- A bursting shell's fragments still have a COM following the original parabolic path.
+- For a 1D elastic collision, v1' = ((m1 - m2)*u1 + 2*m2*u2) / (m1 + m2).`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-m01",
+      topicId: "jee-physics-electromagnetic-waves",
+      title: "Electromagnetic Waves",
+      content: `**Electromagnetic (EM) waves** are self-sustaining oscillations of electric and magnetic fields that travel through vacuum.
+
+## Nature of EM Waves
+- E and B fields oscillate **perpendicular to each other and to the direction of propagation** (transverse).
+- They need **no medium** and travel at the speed of light in vacuum.
+
+\`\`\`
+c = 1 / sqrt(mu0 * epsilon0) = 3 x 10^8 m/s
+c = E0 / B0
+\`\`\`
+
+## Energy and Momentum
+\`\`\`
+u_avg = (1/2)*epsilon0*E0^2
+Intensity I = u_avg * c
+\`\`\`
+
+EM waves carry **momentum** and exert radiation pressure on surfaces.
+
+## The Spectrum (increasing frequency)
+| Region | Typical use |
+| --- | --- |
+| Radio | Communication |
+| Microwave | Radar, ovens |
+| Infrared | Heat sensing |
+| Visible | Sight |
+| Ultraviolet | Sterilisation |
+| X-ray | Imaging |
+| Gamma | Medical, nuclear |
+
+## Displacement Current
+- **Maxwell** added the displacement current Id = epsilon0 * d(flux_E)/dt so that Ampere's law holds in a charging capacitor.
+
+### Key Points
+- In all regions, frequency rises and **wavelength falls** while speed stays c in vacuum.
+- The ratio of field amplitudes is fixed: **E0/B0 = c**.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-semiconductors-m01",
+      topicId: "jee-physics-semiconductors",
+      title: "Semiconductors & Logic Gates",
+      content: `**Semiconductors** have conductivity between metals and insulators and are the basis of all electronics.
+
+## Intrinsic and Extrinsic
+- **Intrinsic** semiconductors (pure Si, Ge) carry equal electrons and holes.
+- **Doping** adds carriers: pentavalent gives **n-type** (electrons), trivalent gives **p-type** (holes).
+
+| Type | Dopant | Majority carrier |
+| --- | --- | --- |
+| n-type | Phosphorus | Electrons |
+| p-type | Boron | Holes |
+
+## The p-n Junction Diode
+- A **depletion region** forms at the junction with a built-in potential barrier.
+- **Forward bias** lowers the barrier and conducts; **reverse bias** widens it and blocks.
+
+\`\`\`
+Forward: current flows (p to +, n to -)
+Reverse: tiny saturation current only
+\`\`\`
+
+## Logic Gates
+| Gate | Output is 1 when |
+| --- | --- |
+| AND | All inputs are 1 |
+| OR | Any input is 1 |
+| NOT | Input is 0 |
+| NAND | Not all inputs are 1 |
+| NOR | All inputs are 0 |
+
+\`\`\`
+NAND and NOR are universal gates
+\`\`\`
+
+### Key Points
+- A **diode** acts as a one-way valve and is used in rectifiers.
+- Raising temperature **increases** a semiconductor's conductivity, opposite to a metal.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-communication-systems-m01",
+      topicId: "jee-physics-communication-systems",
+      title: "Communication Systems",
+      content: `**Communication systems** transmit information from a source to a destination using EM signals.
+
+## Basic Blocks
+A system has a **transmitter, a channel and a receiver**. The message is the **signal**; unwanted additions are **noise**.
+
+## Modulation
+Low-frequency signals cannot radiate efficiently, so they ride on a high-frequency **carrier**.
+
+| Type | What varies |
+| --- | --- |
+| Amplitude (AM) | Carrier amplitude |
+| Frequency (FM) | Carrier frequency |
+| Phase (PM) | Carrier phase |
+
+\`\`\`
+Modulation index (AM): m = A_m / A_c   (kept <= 1)
+\`\`\`
+
+Over-modulation (m > 1) distorts the recovered signal.
+
+## Propagation
+| Mode | Frequency range |
+| --- | --- |
+| Ground wave | Low frequency |
+| Sky wave | 2 to 30 MHz (ionosphere) |
+| Space wave | Above 40 MHz (line of sight) |
+
+## Antenna and Range
+\`\`\`
+Antenna length ~ lambda/4
+Range of TV tower: d = sqrt(2*R*h)
+\`\`\`
+
+### Key Points
+- **Bandwidth** is the range of frequencies a channel must carry; FM needs more than AM.
+- **Line-of-sight** communication uses space waves and tall towers to extend range.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-redox-reactions-m01",
+      topicId: "jee-chemistry-redox-reactions",
+      title: "Redox Reactions",
+      content: `**Redox reactions** involve simultaneous oxidation and reduction through electron transfer.
+
+## Core Definitions
+| Process | Electrons | Oxidation number |
+| --- | --- | --- |
+| Oxidation | Lost | Increases |
+| Reduction | Gained | Decreases |
+
+- The species **oxidised** is the reducing agent; the species **reduced** is the oxidising agent.
+
+## Oxidation Number Rules
+\`\`\`
+Free element     : 0
+H (most cases)   : +1
+O (most cases)   : -2
+Sum in a neutral molecule : 0
+Sum in an ion    : equals its charge
+\`\`\`
+
+## Balancing
+- The **ion-electron (half-reaction) method** balances mass, then charge, then combines so electrons cancel.
+- In acidic medium add **H+ and H2O**; in basic medium add **OH- and H2O**.
+
+## Types of Redox
+| Type | Description |
+| --- | --- |
+| Combination | Elements form a compound |
+| Decomposition | Compound breaks down |
+| Displacement | A reactive element displaces another |
+| Disproportionation | Same element both oxidised and reduced |
+
+### Key Points
+- In **disproportionation** one element in an intermediate oxidation state is simultaneously oxidised and reduced (e.g. Cl2 to Cl- and ClO-).
+- A more reactive metal **displaces** a less reactive one from its salt solution.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-solutions-m01",
+      topicId: "jee-chemistry-solutions",
+      title: "Solutions & Colligative Properties",
+      content: `A **solution** is a homogeneous mixture; **colligative properties** depend on the number of solute particles, not their nature.
+
+## Concentration Terms
+| Term | Definition |
+| --- | --- |
+| Molarity (M) | moles solute per litre solution |
+| Molality (m) | moles solute per kg solvent |
+| Mole fraction | moles part / total moles |
+
+## Raoult's Law
+\`\`\`
+P_solution = X_solvent * P0_solvent
+\`\`\`
+
+- An **ideal solution** obeys Raoult's law over the whole range with no enthalpy or volume change of mixing.
+
+## Colligative Properties
+\`\`\`
+Relative lowering of vapour pressure = X_solute
+Boiling elevation:  dTb = i * Kb * m
+Freezing depression: dTf = i * Kf * m
+Osmotic pressure:    pi = i * C * R * T
+\`\`\`
+
+The **van't Hoff factor i** counts particles produced (i > 1 for dissociation, i < 1 for association).
+
+## Why They Matter
+| Property | Effect of solute |
+| --- | --- |
+| Vapour pressure | Lowered |
+| Boiling point | Raised |
+| Freezing point | Lowered |
+
+### Key Points
+- **Osmotic pressure** is the best method for large molecules (polymers) because it is measurable at low concentration.
+- Adding salt **lowers the freezing point**, which is why salt melts ice on roads.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-m01",
+      topicId: "jee-chemistry-chemical-kinetics",
+      title: "Chemical Kinetics",
+      content: `**Chemical kinetics** studies reaction rates and the factors that control them.
+
+## Rate and Rate Law
+\`\`\`
+Rate = -d[R]/dt = +d[P]/dt
+Rate = k * [A]^x * [B]^y
+\`\`\`
+
+- The **order** is x + y, found experimentally, not from the balanced equation.
+- The **molecularity** counts species in an elementary step and is a small whole number.
+
+## Integrated Rate Laws
+| Order | Integrated form | Half-life |
+| --- | --- | --- |
+| Zero | [A] = [A0] - k*t | [A0]/(2k) |
+| First | ln[A] = ln[A0] - k*t | 0.693/k |
+
+The **first-order half-life is independent of concentration**.
+
+## Temperature Dependence
+\`\`\`
+k = A * exp(-Ea / (R*T))      (Arrhenius)
+ln(k2/k1) = (Ea/R)*(1/T1 - 1/T2)
+\`\`\`
+
+Raising temperature increases the fraction of molecules above the **activation energy Ea**.
+
+## Catalysis
+- A **catalyst** lowers Ea by providing an alternative path; it is unchanged overall.
+
+### Key Points
+- For a first-order reaction, a plot of **ln[A] versus time** is a straight line of slope -k.
+- The unit of k depends on the order: for first order it is per second.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-m01",
+      topicId: "jee-chemistry-surface-chemistry",
+      title: "Surface Chemistry",
+      content: `**Surface chemistry** deals with phenomena at interfaces: adsorption, catalysis and colloids.
+
+## Adsorption
+- **Adsorption** is the accumulation of molecules at a surface; **absorption** is uptake throughout the bulk.
+
+| Feature | Physisorption | Chemisorption |
+| --- | --- | --- |
+| Forces | van der Waals | Chemical bonds |
+| Enthalpy | Low | High |
+| Specificity | Low | High |
+| Temperature | Favoured by low T | Needs higher T |
+
+## Adsorption Isotherm
+\`\`\`
+Freundlich:  x/m = k * P^(1/n)      (n > 1)
+\`\`\`
+
+The extent of adsorption rises with pressure but levels off as the surface saturates.
+
+## Catalysis
+- **Homogeneous** catalysts share the phase of reactants; **heterogeneous** ones (solids) work via surface adsorption.
+- **Enzymes** are highly specific biological catalysts.
+
+## Colloids
+| Type | Dispersed phase / medium | Example |
+| --- | --- | --- |
+| Sol | Solid in liquid | Paint |
+| Emulsion | Liquid in liquid | Milk |
+| Aerosol | Liquid in gas | Fog |
+
+### Key Points
+- The **Tyndall effect** (scattering of light) distinguishes a colloid from a true solution.
+- Colloids are coagulated by adding an electrolyte; **higher ion charge** (Hardy-Schulze rule) is more effective.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-s-block-m01",
+      topicId: "jee-chemistry-s-block",
+      title: "s-Block Elements",
+      content: `The **s-block** holds Group 1 (alkali metals) and Group 2 (alkaline earth metals), whose valence electrons are in s orbitals.
+
+## General Character
+- Highly **electropositive** and reactive; reactivity increases down each group.
+- Group 1 shows the **+1** oxidation state; Group 2 shows **+2**.
+
+| Trend (down group) | Change |
+| --- | --- |
+| Atomic radius | Increases |
+| Ionisation energy | Decreases |
+| Reactivity | Increases |
+
+## Reactions
+\`\`\`
+2 Na + 2 H2O -> 2 NaOH + H2
+Ca + 2 H2O -> Ca(OH)2 + H2
+\`\`\`
+
+- Alkali metals impart **characteristic flame colours** (Na yellow, K lilac, Ca brick red).
+
+## Anomalies and Diagonal Relationship
+- **Lithium** resembles magnesium, and **beryllium** resembles aluminium (diagonal relationship).
+- Li and Be are the smallest, most covalent members of their groups.
+
+## Important Compounds
+| Compound | Use |
+| --- | --- |
+| NaOH | Soap, paper |
+| Na2CO3 | Glass, washing soda |
+| CaO | Cement, lime |
+
+### Key Points
+- Solubility of Group 2 **hydroxides increases** down the group, while **sulphates decrease**.
+- **Sodium and potassium** are essential for nerve and muscle function in the body.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-p-block-m01",
+      topicId: "jee-chemistry-p-block",
+      title: "p-Block Elements",
+      content: `The **p-block** spans Groups 13 to 18, where the differentiating electron enters a p orbital.
+
+## General Features
+- Contains **metals, metalloids and non-metals**; non-metallic character rises across a period.
+- The **inert pair effect** makes lower oxidation states more stable for heavier members (e.g. Pb(+2) over Pb(+4)).
+
+| Group | Family | Common oxidation states |
+| --- | --- | --- |
+| 13 | Boron | +3 (and +1 for heavy) |
+| 14 | Carbon | +4, +2 |
+| 15 | Nitrogen | -3 to +5 |
+| 16 | Oxygen | -2 to +6 |
+| 17 | Halogens | -1 to +7 |
+| 18 | Noble gases | mostly 0 |
+
+## Notable Trends
+- **Halogens** are the most reactive non-metals; oxidising power decreases F2 > Cl2 > Br2 > I2.
+- **Nitrogen** forms strong p-pi bonds, so it is a diatomic gas, while phosphorus is solid.
+
+## Important Compounds
+\`\`\`
+NH3, HNO3 (nitrogen)
+H2SO4 (sulphur)
+\`\`\`
+
+| Oxide | Nature |
+| --- | --- |
+| CO2, SO2 | Acidic |
+| Al2O3 | Amphoteric |
+
+### Key Points
+- **Catenation** (self-linking) is strongest for carbon, giving its vast organic chemistry.
+- Noble gases are stable due to **completely filled** valence shells.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-d-f-block-m01",
+      topicId: "jee-chemistry-d-f-block",
+      title: "d & f Block Elements",
+      content: `The **d-block** (transition metals) and **f-block** (lanthanides and actinides) feature partially filled inner orbitals.
+
+## Characteristic Properties
+- **Variable oxidation states** from involvement of both (n-1)d and ns electrons.
+- Many ions are **coloured** due to d-d electronic transitions.
+- They are good **catalysts** and form complex ions readily.
+
+| Property | Reason |
+| --- | --- |
+| Colour | d-d transitions |
+| Paramagnetism | Unpaired d electrons |
+| Catalytic activity | Variable oxidation states |
+
+## Magnetic Moment
+\`\`\`
+mu = sqrt(n*(n + 2)) BM     (n = unpaired electrons)
+\`\`\`
+
+## Lanthanide Contraction
+- A steady **decrease in size** across the lanthanides due to poor 4f shielding.
+- It makes second and third transition series of similar size (Zr and Hf).
+
+## Important Facts
+| Element/ion | Note |
+| --- | --- |
+| Zn2+ | Colourless (d10, no d-d) |
+| Mn (+7) | Strong oxidiser (KMnO4) |
+| Cr (+6) | Oxidiser (K2Cr2O7) |
+
+### Key Points
+- A **colourless** transition ion usually has a fully filled or empty d subshell.
+- **Actinides** are radioactive and show more oxidation states than lanthanides.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-m01",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      title: "Haloalkanes & Haloarenes",
+      content: `**Haloalkanes and haloarenes** have halogens bonded to sp3 carbon and aromatic rings respectively.
+
+## Nature of the C-X Bond
+- The **C-X bond is polar**; carbon is electrophilic and open to nucleophilic attack.
+- Bond strength order: **C-F > C-Cl > C-Br > C-I**, so iodides are most reactive.
+
+## Nucleophilic Substitution
+| Mechanism | Rate law | Stereochemistry |
+| --- | --- | --- |
+| SN1 | Rate = k[RX] | Racemisation |
+| SN2 | Rate = k[RX][Nu] | Inversion |
+
+\`\`\`
+SN1: favoured by 3 degrees C and polar protic solvent
+SN2: favoured by 1 degree C and polar aprotic solvent
+\`\`\`
+
+- **SN2** gives Walden inversion (umbrella flip); **SN1** goes through a planar carbocation.
+
+## Elimination
+- The **E2/E1** routes give alkenes; **Saytzeff's rule** favours the more substituted alkene.
+
+## Haloarenes
+- Aryl halides resist substitution because of **partial double-bond character** and ring electron density.
+
+### Key Points
+- The **order of SN2 reactivity** is methyl > 1 degree > 2 degrees > 3 degrees (steric hindrance).
+- **Grignard reagents** (RMgX) are powerful nucleophiles made from haloalkanes.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-m01",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      title: "Alcohols, Phenols & Ethers",
+      content: `**Alcohols (R-OH)**, **phenols (Ar-OH)** and **ethers (R-O-R')** share an oxygen functional group but differ widely in reactivity.
+
+## Acidity
+- **Phenols are far more acidic than alcohols** because the phenoxide ion is resonance-stabilised.
+- Order: carboxylic acid > phenol > water > alcohol.
+
+\`\`\`
+Phenol: pKa ~ 10
+Ethanol: pKa ~ 16
+\`\`\`
+
+## Classification of Alcohols
+| Type | Carbon bearing OH |
+| --- | --- |
+| Primary | Attached to one C |
+| Secondary | Attached to two C |
+| Tertiary | Attached to three C |
+
+## Reactions
+- **Oxidation**: 1 degree alcohol to aldehyde to acid; 2 degrees to ketone; 3 degrees resists.
+- **Dehydration** with acid gives alkenes (E1).
+- **Lucas test** (HCl/ZnCl2) distinguishes alcohols by reaction speed (3 degrees fastest).
+
+## Ethers
+- Ethers are **fairly inert** but cleave with hot HI.
+
+### Key Points
+- Phenol gives a **violet colour** with neutral FeCl3, a classic test.
+- The **Williamson synthesis** (alkoxide + haloalkane) is the best route to ethers.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-m01",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      title: "Aldehydes, Ketones & Carboxylic Acids",
+      content: `**Aldehydes (R-CHO), ketones (R-CO-R') and carboxylic acids (R-COOH)** all contain the polar carbonyl group.
+
+## The Carbonyl Group
+- The **C=O carbon is electrophilic**, so it undergoes **nucleophilic addition**.
+- Aldehydes are more reactive than ketones (less steric hindrance, less +I).
+
+## Key Reactions
+\`\`\`
+Nucleophilic addition: HCN, NaHSO3, alcohols
+Aldol condensation: alpha-H compounds + base
+\`\`\`
+
+| Test | Positive for |
+| --- | --- |
+| Tollens (silver mirror) | Aldehydes |
+| Fehling | Aliphatic aldehydes |
+| Iodoform | Methyl ketones, ethanal |
+
+- The **aldol reaction** needs an alpha-hydrogen; **Cannizzaro** occurs for aldehydes without alpha-H.
+
+## Carboxylic Acids
+- Acidity is enhanced by **electron-withdrawing groups** (Cl3C-COOH is very strong).
+- The **carboxylate ion** is resonance-stabilised over two equivalent oxygens.
+
+\`\`\`
+Acidity: HCOOH > CH3COOH (alkyl is +I, weakens)
+\`\`\`
+
+### Key Points
+- Only **aldehydes** give the Tollens silver mirror, distinguishing them from ketones.
+- A **methyl ketone** gives a positive iodoform (yellow precipitate) test.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-amines-m01",
+      topicId: "jee-chemistry-amines",
+      title: "Amines",
+      content: `**Amines** are derivatives of ammonia in which one or more hydrogens are replaced by alkyl or aryl groups.
+
+## Classification
+| Type | Structure |
+| --- | --- |
+| Primary | R-NH2 |
+| Secondary | R2-NH |
+| Tertiary | R3-N |
+
+## Basicity
+- Amines are **basic** because of the lone pair on nitrogen.
+- In the gas phase basicity follows 3 degrees > 2 degrees > 1 degree; in water, solvation makes **2 degrees often most basic** among alkylamines.
+- **Aromatic amines (aniline) are weaker bases** because the lone pair is delocalised into the ring.
+
+\`\`\`
+Basicity (aqueous): alkylamine > NH3 > aniline
+\`\`\`
+
+## Key Reactions
+- **Diazotisation**: 1 degree aromatic amine + HNO2 at 0-5 C gives a diazonium salt.
+- Diazonium salts undergo **coupling** to form azo dyes and substitution (Sandmeyer).
+
+| Test | Result |
+| --- | --- |
+| Carbylamine | 1 degree amine gives foul isocyanide |
+| Hinsberg | Distinguishes 1, 2, 3 degrees amines |
+
+### Key Points
+- The **carbylamine test** is specific to primary amines (foul-smelling isocyanide).
+- **Diazonium salts** are versatile intermediates for introducing many groups onto the ring.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-m01",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      title: "Biomolecules & Polymers",
+      content: `**Biomolecules** build living systems; **polymers** are large molecules made of repeating units.
+
+## Carbohydrates
+- **Monosaccharides** (glucose, fructose) cannot be hydrolysed further.
+- **Glucose** is an aldohexose; **starch and cellulose** are polysaccharides of glucose.
+
+| Class | Example |
+| --- | --- |
+| Mono | Glucose |
+| Di | Sucrose |
+| Poly | Starch, cellulose |
+
+## Proteins
+- Built from **alpha-amino acids** joined by **peptide bonds (-CO-NH-)**.
+- Structure levels: primary (sequence), secondary (helix/sheet), tertiary, quaternary.
+- Heat causes **denaturation**, losing function while keeping the primary sequence.
+
+## Nucleic Acids
+- **DNA and RNA** store and transfer genetic information; bases pair A-T(U) and G-C.
+
+## Polymers
+| Type | Example | Bonding |
+| --- | --- | --- |
+| Addition | Polythene | Chain growth |
+| Condensation | Nylon-6,6 | Step growth |
+
+\`\`\`
+Natural rubber: polymer of isoprene
+\`\`\`
+
+### Key Points
+- **Vitamins** are micronutrients; A, D, E, K are fat-soluble while B and C are water-soluble.
+- **Nylon and terylene** are condensation polymers that release a small molecule on each linkage.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-metallurgy-m01",
+      topicId: "jee-chemistry-metallurgy",
+      title: "Metallurgy",
+      content: `**Metallurgy** is the science of extracting and refining metals from their ores.
+
+## Steps of Extraction
+1. **Concentration** of the ore (removing gangue).
+2. **Reduction** of the oxide to the metal.
+3. **Refining** to high purity.
+
+## Concentration Methods
+| Method | Used for |
+| --- | --- |
+| Froth flotation | Sulphide ores |
+| Magnetic separation | Magnetic ores |
+| Leaching | Bauxite, gold |
+
+## Reduction
+\`\`\`
+Roasting:  sulphide + O2 -> oxide + SO2
+Calcination: carbonate -> oxide + CO2
+\`\`\`
+
+- **Ellingham diagrams** show which reducing agent can reduce an oxide at a given temperature.
+- A metal lower in the diagram reduces the oxide of a metal above it.
+
+## Refining
+| Technique | Example |
+| --- | --- |
+| Electrolytic | Copper, aluminium |
+| Zone refining | Silicon, germanium |
+| Vapour phase | Nickel (Mond process) |
+
+### Key Points
+- **Aluminium** is obtained by electrolysis of molten alumina (Hall-Heroult process).
+- **Zone refining** exploits that impurities prefer the molten zone, giving ultrapure semiconductors.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-m01",
+      topicId: "jee-chemistry-environmental-chemistry",
+      title: "Environmental Chemistry",
+      content: `**Environmental chemistry** studies pollutants and the chemical processes in air, water and soil.
+
+## Air Pollution
+| Pollutant | Source / effect |
+| --- | --- |
+| CO | Incomplete combustion; binds haemoglobin |
+| SO2, NOx | Burning fuel; acid rain |
+| CFCs | Aerosols; ozone depletion |
+
+\`\`\`
+Acid rain: SO2, NO2 + H2O -> H2SO4, HNO3
+\`\`\`
+
+## The Ozone Layer
+- Stratospheric **ozone (O3)** absorbs harmful UV.
+- **CFCs release chlorine atoms** that catalytically destroy ozone, forming the ozone hole.
+
+## Greenhouse Effect
+- Gases such as **CO2, CH4 and water vapour** trap infrared and warm the planet.
+- Excess emissions cause **global warming** and climate change.
+
+## Water Pollution
+| Indicator | Meaning |
+| --- | --- |
+| BOD | Oxygen demand of microbes; high BOD = polluted |
+| DO | Dissolved oxygen; low DO harms aquatic life |
+
+### Key Points
+- **Eutrophication** from fertiliser runoff causes algal blooms that deplete dissolved oxygen.
+- **Green chemistry** designs processes that prevent waste and use safer reagents.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-m01",
+      topicId: "jee-mathematics-sets-relations-functions",
+      title: "Sets, Relations & Functions",
+      content: `**Sets** group objects; **relations** pair elements; **functions** assign exactly one output to each input.
+
+## Set Operations
+\`\`\`
+n(A union B) = n(A) + n(B) - n(A intersection B)
+\`\`\`
+
+| Operation | Meaning |
+| --- | --- |
+| Union | In A or B |
+| Intersection | In both A and B |
+| Difference A - B | In A but not B |
+| Complement | Not in A |
+
+## Relations
+- A **relation** from A to B is a subset of A x B.
+- An **equivalence relation** is reflexive, symmetric and transitive.
+
+## Functions
+| Type | Property |
+| --- | --- |
+| One-one (injective) | Distinct inputs give distinct outputs |
+| Onto (surjective) | Every codomain element is hit |
+| Bijective | Both one-one and onto |
+
+\`\`\`
+Number of functions from A (m elements) to B (n) = n^m
+\`\`\`
+
+- Only a **bijective** function has an inverse.
+
+## Composition
+- (f o g)(x) = f(g(x)); composition is **associative but not commutative**.
+
+### Key Points
+- For a finite set with n elements, the **power set** has 2^n subsets.
+- **(f o g)** and **(g o f)** are generally different functions.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-m01",
+      topicId: "jee-mathematics-trigonometric-identities",
+      title: "Trigonometric Identities",
+      content: `**Trigonometric identities** relate the ratios sine, cosine and tangent for all angles.
+
+## Fundamental Identities
+\`\`\`
+sin^2(x) + cos^2(x) = 1
+1 + tan^2(x) = sec^2(x)
+1 + cot^2(x) = csc^2(x)
+\`\`\`
+
+## Compound Angles
+\`\`\`
+sin(A + B) = sinA*cosB + cosA*sinB
+cos(A + B) = cosA*cosB - sinA*sinB
+tan(A + B) = (tanA + tanB) / (1 - tanA*tanB)
+\`\`\`
+
+## Double and Half Angles
+\`\`\`
+sin(2A) = 2*sinA*cosA
+cos(2A) = 1 - 2*sin^2(A) = 2*cos^2(A) - 1
+tan(2A) = 2*tanA / (1 - tan^2(A))
+\`\`\`
+
+## Standard Values
+| Angle | sin | cos |
+| --- | --- | --- |
+| 0 | 0 | 1 |
+| 30 | 1/2 | sqrt(3)/2 |
+| 45 | sqrt(2)/2 | sqrt(2)/2 |
+| 60 | sqrt(3)/2 | 1/2 |
+| 90 | 1 | 0 |
+
+### Key Points
+- The general solution of **sin(x) = 0** is x = n*pi; of **cos(x) = 0** is x = (2n+1)*pi/2.
+- **Product-to-sum** formulas convert sinA*cosB and similar products into sums for easy integration.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-m01",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      title: "Inverse Trigonometric Functions",
+      content: `**Inverse trigonometric functions** return the angle whose ratio is given, on a restricted principal range.
+
+## Principal Value Ranges
+| Function | Range |
+| --- | --- |
+| arcsin(x) | [-pi/2, pi/2] |
+| arccos(x) | [0, pi] |
+| arctan(x) | (-pi/2, pi/2) |
+
+## Key Identities
+\`\`\`
+arcsin(x) + arccos(x) = pi/2
+arctan(x) + arccot(x) = pi/2
+arcsec(x) + arccsc(x) = pi/2
+\`\`\`
+
+## Sum Formula
+\`\`\`
+arctan(x) + arctan(y) = arctan((x + y)/(1 - x*y)),  if x*y < 1
+\`\`\`
+
+When x*y > 1 a correction of pi (or -pi) is added depending on signs.
+
+## Useful Conversions
+\`\`\`
+2*arctan(x) = arcsin(2x/(1 + x^2)) = arccos((1 - x^2)/(1 + x^2))
+\`\`\`
+
+## Properties
+- arcsin(-x) = -arcsin(x) (odd); arccos(-x) = pi - arccos(x).
+
+### Key Points
+- Always check the **principal range** before simplifying; arcsin(sin(x)) need not equal x.
+- The derivative of **arctan(x)** is 1/(1 + x^2), a key integration result.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-conic-sections-m01",
+      topicId: "jee-mathematics-conic-sections",
+      title: "Conic Sections",
+      content: `**Conic sections** are curves from slicing a cone: the parabola, ellipse and hyperbola, defined by eccentricity e.
+
+## Eccentricity
+| Conic | Eccentricity |
+| --- | --- |
+| Circle | e = 0 |
+| Ellipse | 0 < e < 1 |
+| Parabola | e = 1 |
+| Hyperbola | e > 1 |
+
+## Parabola
+\`\`\`
+y^2 = 4*a*x
+Focus: (a, 0)   Directrix: x = -a
+Latus rectum length: 4a
+\`\`\`
+
+## Ellipse
+\`\`\`
+x^2/a^2 + y^2/b^2 = 1,  a > b
+b^2 = a^2*(1 - e^2)
+Foci: (+-a*e, 0)
+\`\`\`
+
+The sum of distances from any point to the **two foci is constant (2a)**.
+
+## Hyperbola
+\`\`\`
+x^2/a^2 - y^2/b^2 = 1
+b^2 = a^2*(e^2 - 1)
+Asymptotes: y = +-(b/a)*x
+\`\`\`
+
+The **difference** of focal distances is constant (2a).
+
+### Key Points
+- The **latus rectum** of an ellipse and hyperbola is 2*b^2/a.
+- For a parabola **y^2 = 4ax**, a point on it is (a*t^2, 2*a*t) in parametric form.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-differential-equations-m01",
+      topicId: "jee-mathematics-differential-equations",
+      title: "Differential Equations",
+      content: `A **differential equation** relates a function to its derivatives; solving one recovers the family of functions.
+
+## Order and Degree
+- **Order** is the highest derivative present; **degree** is its power after clearing radicals.
+
+## Variable Separable
+\`\`\`
+dy/dx = f(x)*g(y)  ->  integral dy/g(y) = integral f(x) dx
+\`\`\`
+
+## Linear First Order
+\`\`\`
+dy/dx + P(x)*y = Q(x)
+Integrating factor I.F. = exp(integral P dx)
+Solution: y*(I.F.) = integral Q*(I.F.) dx + C
+\`\`\`
+
+## Homogeneous Equations
+- A function f(x, y) is homogeneous of degree n if **f(t*x, t*y) = t^n * f(x, y)**.
+- Substitute **y = v*x** to make the equation separable.
+
+| Type | Method |
+| --- | --- |
+| Separable | Move variables to opposite sides |
+| Linear | Integrating factor |
+| Homogeneous | Substitute y = v*x |
+
+### Key Points
+- A general solution of an order-n equation contains **n arbitrary constants**.
+- The **integrating factor** turns a linear equation into an exact derivative for direct integration.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-m01",
+      topicId: "jee-mathematics-application-of-derivatives",
+      title: "Application of Derivatives",
+      content: `The **derivative** measures instantaneous rate of change and reveals the shape of a curve.
+
+## Tangents and Normals
+\`\`\`
+Slope of tangent at x = a : f'(a)
+Slope of normal : -1/f'(a)
+\`\`\`
+
+## Rate of Change
+- If two quantities are related, differentiating with respect to time links their rates (**related rates**).
+
+## Increasing and Decreasing
+| Condition | Behaviour |
+| --- | --- |
+| f'(x) > 0 | Increasing |
+| f'(x) < 0 | Decreasing |
+| f'(x) = 0 | Stationary point |
+
+## Maxima and Minima
+\`\`\`
+First derivative: f'(x) = 0 at a critical point
+Second derivative test:
+  f''(x) > 0 -> local minimum
+  f''(x) < 0 -> local maximum
+\`\`\`
+
+- Check **endpoints** as well for the absolute maximum on a closed interval.
+
+## Approximation
+\`\`\`
+dy ~ f'(x)*dx       (small change)
+\`\`\`
+
+### Key Points
+- At a point of **inflection** the second derivative changes sign and concavity flips.
+- A stationary point with **f''(x) = 0** needs higher-order tests to classify.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-area-under-curves-m01",
+      topicId: "jee-mathematics-area-under-curves",
+      title: "Area Under Curves",
+      content: `**Definite integration** computes the area enclosed between curves and the axes.
+
+## Area Below a Curve
+\`\`\`
+Area = integral from a to b of f(x) dx   (f(x) >= 0)
+\`\`\`
+
+- If the curve dips **below the x-axis**, the integral is negative there, so take the modulus for physical area.
+
+## Area Between Two Curves
+\`\`\`
+Area = integral from a to b of (y_upper - y_lower) dx
+\`\`\`
+
+The limits a and b are the **x-coordinates of intersection** of the two curves.
+
+## With Respect to y
+\`\`\`
+Area = integral from c to d of (x_right - x_left) dy
+\`\`\`
+
+Choose dy strips when the curves are easier to express as x = g(y).
+
+## Common Results
+| Region | Area |
+| --- | --- |
+| Circle radius r | pi*r^2 |
+| Ellipse a, b | pi*a*b |
+
+### Key Points
+- Always **sketch the region** and find intersection points before integrating.
+- For symmetric regions, integrate over **half** and double to simplify the work.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-m01",
+      topicId: "jee-mathematics-statistics-reasoning",
+      title: "Statistics & Mathematical Reasoning",
+      content: `**Statistics** summarises data; **mathematical reasoning** handles the logic of statements.
+
+## Measures of Central Tendency
+| Measure | Definition |
+| --- | --- |
+| Mean | Sum / number of values |
+| Median | Middle value when ordered |
+| Mode | Most frequent value |
+
+## Dispersion
+\`\`\`
+Variance = (sum (x_i - mean)^2) / n
+Standard deviation = sqrt(Variance)
+\`\`\`
+
+- The **standard deviation** has the same units as the data; variance is its square.
+
+## Mathematical Reasoning
+| Term | Meaning |
+| --- | --- |
+| Conjunction (and) | True only if both true |
+| Disjunction (or) | True if at least one true |
+| Negation (not) | Reverses truth value |
+| Implication (if p then q) | False only when p true, q false |
+
+\`\`\`
+Contrapositive of (p -> q) is (not q -> not p), logically equivalent
+\`\`\`
+
+### Key Points
+- The **contrapositive** of a statement is always equivalent to it; the converse is not.
+- A statement is **a tautology** if it is true for all truth values of its components.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-heights-distances-m01",
+      topicId: "jee-mathematics-heights-distances",
+      title: "Heights & Distances",
+      content: `**Heights and distances** apply trigonometry to measure inaccessible lengths using angles.
+
+## Angles of Elevation and Depression
+- The **angle of elevation** is measured upward from the horizontal to an object above.
+- The **angle of depression** is measured downward from the horizontal to an object below.
+- These two angles are **equal** (alternate angles) for the same line of sight.
+
+## Basic Right-Triangle Relations
+\`\`\`
+tan(theta) = opposite / adjacent = height / base
+sin(theta) = opposite / hypotenuse
+cos(theta) = adjacent / hypotenuse
+\`\`\`
+
+## Standard Setup
+For an object of height h observed at angle theta from distance d:
+
+\`\`\`
+h = d * tan(theta)
+\`\`\`
+
+| Angle | tan value |
+| --- | --- |
+| 30 | 1/sqrt(3) |
+| 45 | 1 |
+| 60 | sqrt(3) |
+
+## Two-Observation Problems
+- Observing the same top from **two points** gives two equations to eliminate the unknown distance.
+
+### Key Points
+- At an elevation of **45 degrees**, the height equals the horizontal distance.
+- Always draw a clear **right-angled diagram** and label the known angle and side first.`,
+      estimatedReadTime: 2,
+      orderIndex: 0
     }
   ],
   questions: [
@@ -1544,11 +3067,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-kinematics-1d-q01",
       topicId: "jee-physics-kinematics-1d",
       text: "A body starts from rest and accelerates at 2 m/s². How far does it travel in 5 s?",
-      optionA: "25 m",
-      optionB: "20 m",
+      optionA: "20 m",
+      optionB: "25 m",
       optionC: "50 m",
       optionD: "10 m",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "s = ut + ½at² = 0 + ½(2)(25) = 25 m.",
       orderIndex: 0
     },
@@ -1556,11 +3079,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-kinematics-1d-q02",
       topicId: "jee-physics-kinematics-1d",
       text: "A stone is dropped from rest. Its velocity after 3 s (g = 10 m/s²) is:",
-      optionA: "30 m/s",
-      optionB: "10 m/s",
+      optionA: "10 m/s",
+      optionB: "30 m/s",
       optionC: "20 m/s",
       optionD: "45 m/s",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "v = u + gt = 0 + 10 × 3 = 30 m/s.",
       orderIndex: 1
     },
@@ -1580,11 +3103,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-kinematics-1d-q04",
       topicId: "jee-physics-kinematics-1d",
       text: "A car moving at 20 m/s decelerates uniformly and stops in 100 m. The deceleration is:",
-      optionA: "1 m/s²",
+      optionA: "2 m/s²",
       optionB: "10 m/s²",
-      optionC: "2 m/s²",
+      optionC: "1 m/s²",
       optionD: "4 m/s²",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Using v² = u² + 2as: 0 = 400 + 2a(100), so a = −2 m/s².",
       orderIndex: 3
     },
@@ -1592,11 +3115,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-kinematics-1d-q05",
       topicId: "jee-physics-kinematics-1d",
       text: "The distance covered in the n-th second by a body from rest with acceleration a is:",
-      optionA: "a(n − 1)",
+      optionA: "(a/2)(2n − 1)",
       optionB: "an",
       optionC: "½an²",
-      optionD: "(a/2)(2n − 1)",
-      correctOption: "D",
+      optionD: "a(n − 1)",
+      correctOption: "A",
       explanation: "s_nth = u + (a/2)(2n − 1); with u = 0 it reduces to (a/2)(2n − 1).",
       orderIndex: 4
     },
@@ -1604,11 +3127,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-kinematics-1d-q06",
       topicId: "jee-physics-kinematics-1d",
       text: "A ball thrown vertically up with 20 m/s reaches a maximum height of (g = 10 m/s²):",
-      optionA: "30 m",
+      optionA: "20 m",
       optionB: "10 m",
-      optionC: "20 m",
+      optionC: "30 m",
       optionD: "40 m",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "At the top v = 0, so h = u²/2g = 400/20 = 20 m.",
       orderIndex: 5
     },
@@ -1630,9 +3153,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Two balls are dropped 1 s apart from the same height. As they fall, the gap between them:",
       optionA: "Stays constant",
       optionB: "Decreases",
-      optionC: "Increases",
-      optionD: "First increases then decreases",
-      correctOption: "C",
+      optionC: "First increases then decreases",
+      optionD: "Increases",
+      correctOption: "D",
       explanation: "The earlier ball is always faster, so the separation grows with time.",
       orderIndex: 7
     },
@@ -1676,11 +3199,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-rotational-motion-q04",
       topicId: "jee-physics-rotational-motion",
       text: "Which body reaches the bottom of an incline first while rolling without slipping?",
-      optionA: "Hollow cylinder",
+      optionA: "Solid sphere",
       optionB: "Hollow sphere",
       optionC: "Ring",
-      optionD: "Solid sphere",
-      correctOption: "D",
+      optionD: "Hollow cylinder",
+      correctOption: "A",
       explanation: "The solid sphere has the smallest I/MR² (2/5), giving the largest acceleration.",
       orderIndex: 3
     },
@@ -1700,11 +3223,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-rotational-motion-q06",
       topicId: "jee-physics-rotational-motion",
       text: "For rolling without slipping, the velocity of the contact point with the ground is:",
-      optionA: "v",
+      optionA: "Zero",
       optionB: "v/2",
       optionC: "2v",
-      optionD: "Zero",
-      correctOption: "D",
+      optionD: "v",
+      correctOption: "A",
       explanation: "In pure rolling, the instantaneous velocity of the contact point is zero.",
       orderIndex: 5
     },
@@ -1726,9 +3249,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "A disc of moment of inertia 2 kg·m² spins at 3 rad/s. Its angular momentum is:",
       optionA: "3 kg·m²/s",
       optionB: "9 kg·m²/s",
-      optionC: "5 kg·m²/s",
-      optionD: "6 kg·m²/s",
-      correctOption: "D",
+      optionC: "6 kg·m²/s",
+      optionD: "5 kg·m²/s",
+      correctOption: "C",
       explanation: "L = Iω = 2 × 3 = 6 kg·m²/s.",
       orderIndex: 7
     },
@@ -1736,11 +3259,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-chemical-bonding-q01",
       topicId: "jee-chemistry-chemical-bonding",
       text: "The shape of a molecule with sp³ hybridisation and no lone pairs is:",
-      optionA: "Tetrahedral",
-      optionB: "Trigonal planar",
+      optionA: "Trigonal planar",
+      optionB: "Tetrahedral",
       optionC: "Linear",
       optionD: "Octahedral",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "Four equivalent sp³ orbitals point to the corners of a tetrahedron (109.5°).",
       orderIndex: 0
     },
@@ -1749,10 +3272,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-chemical-bonding",
       text: "The bond angle in a water molecule is approximately:",
       optionA: "90°",
-      optionB: "104.5°",
-      optionC: "109.5°",
+      optionB: "109.5°",
+      optionC: "104.5°",
       optionD: "120°",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Two lone pairs on the sp³ oxygen compress the H–O–H angle to about 104.5°.",
       orderIndex: 1
     },
@@ -1760,11 +3283,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-chemical-bonding-q03",
       topicId: "jee-chemistry-chemical-bonding",
       text: "Which molecule has a zero net dipole moment despite polar bonds?",
-      optionA: "CO₂",
-      optionB: "NH₃",
+      optionA: "NH₃",
+      optionB: "CO₂",
       optionC: "HCl",
       optionD: "H₂O",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "CO₂ is linear and symmetric, so the two bond dipoles cancel exactly.",
       orderIndex: 2
     },
@@ -1796,11 +3319,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-chemical-bonding-q06",
       topicId: "jee-chemistry-chemical-bonding",
       text: "The hybridisation of carbon in ethyne (C₂H₂) is:",
-      optionA: "sp",
+      optionA: "sp³d",
       optionB: "sp²",
       optionC: "sp³",
-      optionD: "sp³d",
-      correctOption: "A",
+      optionD: "sp",
+      correctOption: "D",
       explanation: "The triple-bonded carbons in ethyne are sp hybridised, giving a linear molecule.",
       orderIndex: 5
     },
@@ -1809,10 +3332,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-chemical-bonding",
       text: "The unusually high boiling point of water is mainly due to:",
       optionA: "Ionic bonding",
-      optionB: "Hydrogen bonding",
-      optionC: "Van der Waals forces",
+      optionB: "Van der Waals forces",
+      optionC: "Hydrogen bonding",
       optionD: "Metallic bonding",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Extensive hydrogen bonding between water molecules requires extra energy to break.",
       orderIndex: 6
     },
@@ -1820,11 +3343,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-chemical-bonding-q08",
       topicId: "jee-chemistry-chemical-bonding",
       text: "In the ammonium ion (NH₄⁺), the fourth N–H bond is a:",
-      optionA: "Ionic bond",
+      optionA: "Coordinate bond",
       optionB: "Metallic bond",
       optionC: "Hydrogen bond",
-      optionD: "Coordinate bond",
-      correctOption: "D",
+      optionD: "Ionic bond",
+      correctOption: "A",
       explanation: "The lone pair on nitrogen forms a coordinate (dative) bond with the proton.",
       orderIndex: 7
     },
@@ -1833,10 +3356,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-quadratic-equations",
       text: "For the equation x² − 5x + 6 = 0, the sum of the roots is:",
       optionA: "6",
-      optionB: "−5",
-      optionC: "5",
+      optionB: "5",
+      optionC: "−5",
       optionD: "−6",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Sum of roots = −b/a = −(−5)/1 = 5 (roots are 2 and 3).",
       orderIndex: 0
     },
@@ -1845,10 +3368,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-quadratic-equations",
       text: "The discriminant of 2x² + 3x + 5 = 0 is:",
       optionA: "31",
-      optionB: "−31",
+      optionB: "−49",
       optionC: "49",
-      optionD: "−49",
-      correctOption: "B",
+      optionD: "−31",
+      correctOption: "D",
       explanation: "D = b² − 4ac = 9 − 40 = −31, so the roots are complex.",
       orderIndex: 1
     },
@@ -1856,11 +3379,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-quadratic-equations-q03",
       topicId: "jee-mathematics-quadratic-equations",
       text: "If the roots of a quadratic are equal, the discriminant is:",
-      optionA: "Zero",
-      optionB: "Negative",
+      optionA: "Negative",
+      optionB: "Zero",
       optionC: "Irrational",
       optionD: "Positive",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "Equal real roots occur exactly when D = b² − 4ac = 0.",
       orderIndex: 2
     },
@@ -1868,11 +3391,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-quadratic-equations-q04",
       topicId: "jee-mathematics-quadratic-equations",
       text: "The quadratic equation whose roots are 3 and −2 is:",
-      optionA: "x² − x − 6 = 0",
+      optionA: "x² − 5x + 6 = 0",
       optionB: "x² + x − 6 = 0",
-      optionC: "x² − 5x + 6 = 0",
+      optionC: "x² − x − 6 = 0",
       optionD: "x² + 5x + 6 = 0",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Sum = 1, product = −6, so x² − (1)x + (−6) = x² − x − 6 = 0.",
       orderIndex: 3
     },
@@ -1882,9 +3405,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "For ax² + bx + c > 0 to hold for all real x, we require:",
       optionA: "a > 0 and D > 0",
       optionB: "a < 0 and D > 0",
-      optionC: "a < 0 and D < 0",
-      optionD: "a > 0 and D < 0",
-      correctOption: "D",
+      optionC: "a > 0 and D < 0",
+      optionD: "a < 0 and D < 0",
+      correctOption: "C",
       explanation: "An upward parabola (a > 0) that never touches the x-axis (D < 0) is always positive.",
       orderIndex: 4
     },
@@ -1904,11 +3427,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-quadratic-equations-q07",
       topicId: "jee-mathematics-quadratic-equations",
       text: "The vertex of the parabola y = x² − 4x + 7 lies at x =:",
-      optionA: "2",
+      optionA: "−2",
       optionB: "1",
       optionC: "4",
-      optionD: "−2",
-      correctOption: "A",
+      optionD: "2",
+      correctOption: "D",
       explanation: "The vertex is at x = −b/(2a) = 4/2 = 2.",
       orderIndex: 6
     },
@@ -1916,11 +3439,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-quadratic-equations-q08",
       topicId: "jee-mathematics-quadratic-equations",
       text: "The product of the roots of 3x² − 12x + 9 = 0 is:",
-      optionA: "1",
+      optionA: "3",
       optionB: "4",
-      optionC: "3",
+      optionC: "1",
       optionD: "9",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Product = c/a = 9/3 = 3.",
       orderIndex: 7
     },
@@ -1928,11 +3451,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-laws-of-motion-q01",
       topicId: "jee-physics-laws-of-motion",
       text: "A net force of 12 N acts on a 3 kg block. Its acceleration is:",
-      optionA: "2 m/s²",
+      optionA: "4 m/s²",
       optionB: "36 m/s²",
       optionC: "9 m/s²",
-      optionD: "4 m/s²",
-      correctOption: "D",
+      optionD: "2 m/s²",
+      correctOption: "A",
       explanation: "By Newton's second law a = F/m = 12/3 = 4 m/s².",
       orderIndex: 0
     },
@@ -1941,10 +3464,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-laws-of-motion",
       text: "Newton's third law force pairs always act on:",
       optionA: "The same body",
-      optionB: "Massless objects only",
-      optionC: "Two different bodies",
+      optionB: "Two different bodies",
+      optionC: "Massless objects only",
       optionD: "The Earth only",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Action and reaction are equal, opposite, and act on different bodies.",
       orderIndex: 1
     },
@@ -1952,11 +3475,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-laws-of-motion-q03",
       topicId: "jee-physics-laws-of-motion",
       text: "A block on a horizontal surface has mu_s = 0.5 and mass 4 kg (g = 10). Maximum static friction is:",
-      optionA: "10 N",
+      optionA: "20 N",
       optionB: "40 N",
       optionC: "2 N",
-      optionD: "20 N",
-      correctOption: "D",
+      optionD: "10 N",
+      correctOption: "A",
       explanation: "f_max = mu_s x N = 0.5 x 4 x 10 = 20 N.",
       orderIndex: 2
     },
@@ -1966,9 +3489,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The angle of repose theta for a surface with coefficient of friction mu satisfies:",
       optionA: "sin(theta) = mu",
       optionB: "cos(theta) = mu",
-      optionC: "tan(theta) = mu",
-      optionD: "theta = mu",
-      correctOption: "C",
+      optionC: "theta = mu",
+      optionD: "tan(theta) = mu",
+      correctOption: "D",
       explanation: "A block just slides when tan(theta) equals the coefficient of static friction.",
       orderIndex: 3
     },
@@ -2001,10 +3524,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-laws-of-motion",
       text: "Two blocks of 2 kg and 3 kg connected by a string are pulled by 20 N on a frictionless floor. Acceleration is:",
       optionA: "10 m/s²",
-      optionB: "6.7 m/s²",
-      optionC: "4 m/s²",
+      optionB: "4 m/s²",
+      optionC: "6.7 m/s²",
       optionD: "2 m/s²",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "a = F/(m1 + m2) = 20/5 = 4 m/s².",
       orderIndex: 6
     },
@@ -2012,11 +3535,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-laws-of-motion-q08",
       topicId: "jee-physics-laws-of-motion",
       text: "A body in equilibrium under three forces means the forces:",
-      optionA: "Are all equal",
+      optionA: "Form a closed triangle",
       optionB: "Are perpendicular",
-      optionC: "Form a closed triangle",
+      optionC: "Are all equal",
       optionD: "Have zero magnitude",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Three concurrent forces in equilibrium add vectorially to zero, forming a closed triangle.",
       orderIndex: 7
     },
@@ -2048,11 +3571,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-work-energy-power-q03",
       topicId: "jee-physics-work-energy-power",
       text: "Work done by a force perpendicular to the displacement is:",
-      optionA: "Maximum",
+      optionA: "Zero",
       optionB: "Equal to F x s",
-      optionC: "Zero",
+      optionC: "Maximum",
       optionD: "Negative",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "W = Fs cos(90) = 0; a perpendicular force does no work.",
       orderIndex: 2
     },
@@ -2073,10 +3596,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-work-energy-power",
       text: "In a perfectly inelastic collision, the conserved quantity is:",
       optionA: "Kinetic energy",
-      optionB: "Neither",
+      optionB: "Momentum",
       optionC: "Both KE and momentum",
-      optionD: "Momentum",
-      correctOption: "D",
+      optionD: "Neither",
+      correctOption: "B",
       explanation: "Momentum is conserved in all collisions; kinetic energy is lost when inelastic.",
       orderIndex: 4
     },
@@ -2084,11 +3607,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-work-energy-power-q06",
       topicId: "jee-physics-work-energy-power",
       text: "A 1000 W motor lifting a load does how much work in 10 s?",
-      optionA: "100 J",
+      optionA: "10000 J",
       optionB: "1000 J",
       optionC: "100000 J",
-      optionD: "10000 J",
-      correctOption: "D",
+      optionD: "100 J",
+      correctOption: "A",
       explanation: "W = P x t = 1000 x 10 = 10000 J.",
       orderIndex: 5
     },
@@ -2098,9 +3621,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "For a perfectly elastic collision, the coefficient of restitution e equals:",
       optionA: "0",
       optionB: "0.5",
-      optionC: "2",
-      optionD: "1",
-      correctOption: "D",
+      optionC: "1",
+      optionD: "2",
+      correctOption: "C",
       explanation: "e = 1 for elastic collisions; e = 0 for perfectly inelastic ones.",
       orderIndex: 6
     },
@@ -2120,11 +3643,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-gravitation-q01",
       topicId: "jee-physics-gravitation",
       text: "The escape velocity from Earth is approximately:",
-      optionA: "11.2 km/s",
+      optionA: "3.0 km/s",
       optionB: "7.9 km/s",
-      optionC: "3.0 km/s",
+      optionC: "11.2 km/s",
       optionD: "30 km/s",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Earth's escape velocity is about 11.2 km/s, equal to sqrt(2GM/R).",
       orderIndex: 0
     },
@@ -2132,11 +3655,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-gravitation-q02",
       topicId: "jee-physics-gravitation",
       text: "If the distance between two masses is doubled, the gravitational force becomes:",
-      optionA: "Half",
+      optionA: "One-quarter",
       optionB: "Four times",
       optionC: "Double",
-      optionD: "One-quarter",
-      correctOption: "D",
+      optionD: "Half",
+      correctOption: "A",
       explanation: "Force varies as 1/r²; doubling r reduces it to one-quarter.",
       orderIndex: 1
     },
@@ -2156,11 +3679,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-gravitation-q04",
       topicId: "jee-physics-gravitation",
       text: "Kepler's third law states that the square of the orbital period is proportional to:",
-      optionA: "Orbital radius",
+      optionA: "Cube of the radius",
       optionB: "Square of the radius",
-      optionC: "Cube of the radius",
+      optionC: "Orbital radius",
       optionD: "Mass of the planet",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "T² is proportional to r³, Kepler's law of periods.",
       orderIndex: 3
     },
@@ -2180,11 +3703,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-gravitation-q06",
       topicId: "jee-physics-gravitation",
       text: "The period of a geostationary satellite is:",
-      optionA: "24 hours",
+      optionA: "365 days",
       optionB: "12 hours",
       optionC: "1 hour",
-      optionD: "365 days",
-      correctOption: "A",
+      optionD: "24 hours",
+      correctOption: "D",
       explanation: "A geostationary satellite matches Earth's rotation with a 24-hour period.",
       orderIndex: 5
     },
@@ -2192,11 +3715,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-gravitation-q07",
       topicId: "jee-physics-gravitation",
       text: "The gravitational potential energy of two masses separated by r is:",
-      optionA: "-GMm/r",
-      optionB: "+GMm/r",
+      optionA: "+GMm/r",
+      optionB: "-GMm/r",
       optionC: "-GMm/r²",
       optionD: "GMm/r²",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "Gravitational PE is negative: U = -GMm/r, taken zero at infinity.",
       orderIndex: 6
     },
@@ -2204,11 +3727,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-gravitation-q08",
       topicId: "jee-physics-gravitation",
       text: "At the centre of the Earth, the acceleration due to gravity is:",
-      optionA: "Maximum",
+      optionA: "Zero",
       optionB: "Equal to surface g",
       optionC: "Infinite",
-      optionD: "Zero",
-      correctOption: "D",
+      optionD: "Maximum",
+      correctOption: "A",
       explanation: "g decreases linearly with depth and is zero at the centre.",
       orderIndex: 7
     },
@@ -2216,11 +3739,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-shm-waves-q01",
       topicId: "jee-physics-shm-waves",
       text: "The time period of a simple pendulum of length L is:",
-      optionA: "2*pi*sqrt(g/L)",
-      optionB: "2*pi*sqrt(L/g)",
+      optionA: "2*pi*sqrt(L/g)",
+      optionB: "2*pi*sqrt(g/L)",
       optionC: "2*pi*sqrt(m/k)",
       optionD: "sqrt(L/g)",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "The pendulum period is 2*pi*sqrt(L/g), independent of mass.",
       orderIndex: 0
     },
@@ -2229,10 +3752,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-shm-waves",
       text: "In SHM, the acceleration is maximum at:",
       optionA: "The mean position",
-      optionB: "The extreme position",
-      optionC: "Halfway",
+      optionB: "Halfway",
+      optionC: "The extreme position",
       optionD: "Everywhere equal",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Acceleration a = -omega²x is maximum where displacement x is largest, at the extremes.",
       orderIndex: 1
     },
@@ -2241,10 +3764,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-shm-waves",
       text: "A spring-mass system has k = 100 N/m and m = 1 kg. Its angular frequency is:",
       optionA: "5 rad/s",
-      optionB: "10 rad/s",
+      optionB: "1 rad/s",
       optionC: "100 rad/s",
-      optionD: "1 rad/s",
-      correctOption: "B",
+      optionD: "10 rad/s",
+      correctOption: "D",
       explanation: "omega = sqrt(k/m) = sqrt(100) = 10 rad/s.",
       orderIndex: 2
     },
@@ -2253,10 +3776,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-shm-waves",
       text: "Two tuning forks of 256 Hz and 260 Hz produce beats at a frequency of:",
       optionA: "2 Hz",
-      optionB: "4 Hz",
-      optionC: "8 Hz",
+      optionB: "8 Hz",
+      optionC: "4 Hz",
       optionD: "516 Hz",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Beat frequency equals the difference, 260 - 256 = 4 Hz.",
       orderIndex: 3
     },
@@ -2264,11 +3787,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-shm-waves-q05",
       topicId: "jee-physics-shm-waves",
       text: "The velocity of a wave with frequency 50 Hz and wavelength 4 m is:",
-      optionA: "12.5 m/s",
-      optionB: "200 m/s",
+      optionA: "200 m/s",
+      optionB: "12.5 m/s",
       optionC: "54 m/s",
       optionD: "100 m/s",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "v = f x lambda = 50 x 4 = 200 m/s.",
       orderIndex: 4
     },
@@ -2278,9 +3801,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The total energy of a particle in SHM is proportional to:",
       optionA: "Amplitude",
       optionB: "Frequency only",
-      optionC: "Inverse of amplitude",
-      optionD: "Square of amplitude",
-      correctOption: "D",
+      optionC: "Square of amplitude",
+      optionD: "Inverse of amplitude",
+      correctOption: "C",
       explanation: "Total energy E = 0.5 k A² is proportional to the square of the amplitude.",
       orderIndex: 5
     },
@@ -2313,10 +3836,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-electrostatics",
       text: "The force between two charges is F. If each charge is doubled, the new force is:",
       optionA: "2F",
-      optionB: "4F",
+      optionB: "F/4",
       optionC: "F/2",
-      optionD: "F/4",
-      correctOption: "B",
+      optionD: "4F",
+      correctOption: "D",
       explanation: "F is proportional to the product of charges; doubling both gives 4F.",
       orderIndex: 0
     },
@@ -2324,11 +3847,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-electrostatics-q02",
       topicId: "jee-physics-electrostatics",
       text: "The electric field inside a charged conductor in electrostatic equilibrium is:",
-      optionA: "Zero",
+      optionA: "Maximum",
       optionB: "Equal to the surface field",
-      optionC: "Maximum",
+      optionC: "Zero",
       optionD: "Infinite",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Charges reside on the surface, leaving the field inside a conductor zero.",
       orderIndex: 1
     },
@@ -2336,11 +3859,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-electrostatics-q03",
       topicId: "jee-physics-electrostatics",
       text: "Electric potential is a:",
-      optionA: "Vector quantity",
+      optionA: "Scalar quantity",
       optionB: "Always zero",
       optionC: "Tensor",
-      optionD: "Scalar quantity",
-      correctOption: "D",
+      optionD: "Vector quantity",
+      correctOption: "A",
       explanation: "Potential is a scalar; potentials from multiple charges add algebraically.",
       orderIndex: 2
     },
@@ -2349,10 +3872,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-electrostatics",
       text: "By Gauss's law, the total electric flux through a closed surface depends on:",
       optionA: "Surface area",
-      optionB: "Charge enclosed",
+      optionB: "External charges",
       optionC: "Shape of the surface",
-      optionD: "External charges",
-      correctOption: "B",
+      optionD: "Charge enclosed",
+      correctOption: "D",
       explanation: "Flux equals q_enclosed/epsilon0, independent of shape or external charges.",
       orderIndex: 3
     },
@@ -2362,9 +3885,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Inserting a dielectric of constant K between capacitor plates changes capacitance to:",
       optionA: "C/K",
       optionB: "C unchanged",
-      optionC: "C + K",
-      optionD: "K x C",
-      correctOption: "D",
+      optionC: "K x C",
+      optionD: "C + K",
+      correctOption: "C",
       explanation: "A dielectric raises capacitance by the factor K to K times C.",
       orderIndex: 4
     },
@@ -2372,11 +3895,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-electrostatics-q06",
       topicId: "jee-physics-electrostatics",
       text: "The energy stored in a capacitor of capacitance C charged to voltage V is:",
-      optionA: "CV",
+      optionA: "0.5 C V²",
       optionB: "0.5 C V",
       optionC: "C V²",
-      optionD: "0.5 C V²",
-      correctOption: "D",
+      optionD: "CV",
+      correctOption: "A",
       explanation: "Stored energy is U = 0.5 x C x V².",
       orderIndex: 5
     },
@@ -2384,11 +3907,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-electrostatics-q07",
       topicId: "jee-physics-electrostatics",
       text: "The electric field due to an infinite charged sheet of surface density sigma is:",
-      optionA: "sigma/(2 epsilon0)",
+      optionA: "Depends on distance",
       optionB: "sigma/epsilon0",
-      optionC: "Depends on distance",
+      optionC: "sigma/(2 epsilon0)",
       optionD: "Zero",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "The field of an infinite sheet is sigma/(2 epsilon0), independent of distance.",
       orderIndex: 6
     },
@@ -2409,10 +3932,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-current-electricity",
       text: "A 12 V battery drives 3 A through a resistor. The resistance is:",
       optionA: "0.25 ohm",
-      optionB: "36 ohm",
+      optionB: "4 ohm",
       optionC: "15 ohm",
-      optionD: "4 ohm",
-      correctOption: "D",
+      optionD: "36 ohm",
+      correctOption: "B",
       explanation: "By Ohm's law R = V/I = 12/3 = 4 ohm.",
       orderIndex: 0
     },
@@ -2420,11 +3943,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-current-electricity-q02",
       topicId: "jee-physics-current-electricity",
       text: "Two resistors of 6 ohm each in parallel give an equivalent of:",
-      optionA: "3 ohm",
+      optionA: "1.5 ohm",
       optionB: "6 ohm",
       optionC: "12 ohm",
-      optionD: "1.5 ohm",
-      correctOption: "A",
+      optionD: "3 ohm",
+      correctOption: "D",
       explanation: "Equal parallel resistors halve: 6/2 = 3 ohm.",
       orderIndex: 1
     },
@@ -2433,10 +3956,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-current-electricity",
       text: "Kirchhoff's junction rule is a statement of conservation of:",
       optionA: "Energy",
-      optionB: "Charge",
+      optionB: "Power",
       optionC: "Momentum",
-      optionD: "Power",
-      correctOption: "B",
+      optionD: "Charge",
+      correctOption: "D",
       explanation: "The junction rule reflects conservation of charge: current in equals current out.",
       orderIndex: 2
     },
@@ -2445,10 +3968,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-current-electricity",
       text: "The power dissipated in a 5 ohm resistor carrying 2 A is:",
       optionA: "10 W",
-      optionB: "2.5 W",
+      optionB: "20 W",
       optionC: "40 W",
-      optionD: "20 W",
-      correctOption: "D",
+      optionD: "2.5 W",
+      correctOption: "B",
       explanation: "P = I²R = 4 x 5 = 20 W.",
       orderIndex: 3
     },
@@ -2456,11 +3979,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-current-electricity-q05",
       topicId: "jee-physics-current-electricity",
       text: "The resistance of a wire of length L and area A with resistivity rho is:",
-      optionA: "rho L / A",
-      optionB: "rho A / L",
+      optionA: "rho A / L",
+      optionB: "rho L / A",
       optionC: "L / (rho A)",
       optionD: "rho L A",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "R = rho x L / A; resistance grows with length and falls with area.",
       orderIndex: 4
     },
@@ -2470,9 +3993,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "A Wheatstone bridge is balanced when:",
       optionA: "All arms are equal",
       optionB: "Galvanometer reads maximum",
-      optionC: "The cell is removed",
-      optionD: "P/Q = R/S",
-      correctOption: "D",
+      optionC: "P/Q = R/S",
+      optionD: "The cell is removed",
+      correctOption: "C",
       explanation: "Balance occurs when P/Q = R/S, giving no galvanometer current.",
       orderIndex: 5
     },
@@ -2480,11 +4003,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-current-electricity-q07",
       topicId: "jee-physics-current-electricity",
       text: "Three 2 ohm resistors in series give a total resistance of:",
-      optionA: "2 ohm",
+      optionA: "6 ohm",
       optionB: "0.67 ohm",
-      optionC: "6 ohm",
+      optionC: "2 ohm",
       optionD: "8 ohm",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Series resistances add: 2 + 2 + 2 = 6 ohm.",
       orderIndex: 6
     },
@@ -2492,11 +4015,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-current-electricity-q08",
       topicId: "jee-physics-current-electricity",
       text: "The terminal voltage of a cell of emf E and internal resistance r carrying current I is:",
-      optionA: "E - Ir",
+      optionA: "E x Ir",
       optionB: "E + Ir",
-      optionC: "E x Ir",
+      optionC: "E - Ir",
       optionD: "Ir - E",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Terminal voltage V = E - Ir while the cell delivers current.",
       orderIndex: 7
     },
@@ -2516,11 +4039,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-magnetism-emi-q02",
       topicId: "jee-physics-magnetism-emi",
       text: "The direction of an induced current is given by:",
-      optionA: "Ohm's law",
-      optionB: "Lenz's law",
+      optionA: "Lenz's law",
+      optionB: "Ohm's law",
       optionC: "Coulomb's law",
       optionD: "Gauss's law",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "Lenz's law: the induced current opposes the change in flux that produces it.",
       orderIndex: 1
     },
@@ -2540,11 +4063,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-magnetism-emi-q04",
       topicId: "jee-physics-magnetism-emi",
       text: "The magnetic field at distance r from a long straight wire carrying current I is:",
-      optionA: "mu0 I / (2 pi r)",
+      optionA: "mu0 I r",
       optionB: "mu0 I / (2 r)",
-      optionC: "mu0 I r",
+      optionC: "mu0 I / (2 pi r)",
       optionD: "mu0 I / r²",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "By Ampere's law, B = mu0 I / (2 pi r) around a long straight wire.",
       orderIndex: 3
     },
@@ -2552,11 +4075,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-magnetism-emi-q05",
       topicId: "jee-physics-magnetism-emi",
       text: "A rod of length L moves at speed v perpendicular to a field B. The motional emf is:",
-      optionA: "BL/v",
-      optionB: "BLv",
+      optionA: "BLv",
+      optionB: "BL/v",
       optionC: "Bv/L",
       optionD: "BLv²",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "Motional emf is B x L x v for a rod moving perpendicular to the field.",
       orderIndex: 4
     },
@@ -2578,9 +4101,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The inductive reactance of an inductor at angular frequency omega is:",
       optionA: "1/(omega L)",
       optionB: "L/omega",
-      optionC: "omega/L",
-      optionD: "omega L",
-      correctOption: "D",
+      optionC: "omega L",
+      optionD: "omega/L",
+      correctOption: "C",
       explanation: "Inductive reactance X_L = omega x L and rises with frequency.",
       orderIndex: 6
     },
@@ -2590,9 +4113,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "An LC circuit resonates at an angular frequency of:",
       optionA: "sqrt(LC)",
       optionB: "LC",
-      optionC: "1/sqrt(LC)",
-      optionD: "1/(LC)",
-      correctOption: "C",
+      optionC: "1/(LC)",
+      optionD: "1/sqrt(LC)",
+      correctOption: "D",
       explanation: "Resonance occurs at omega = 1/sqrt(LC).",
       orderIndex: 7
     },
@@ -2602,9 +4125,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The focal length of a concave mirror of radius of curvature 20 cm is:",
       optionA: "20 cm",
       optionB: "40 cm",
-      optionC: "10 cm",
-      optionD: "5 cm",
-      correctOption: "C",
+      optionC: "5 cm",
+      optionD: "10 cm",
+      correctOption: "D",
       explanation: "Focal length f = R/2 = 20/2 = 10 cm.",
       orderIndex: 0
     },
@@ -2625,10 +4148,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-optics",
       text: "The power of a lens of focal length 50 cm is:",
       optionA: "0.5 D",
-      optionB: "2 D",
+      optionB: "5 D",
       optionC: "50 D",
-      optionD: "5 D",
-      correctOption: "B",
+      optionD: "2 D",
+      correctOption: "D",
       explanation: "Power = 1/f(in metres) = 1/0.5 = 2 dioptres.",
       orderIndex: 2
     },
@@ -2638,9 +4161,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "In Young's double-slit experiment, the fringe width is:",
       optionA: "lambda d / D",
       optionB: "D d / lambda",
-      optionC: "lambda D / d",
-      optionD: "lambda / (D d)",
-      correctOption: "C",
+      optionC: "lambda / (D d)",
+      optionD: "lambda D / d",
+      correctOption: "D",
       explanation: "Fringe width beta = lambda x D / d.",
       orderIndex: 3
     },
@@ -2650,9 +4173,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Snell's law relates the angles of incidence and refraction through:",
       optionA: "n1 cos(i) = n2 cos(r)",
       optionB: "n1 tan(i) = n2 tan(r)",
-      optionC: "n1 sin(i) = n2 sin(r)",
-      optionD: "n1 i = n2 r",
-      correctOption: "C",
+      optionC: "n1 i = n2 r",
+      optionD: "n1 sin(i) = n2 sin(r)",
+      correctOption: "D",
       explanation: "Snell's law: n1 sin(i) = n2 sin(r).",
       orderIndex: 4
     },
@@ -2661,10 +4184,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-optics",
       text: "For constructive interference, the path difference must be:",
       optionA: "An odd multiple of lambda/2",
-      optionB: "An integer multiple of lambda",
-      optionC: "lambda/4",
+      optionB: "lambda/4",
+      optionC: "An integer multiple of lambda",
       optionD: "Zero only",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Bright fringes appear where the path difference equals n times lambda.",
       orderIndex: 5
     },
@@ -2672,11 +4195,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-optics-q07",
       topicId: "jee-physics-optics",
       text: "When unpolarised light passes through two polarisers, Malus's law gives the transmitted intensity as:",
-      optionA: "I0 cos²(theta)",
+      optionA: "I0",
       optionB: "I0 cos(theta)",
       optionC: "I0 sin²(theta)",
-      optionD: "I0",
-      correctOption: "A",
+      optionD: "I0 cos²(theta)",
+      correctOption: "D",
       explanation: "Malus's law: I = I0 cos²(theta) for polarised light through an analyser.",
       orderIndex: 6
     },
@@ -2684,11 +4207,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-optics-q08",
       topicId: "jee-physics-optics",
       text: "A convex lens of focal length 10 cm forms an image of an object at 20 cm. The image distance is:",
-      optionA: "20 cm",
+      optionA: "40 cm",
       optionB: "10 cm",
       optionC: "5 cm",
-      optionD: "40 cm",
-      correctOption: "A",
+      optionD: "20 cm",
+      correctOption: "D",
       explanation: "1/v - 1/u = 1/f gives 1/v = 1/10 - 1/20, so v = 20 cm.",
       orderIndex: 7
     },
@@ -2696,11 +4219,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-modern-physics-q01",
       topicId: "jee-physics-modern-physics",
       text: "In the photoelectric effect, increasing the light intensity (frequency fixed) increases:",
-      optionA: "Number of emitted electrons",
+      optionA: "Work function",
       optionB: "Maximum kinetic energy",
       optionC: "Threshold frequency",
-      optionD: "Work function",
-      correctOption: "A",
+      optionD: "Number of emitted electrons",
+      correctOption: "D",
       explanation: "Higher intensity means more photons, hence more electrons, but the same maximum KE.",
       orderIndex: 0
     },
@@ -2720,11 +4243,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-modern-physics-q03",
       topicId: "jee-physics-modern-physics",
       text: "The de Broglie wavelength of a particle of momentum p is:",
-      optionA: "h p",
+      optionA: "h / p",
       optionB: "h / p²",
       optionC: "p / h",
-      optionD: "h / p",
-      correctOption: "D",
+      optionD: "h p",
+      correctOption: "A",
       explanation: "de Broglie wavelength lambda = h/p.",
       orderIndex: 2
     },
@@ -2732,11 +4255,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-modern-physics-q04",
       topicId: "jee-physics-modern-physics",
       text: "A radioactive sample has a half-life of 5 years. After 15 years the fraction remaining is:",
-      optionA: "1/8",
-      optionB: "1/4",
+      optionA: "1/4",
+      optionB: "1/8",
       optionC: "1/2",
       optionD: "1/16",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "15 years is three half-lives, leaving (1/2)³ = 1/8 of the sample.",
       orderIndex: 3
     },
@@ -2745,10 +4268,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-modern-physics",
       text: "Einstein's photoelectric equation is KE_max =:",
       optionA: "hf + phi",
-      optionB: "hf - phi",
-      optionC: "phi - hf",
+      optionB: "phi - hf",
+      optionC: "hf - phi",
       optionD: "hf x phi",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "KE_max = hf - phi, where phi is the work function.",
       orderIndex: 4
     },
@@ -2793,10 +4316,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-thermodynamics",
       text: "The first law of thermodynamics is a statement of conservation of:",
       optionA: "Mass",
-      optionB: "Energy",
-      optionC: "Momentum",
+      optionB: "Momentum",
+      optionC: "Energy",
       optionD: "Charge",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "The first law, delta U = Q - W, expresses conservation of energy.",
       orderIndex: 0
     },
@@ -2804,11 +4327,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-thermodynamics-q02",
       topicId: "jee-physics-thermodynamics",
       text: "In an isothermal process for an ideal gas, the change in internal energy is:",
-      optionA: "Zero",
-      optionB: "Negative",
+      optionA: "Negative",
+      optionB: "Zero",
       optionC: "Positive",
       optionD: "Equal to the work done",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "Internal energy depends on temperature only; at constant T, delta U = 0.",
       orderIndex: 1
     },
@@ -2816,11 +4339,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-thermodynamics-q03",
       topicId: "jee-physics-thermodynamics",
       text: "In an adiabatic process the quantity that stays constant is:",
-      optionA: "Temperature",
+      optionA: "Heat exchanged Q",
       optionB: "Pressure",
-      optionC: "Heat exchanged Q",
+      optionC: "Temperature",
       optionD: "Volume",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "An adiabatic process has Q = 0, with no heat exchanged.",
       orderIndex: 2
     },
@@ -2852,11 +4375,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-thermodynamics-q06",
       topicId: "jee-physics-thermodynamics",
       text: "The average kinetic energy of a gas molecule is proportional to:",
-      optionA: "Absolute temperature",
+      optionA: "Pressure",
       optionB: "Volume",
-      optionC: "Pressure",
+      optionC: "Absolute temperature",
       optionD: "Molar mass",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Average KE = (3/2)kT, proportional to absolute temperature.",
       orderIndex: 5
     },
@@ -2864,11 +4387,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-physics-thermodynamics-q07",
       topicId: "jee-physics-thermodynamics",
       text: "Mayer's relation for an ideal gas is:",
-      optionA: "Cp/Cv = R",
+      optionA: "Cp - Cv = R",
       optionB: "Cp + Cv = R",
       optionC: "Cp x Cv = R",
-      optionD: "Cp - Cv = R",
-      correctOption: "D",
+      optionD: "Cp/Cv = R",
+      correctOption: "A",
       explanation: "For an ideal gas, Cp - Cv = R (Mayer's relation).",
       orderIndex: 6
     },
@@ -2877,10 +4400,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-physics-thermodynamics",
       text: "The rms speed of gas molecules is proportional to:",
       optionA: "T",
-      optionB: "1/T",
-      optionC: "sqrt(T)",
+      optionB: "sqrt(T)",
+      optionC: "1/T",
       optionD: "T²",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "v_rms = sqrt(3RT/M) is proportional to the square root of temperature.",
       orderIndex: 7
     },
@@ -2902,9 +4425,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The principle that no two electrons can have all four quantum numbers identical is:",
       optionA: "Aufbau principle",
       optionB: "Hund's rule",
-      optionC: "Heisenberg principle",
-      optionD: "Pauli exclusion principle",
-      correctOption: "D",
+      optionC: "Pauli exclusion principle",
+      optionD: "Heisenberg principle",
+      correctOption: "C",
       explanation: "The Pauli exclusion principle forbids identical sets of four quantum numbers.",
       orderIndex: 1
     },
@@ -2913,10 +4436,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-atomic-structure",
       text: "The azimuthal quantum number l for a d subshell is:",
       optionA: "0",
-      optionB: "1",
+      optionB: "2",
       optionC: "3",
-      optionD: "2",
-      correctOption: "D",
+      optionD: "1",
+      correctOption: "B",
       explanation: "For d orbitals, l = 2 (s = 0, p = 1, d = 2, f = 3).",
       orderIndex: 2
     },
@@ -2926,9 +4449,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The Balmer series of hydrogen corresponds to electron transitions ending at:",
       optionA: "n = 1",
       optionB: "n = 4",
-      optionC: "n = 3",
-      optionD: "n = 2",
-      correctOption: "D",
+      optionC: "n = 2",
+      optionD: "n = 3",
+      correctOption: "C",
       explanation: "Balmer lines arise from transitions down to n = 2 and lie in the visible region.",
       orderIndex: 3
     },
@@ -2936,11 +4459,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-atomic-structure-q05",
       topicId: "jee-chemistry-atomic-structure",
       text: "Hund's rule of maximum multiplicity states that electrons:",
-      optionA: "Fill orbitals singly before pairing",
+      optionA: "Always pair with opposite spin",
       optionB: "Pair up first",
       optionC: "Occupy the highest orbital",
-      optionD: "Always pair with opposite spin",
-      correctOption: "A",
+      optionD: "Fill orbitals singly before pairing",
+      correctOption: "D",
       explanation: "Degenerate orbitals are singly filled before any pairing occurs.",
       orderIndex: 4
     },
@@ -2949,10 +4472,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-atomic-structure",
       text: "The electronic configuration of chromium (Z = 24) is anomalous as:",
       optionA: "[Ar] 3d4 4s2",
-      optionB: "[Ar] 3d5 4s1",
-      optionC: "[Ar] 3d6 4s0",
+      optionB: "[Ar] 3d6 4s0",
+      optionC: "[Ar] 3d5 4s1",
       optionD: "[Ar] 3d3 4s3",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Chromium adopts 3d5 4s1 for the extra stability of a half-filled d subshell.",
       orderIndex: 5
     },
@@ -2985,10 +4508,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-periodicity",
       text: "Across a period from left to right, atomic radius generally:",
       optionA: "Increases",
-      optionB: "First increases then decreases",
+      optionB: "Decreases",
       optionC: "Stays constant",
-      optionD: "Decreases",
-      correctOption: "D",
+      optionD: "First increases then decreases",
+      correctOption: "B",
       explanation: "Rising effective nuclear charge pulls electrons closer, shrinking the radius.",
       orderIndex: 0
     },
@@ -2996,11 +4519,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-periodicity-q02",
       topicId: "jee-chemistry-periodicity",
       text: "The modern periodic law arranges elements by increasing:",
-      optionA: "Atomic number",
+      optionA: "Valency",
       optionB: "Atomic mass",
       optionC: "Density",
-      optionD: "Valency",
-      correctOption: "A",
+      optionD: "Atomic number",
+      correctOption: "D",
       explanation: "Moseley's modern law orders elements by atomic number.",
       orderIndex: 1
     },
@@ -3008,11 +4531,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-periodicity-q03",
       topicId: "jee-chemistry-periodicity",
       text: "Down a group, ionisation energy generally:",
-      optionA: "Increases",
-      optionB: "Decreases",
+      optionA: "Decreases",
+      optionB: "Increases",
       optionC: "Stays constant",
       optionD: "Becomes zero",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "Added shells increase size, so electrons are easier to remove going down a group.",
       orderIndex: 2
     },
@@ -3020,11 +4543,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-periodicity-q04",
       topicId: "jee-chemistry-periodicity",
       text: "The most electronegative element in the periodic table is:",
-      optionA: "Fluorine",
+      optionA: "Nitrogen",
       optionB: "Chlorine",
       optionC: "Oxygen",
-      optionD: "Nitrogen",
-      correctOption: "A",
+      optionD: "Fluorine",
+      correctOption: "D",
       explanation: "Fluorine has the highest electronegativity on the Pauling scale.",
       orderIndex: 3
     },
@@ -3056,11 +4579,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-periodicity-q07",
       topicId: "jee-chemistry-periodicity",
       text: "The lanthanide contraction causes the atomic sizes of which pair to be nearly equal?",
-      optionA: "Zr and Hf",
+      optionA: "F and Cl",
       optionB: "Na and K",
       optionC: "Li and Be",
-      optionD: "F and Cl",
-      correctOption: "A",
+      optionD: "Zr and Hf",
+      correctOption: "D",
       explanation: "The lanthanide contraction makes Zr and Hf almost the same size.",
       orderIndex: 6
     },
@@ -3068,11 +4591,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-periodicity-q08",
       topicId: "jee-chemistry-periodicity",
       text: "Down a group, metallic character generally:",
-      optionA: "Increases",
-      optionB: "Decreases",
+      optionA: "Decreases",
+      optionB: "Increases",
       optionC: "Stays constant",
       optionD: "Disappears",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "Easier electron loss down a group increases metallic character.",
       orderIndex: 7
     },
@@ -3082,9 +4605,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The number of molecules in 2 moles of a gas is:",
       optionA: "6.022 x 10^23",
       optionB: "12 x 10^24",
-      optionC: "3.0 x 10^23",
-      optionD: "1.2 x 10^24",
-      correctOption: "D",
+      optionC: "1.2 x 10^24",
+      optionD: "3.0 x 10^23",
+      correctOption: "C",
       explanation: "2 moles contain 2 x 6.022 x 10^23 = 1.2 x 10^24 molecules.",
       orderIndex: 0
     },
@@ -3092,11 +4615,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-mole-concept-q02",
       topicId: "jee-chemistry-mole-concept",
       text: "The molar volume of an ideal gas at STP is:",
-      optionA: "11.2 L",
-      optionB: "22.4 L",
+      optionA: "22.4 L",
+      optionB: "11.2 L",
       optionC: "24.4 L",
       optionD: "1 L",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "One mole of ideal gas occupies 22.4 L at STP.",
       orderIndex: 1
     },
@@ -3104,11 +4627,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-mole-concept-q03",
       topicId: "jee-chemistry-mole-concept",
       text: "The number of moles in 36 g of water (molar mass 18) is:",
-      optionA: "1",
-      optionB: "2",
+      optionA: "2",
+      optionB: "1",
       optionC: "0.5",
       optionD: "18",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "moles = mass/molar mass = 36/18 = 2.",
       orderIndex: 2
     },
@@ -3117,10 +4640,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-mole-concept",
       text: "Molarity is defined as moles of solute per:",
       optionA: "Kilogram of solvent",
-      optionB: "Litre of solvent",
-      optionC: "Litre of solution",
+      optionB: "Litre of solution",
+      optionC: "Litre of solvent",
       optionD: "Mole of solution",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Molarity = moles of solute per litre of solution.",
       orderIndex: 3
     },
@@ -3129,10 +4652,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-mole-concept",
       text: "In a reaction, the reagent that is completely consumed is called the:",
       optionA: "Excess reagent",
-      optionB: "Limiting reagent",
+      optionB: "Product",
       optionC: "Catalyst",
-      optionD: "Product",
-      correctOption: "B",
+      optionD: "Limiting reagent",
+      correctOption: "D",
       explanation: "The limiting reagent runs out first and caps the amount of product.",
       orderIndex: 4
     },
@@ -3153,10 +4676,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-mole-concept",
       text: "On dilution of a solution, the number of moles of solute:",
       optionA: "Increases",
-      optionB: "Stays the same",
+      optionB: "Becomes zero",
       optionC: "Decreases",
-      optionD: "Becomes zero",
-      correctOption: "B",
+      optionD: "Stays the same",
+      correctOption: "D",
       explanation: "Dilution adds only solvent, so moles of solute stay constant (M1V1 = M2V2).",
       orderIndex: 6
     },
@@ -3165,10 +4688,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-mole-concept",
       text: "The empirical formula of a compound with 40 percent C, 6.7 percent H and 53.3 percent O (by mass) is:",
       optionA: "CHO",
-      optionB: "CH2O",
+      optionB: "CH4O",
       optionC: "C2H4O2",
-      optionD: "CH4O",
-      correctOption: "B",
+      optionD: "CH2O",
+      correctOption: "D",
       explanation: "Mole ratio C:H:O is about 1:2:1, giving the empirical formula CH2O.",
       orderIndex: 7
     },
@@ -3176,11 +4699,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-equilibrium-q01",
       topicId: "jee-chemistry-equilibrium",
       text: "At chemical equilibrium, the rates of the forward and reverse reactions are:",
-      optionA: "Zero",
+      optionA: "Equal",
       optionB: "Maximum",
-      optionC: "Equal",
+      optionC: "Zero",
       optionD: "Unrelated",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Equilibrium is dynamic: forward and reverse rates are equal.",
       orderIndex: 0
     },
@@ -3201,10 +4724,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-equilibrium",
       text: "Adding more reactant to a system at equilibrium shifts it, by Le Chatelier, toward the:",
       optionA: "Reactants",
-      optionB: "Solid phase",
+      optionB: "Products",
       optionC: "No change",
-      optionD: "Products",
-      correctOption: "D",
+      optionD: "Solid phase",
+      correctOption: "B",
       explanation: "Increasing a reactant drives the equilibrium toward the products.",
       orderIndex: 2
     },
@@ -3224,11 +4747,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-equilibrium-q05",
       topicId: "jee-chemistry-equilibrium",
       text: "Increasing pressure on a gaseous equilibrium shifts it toward the side with:",
-      optionA: "Fewer gas moles",
+      optionA: "Higher temperature",
       optionB: "More gas moles",
-      optionC: "Higher temperature",
+      optionC: "Fewer gas moles",
       optionD: "More solid",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Higher pressure favours the side with fewer moles of gas.",
       orderIndex: 4
     },
@@ -3238,9 +4761,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "A buffer solution is best described as one that resists changes in:",
       optionA: "Temperature",
       optionB: "Volume",
-      optionC: "pH",
-      optionD: "Colour",
-      correctOption: "C",
+      optionC: "Colour",
+      optionD: "pH",
+      correctOption: "D",
       explanation: "A buffer resists pH change on adding small amounts of acid or base.",
       orderIndex: 5
     },
@@ -3250,9 +4773,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The relation between Kp and Kc is Kp =:",
       optionA: "Kc + RT",
       optionB: "Kc / RT",
-      optionC: "Kc x RT",
-      optionD: "Kc (RT)^delta-n",
-      correctOption: "D",
+      optionC: "Kc (RT)^delta-n",
+      optionD: "Kc x RT",
+      correctOption: "C",
       explanation: "Kp = Kc (RT) raised to the change in moles of gas, delta-n.",
       orderIndex: 6
     },
@@ -3273,10 +4796,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-thermodynamics",
       text: "A reaction is spontaneous when the Gibbs energy change is:",
       optionA: "Positive",
-      optionB: "Infinite",
+      optionB: "Negative",
       optionC: "Zero",
-      optionD: "Negative",
-      correctOption: "D",
+      optionD: "Infinite",
+      correctOption: "B",
       explanation: "Spontaneity requires delta G to be negative.",
       orderIndex: 0
     },
@@ -3285,10 +4808,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-thermodynamics",
       text: "Hess's law is based on the fact that enthalpy is a:",
       optionA: "Path function",
-      optionB: "Random variable",
-      optionC: "State function",
+      optionB: "State function",
+      optionC: "Random variable",
       optionD: "Constant for all reactions",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Enthalpy is a state function, so delta H is path-independent.",
       orderIndex: 1
     },
@@ -3297,10 +4820,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-thermodynamics",
       text: "The Gibbs energy relation is delta G =:",
       optionA: "delta H + T delta S",
-      optionB: "delta H - T delta S",
-      optionC: "T delta S - delta H",
+      optionB: "T delta S - delta H",
+      optionC: "delta H - T delta S",
       optionD: "delta H x T delta S",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "delta G = delta H - T delta S.",
       orderIndex: 2
     },
@@ -3310,9 +4833,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "For an exothermic reaction, the enthalpy change delta H is:",
       optionA: "Positive",
       optionB: "Zero",
-      optionC: "Negative",
-      optionD: "Always one",
-      correctOption: "C",
+      optionC: "Always one",
+      optionD: "Negative",
+      correctOption: "D",
       explanation: "Exothermic reactions release heat, so delta H is negative.",
       orderIndex: 3
     },
@@ -3320,11 +4843,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-thermodynamics-q05",
       topicId: "jee-chemistry-thermodynamics",
       text: "The entropy of a perfect crystal at absolute zero is, by the third law:",
-      optionA: "Maximum",
-      optionB: "Zero",
+      optionA: "Zero",
+      optionB: "Maximum",
       optionC: "Negative",
       optionD: "Undefined",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "The third law sets the entropy of a perfect crystal at 0 K to zero.",
       orderIndex: 4
     },
@@ -3333,10 +4856,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-thermodynamics",
       text: "At equilibrium, the Gibbs energy change of a reaction is:",
       optionA: "Maximum",
-      optionB: "Minimum negative",
-      optionC: "Zero",
+      optionB: "Zero",
+      optionC: "Minimum negative",
       optionD: "Large positive",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "At equilibrium delta G = 0.",
       orderIndex: 5
     },
@@ -3344,11 +4867,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-thermodynamics-q07",
       topicId: "jee-chemistry-thermodynamics",
       text: "The relation between standard Gibbs energy and equilibrium constant is delta G-standard =:",
-      optionA: "RT ln K",
-      optionB: "-RT ln K",
+      optionA: "-RT ln K",
+      optionB: "RT ln K",
       optionC: "-R/T ln K",
       optionD: "RT/K",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "delta G-standard = -RT ln K links thermodynamics to equilibrium.",
       orderIndex: 6
     },
@@ -3370,9 +4893,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The stability order of carbocations is:",
       optionA: "methyl > 1 degree > 2 degree > 3 degree",
       optionB: "All equally stable",
-      optionC: "1 degree > 2 degree > 3 degree",
-      optionD: "3 degree > 2 degree > 1 degree > methyl",
-      correctOption: "D",
+      optionC: "3 degree > 2 degree > 1 degree > methyl",
+      optionD: "1 degree > 2 degree > 3 degree",
+      correctOption: "C",
       explanation: "Tertiary carbocations are most stable due to hyperconjugation and inductive donation.",
       orderIndex: 0
     },
@@ -3392,11 +4915,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-goc-q03",
       topicId: "jee-chemistry-goc",
       text: "The -NO2 group exerts which kind of inductive effect?",
-      optionA: "Electron-donating (+I)",
-      optionB: "Electron-withdrawing (-I)",
+      optionA: "Electron-withdrawing (-I)",
+      optionB: "Electron-donating (+I)",
       optionC: "No effect",
       optionD: "Only resonance",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "Nitro is strongly electron-withdrawing, showing a -I effect.",
       orderIndex: 2
     },
@@ -3406,9 +4929,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "A carbon atom bonded to four different groups is called:",
       optionA: "Quaternary",
       optionB: "Primary",
-      optionC: "Chiral",
-      optionD: "Aromatic",
-      correctOption: "C",
+      optionC: "Aromatic",
+      optionD: "Chiral",
+      correctOption: "D",
       explanation: "A chiral (asymmetric) carbon has four different substituents and is optically active.",
       orderIndex: 3
     },
@@ -3417,10 +4940,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-goc",
       text: "Which is the strongest acid among the following?",
       optionA: "Ethanol",
-      optionB: "Phenol",
-      optionC: "Acetic acid",
+      optionB: "Acetic acid",
+      optionC: "Phenol",
       optionD: "Water",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Carboxylic acids are stronger than phenols and alcohols due to resonance-stabilised anions.",
       orderIndex: 4
     },
@@ -3430,9 +4953,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Hyperconjugation involves the delocalisation of electrons from:",
       optionA: "Lone pairs",
       optionB: "pi to pi bonds",
-      optionC: "Adjacent C-H sigma bonds",
-      optionD: "d orbitals",
-      correctOption: "C",
+      optionC: "d orbitals",
+      optionD: "Adjacent C-H sigma bonds",
+      correctOption: "D",
       explanation: "Hyperconjugation delocalises electrons of neighbouring C-H sigma bonds into an empty or pi orbital.",
       orderIndex: 5
     },
@@ -3454,9 +4977,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The resonance (+M) effect of -OH on benzene makes the ring:",
       optionA: "Deactivated",
       optionB: "Inert",
-      optionC: "Activated toward electrophiles",
-      optionD: "Meta-directing",
-      correctOption: "C",
+      optionC: "Meta-directing",
+      optionD: "Activated toward electrophiles",
+      correctOption: "D",
       explanation: "-OH donates electrons by resonance, activating the ring and directing ortho/para.",
       orderIndex: 7
     },
@@ -3464,11 +4987,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-hydrocarbons-q01",
       topicId: "jee-chemistry-hydrocarbons",
       text: "The general formula of an alkane is:",
-      optionA: "CnH2n+2",
+      optionA: "CnHn",
       optionB: "CnH2n",
       optionC: "CnH2n-2",
-      optionD: "CnHn",
-      correctOption: "A",
+      optionD: "CnH2n+2",
+      correctOption: "D",
       explanation: "Saturated open-chain alkanes follow CnH2n+2.",
       orderIndex: 0
     },
@@ -3476,11 +4999,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-hydrocarbons-q02",
       topicId: "jee-chemistry-hydrocarbons",
       text: "Alkanes typically undergo which kind of reaction with halogens in sunlight?",
-      optionA: "Free-radical substitution",
-      optionB: "Electrophilic addition",
+      optionA: "Electrophilic addition",
+      optionB: "Free-radical substitution",
       optionC: "Nucleophilic substitution",
       optionD: "Elimination",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "Alkanes undergo free-radical substitution with halogens under UV light.",
       orderIndex: 1
     },
@@ -3488,11 +5011,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-hydrocarbons-q03",
       topicId: "jee-chemistry-hydrocarbons",
       text: "Markovnikov's rule predicts the addition of HBr to propene gives mainly:",
-      optionA: "2-bromopropane",
+      optionA: "Propane",
       optionB: "1-bromopropane",
-      optionC: "Propane",
+      optionC: "2-bromopropane",
       optionD: "Propyne",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "H adds to the carbon with more hydrogens, putting Br on C2 (2-bromopropane).",
       orderIndex: 2
     },
@@ -3500,11 +5023,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-hydrocarbons-q04",
       topicId: "jee-chemistry-hydrocarbons",
       text: "Benzene preferentially undergoes:",
-      optionA: "Electrophilic substitution",
+      optionA: "Free-radical addition",
       optionB: "Addition reactions",
       optionC: "Nucleophilic addition",
-      optionD: "Free-radical addition",
-      correctOption: "A",
+      optionD: "Electrophilic substitution",
+      correctOption: "D",
       explanation: "Aromatic stability makes benzene favour electrophilic substitution over addition.",
       orderIndex: 3
     },
@@ -3513,10 +5036,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-hydrocarbons",
       text: "The number of pi bonds in an alkyne triple bond is:",
       optionA: "0",
-      optionB: "1",
+      optionB: "2",
       optionC: "3",
-      optionD: "2",
-      correctOption: "D",
+      optionD: "1",
+      correctOption: "B",
       explanation: "A triple bond has one sigma and two pi bonds.",
       orderIndex: 4
     },
@@ -3524,11 +5047,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-hydrocarbons-q06",
       topicId: "jee-chemistry-hydrocarbons",
       text: "Aromaticity by Huckel's rule requires the number of pi electrons to equal:",
-      optionA: "4n",
+      optionA: "4n + 2",
       optionB: "2n",
-      optionC: "4n + 2",
+      optionC: "4n",
       optionD: "n + 1",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Huckel's rule: a planar cyclic system is aromatic with (4n + 2) pi electrons.",
       orderIndex: 5
     },
@@ -3560,11 +5083,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-coordination-compounds-q01",
       topicId: "jee-chemistry-coordination-compounds",
       text: "The coordination number of the central metal in [Co(NH3)6]3+ is:",
-      optionA: "3",
+      optionA: "6",
       optionB: "4",
-      optionC: "6",
+      optionC: "3",
       optionD: "2",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Six ammonia ligands give a coordination number of 6.",
       orderIndex: 0
     },
@@ -3609,10 +5132,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-coordination-compounds",
       text: "The spin-only magnetic moment for a complex with 2 unpaired electrons is about:",
       optionA: "1.73 BM",
-      optionB: "2.83 BM",
+      optionB: "0 BM",
       optionC: "3.87 BM",
-      optionD: "0 BM",
-      correctOption: "B",
+      optionD: "2.83 BM",
+      correctOption: "D",
       explanation: "mu = sqrt(n(n+2)) = sqrt(8) = 2.83 BM for n = 2.",
       orderIndex: 4
     },
@@ -3622,9 +5145,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "cis-trans isomerism in coordination compounds is a type of:",
       optionA: "Ionisation isomerism",
       optionB: "Optical isomerism",
-      optionC: "Linkage isomerism",
-      optionD: "Geometrical isomerism",
-      correctOption: "D",
+      optionC: "Geometrical isomerism",
+      optionD: "Linkage isomerism",
+      correctOption: "C",
       explanation: "cis and trans arrangements of ligands are geometrical isomers.",
       orderIndex: 5
     },
@@ -3633,10 +5156,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-coordination-compounds",
       text: "A polydentate ligand forming a ring with the metal is said to produce a:",
       optionA: "Lattice",
-      optionB: "Salt bridge",
-      optionC: "Chelate",
+      optionB: "Chelate",
+      optionC: "Salt bridge",
       optionD: "Polymer",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Ring formation by a polydentate ligand is called chelation, giving a chelate.",
       orderIndex: 6
     },
@@ -3645,10 +5168,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-coordination-compounds",
       text: "In the spectrochemical series, which ligand causes the largest crystal-field splitting?",
       optionA: "H2O",
-      optionB: "NH3",
-      optionC: "CO",
+      optionB: "CO",
+      optionC: "NH3",
       optionD: "Cl-",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "CO lies highest in the spectrochemical series, producing the largest splitting.",
       orderIndex: 7
     },
@@ -3656,11 +5179,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-electrochemistry-q01",
       topicId: "jee-chemistry-electrochemistry",
       text: "In a galvanic cell, oxidation occurs at the:",
-      optionA: "Cathode",
+      optionA: "Anode",
       optionB: "Salt bridge",
-      optionC: "Anode",
+      optionC: "Cathode",
       optionD: "Electrolyte",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Oxidation always occurs at the anode of any electrochemical cell.",
       orderIndex: 0
     },
@@ -3681,10 +5204,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-electrochemistry",
       text: "The standard cell potential is given by E-cathode minus:",
       optionA: "Zero",
-      optionB: "E-electrolyte",
-      optionC: "E-anode",
+      optionB: "E-anode",
+      optionC: "E-electrolyte",
       optionD: "Twice E-anode",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "E-cell-standard = E-cathode-standard minus E-anode-standard.",
       orderIndex: 2
     },
@@ -3694,9 +5217,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The Nernst equation introduces a correction term proportional to:",
       optionA: "1/Q",
       optionB: "Q squared",
-      optionC: "log Q",
-      optionD: "exp(Q)",
-      correctOption: "C",
+      optionC: "exp(Q)",
+      optionD: "log Q",
+      correctOption: "D",
       explanation: "The Nernst equation subtracts (0.059/n) log Q from the standard potential.",
       orderIndex: 3
     },
@@ -3704,11 +5227,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-electrochemistry-q05",
       topicId: "jee-chemistry-electrochemistry",
       text: "A positive standard reduction potential indicates a species that is a:",
-      optionA: "Strong reducing agent",
+      optionA: "Strong oxidising agent",
       optionB: "Poor conductor",
       optionC: "Neutral species",
-      optionD: "Strong oxidising agent",
-      correctOption: "D",
+      optionD: "Strong reducing agent",
+      correctOption: "A",
       explanation: "More positive reduction potential means a stronger tendency to be reduced, a good oxidiser.",
       orderIndex: 4
     },
@@ -3718,9 +5241,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The relation between Gibbs energy and cell potential is delta G-standard =:",
       optionA: "nFE-standard",
       optionB: "nF / E-standard",
-      optionC: "E-standard / nF",
-      optionD: "-nFE-standard",
-      correctOption: "D",
+      optionC: "-nFE-standard",
+      optionD: "E-standard / nF",
+      correctOption: "C",
       explanation: "delta G-standard = -nFE-cell-standard.",
       orderIndex: 5
     },
@@ -3728,11 +5251,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-electrochemistry-q07",
       topicId: "jee-chemistry-electrochemistry",
       text: "Kohlrausch's law concerns the molar conductivity at:",
-      optionA: "High concentration",
+      optionA: "Infinite dilution",
       optionB: "Freezing point",
       optionC: "Standard pressure",
-      optionD: "Infinite dilution",
-      correctOption: "D",
+      optionD: "High concentration",
+      correctOption: "A",
       explanation: "Kohlrausch's law gives molar conductivity at infinite dilution as a sum of ionic contributions.",
       orderIndex: 6
     },
@@ -3740,11 +5263,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-electrochemistry-q08",
       topicId: "jee-chemistry-electrochemistry",
       text: "Passing 96500 C through molten NaCl deposits how many gram-equivalents of sodium?",
-      optionA: "0.5",
-      optionB: "1",
+      optionA: "1",
+      optionB: "0.5",
       optionC: "2",
       optionD: "23",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "By Faraday's law, 96500 C deposits one gram-equivalent of the element.",
       orderIndex: 7
     },
@@ -3752,11 +5275,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-states-of-matter-q01",
       topicId: "jee-chemistry-states-of-matter",
       text: "Boyle's law states that at constant temperature, pressure is:",
-      optionA: "Inversely proportional to volume",
+      optionA: "Proportional to temperature",
       optionB: "Proportional to volume",
       optionC: "Independent of volume",
-      optionD: "Proportional to temperature",
-      correctOption: "A",
+      optionD: "Inversely proportional to volume",
+      correctOption: "D",
       explanation: "At constant T, PV is constant, so P varies inversely with V.",
       orderIndex: 0
     },
@@ -3764,11 +5287,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-states-of-matter-q02",
       topicId: "jee-chemistry-states-of-matter",
       text: "The ideal gas constant R in SI units is approximately:",
-      optionA: "0.0821 J/(mol K)",
+      optionA: "8.314 J/(mol K)",
       optionB: "96500 J/(mol K)",
       optionC: "22.4 J/(mol K)",
-      optionD: "8.314 J/(mol K)",
-      correctOption: "D",
+      optionD: "0.0821 J/(mol K)",
+      correctOption: "A",
       explanation: "R = 8.314 J/(mol K) in SI units.",
       orderIndex: 1
     },
@@ -3778,9 +5301,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Charles's law states that at constant pressure, volume is proportional to:",
       optionA: "Pressure",
       optionB: "1/Temperature",
-      optionC: "Absolute temperature",
-      optionD: "Number of collisions",
-      correctOption: "C",
+      optionC: "Number of collisions",
+      optionD: "Absolute temperature",
+      correctOption: "D",
       explanation: "At constant pressure, V is directly proportional to absolute temperature.",
       orderIndex: 2
     },
@@ -3789,10 +5312,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-states-of-matter",
       text: "Dalton's law of partial pressures states that the total pressure equals the:",
       optionA: "Product of partial pressures",
-      optionB: "Largest partial pressure",
+      optionB: "Sum of partial pressures",
       optionC: "Average of partial pressures",
-      optionD: "Sum of partial pressures",
-      correctOption: "D",
+      optionD: "Largest partial pressure",
+      correctOption: "B",
       explanation: "Total pressure is the sum of the partial pressures of all gases present.",
       orderIndex: 3
     },
@@ -3800,11 +5323,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-states-of-matter-q05",
       topicId: "jee-chemistry-states-of-matter",
       text: "The compressibility factor Z for an ideal gas is:",
-      optionA: "1",
+      optionA: "Greater than 1 always",
       optionB: "0",
-      optionC: "Greater than 1 always",
+      optionC: "1",
       optionD: "Less than 0",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "For an ideal gas Z = PV/nRT = 1.",
       orderIndex: 4
     },
@@ -3813,10 +5336,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-chemistry-states-of-matter",
       text: "In the van der Waals equation, the constant b corrects for the:",
       optionA: "Intermolecular attraction",
-      optionB: "Finite volume of molecules",
-      optionC: "Temperature drift",
+      optionB: "Temperature drift",
+      optionC: "Finite volume of molecules",
       optionD: "Number of moles",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "The constant b accounts for the finite volume occupied by gas molecules.",
       orderIndex: 5
     },
@@ -3836,11 +5359,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-chemistry-states-of-matter-q08",
       topicId: "jee-chemistry-states-of-matter",
       text: "The rms speed of gas molecules increases with:",
-      optionA: "Increasing temperature",
-      optionB: "Increasing molar mass",
+      optionA: "Increasing molar mass",
+      optionB: "Increasing temperature",
       optionC: "Decreasing temperature",
       optionD: "Increasing pressure only",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "v_rms = sqrt(3RT/M) rises with temperature and falls with molar mass.",
       orderIndex: 7
     },
@@ -3849,10 +5372,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-complex-numbers",
       text: "The modulus of the complex number 3 + 4i is:",
       optionA: "25",
-      optionB: "7",
-      optionC: "5",
+      optionB: "5",
+      optionC: "7",
       optionD: "1",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "|z| = sqrt(3² + 4²) = sqrt(25) = 5.",
       orderIndex: 0
     },
@@ -3872,11 +5395,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-complex-numbers-q03",
       topicId: "jee-mathematics-complex-numbers",
       text: "The sum of the three cube roots of unity is:",
-      optionA: "0",
+      optionA: "3",
       optionB: "1",
       optionC: "-1",
-      optionD: "3",
-      correctOption: "A",
+      optionD: "0",
+      correctOption: "D",
       explanation: "1 + omega + omega² = 0 for the cube roots of unity.",
       orderIndex: 2
     },
@@ -3896,11 +5419,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-complex-numbers-q05",
       topicId: "jee-mathematics-complex-numbers",
       text: "By De Moivre's theorem, (cos(theta) + i sin(theta)) raised to n equals:",
-      optionA: "cos(n theta) + i sin(n theta)",
+      optionA: "cos(theta/n) + i sin(theta/n)",
       optionB: "cos(n theta) - i sin(n theta)",
       optionC: "n cos(theta) + i n sin(theta)",
-      optionD: "cos(theta/n) + i sin(theta/n)",
-      correctOption: "A",
+      optionD: "cos(n theta) + i sin(n theta)",
+      correctOption: "D",
       explanation: "De Moivre's theorem gives cos(n theta) + i sin(n theta).",
       orderIndex: 4
     },
@@ -3910,9 +5433,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The product of a complex number z and its conjugate equals:",
       optionA: "z",
       optionB: "Modulus of z",
-      optionC: "Square of the modulus of z",
-      optionD: "Zero",
-      correctOption: "C",
+      optionC: "Zero",
+      optionD: "Square of the modulus of z",
+      correctOption: "D",
       explanation: "z times its conjugate equals |z|².",
       orderIndex: 5
     },
@@ -3932,11 +5455,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-complex-numbers-q08",
       topicId: "jee-mathematics-complex-numbers",
       text: "The equation |z - 2| = 3 represents in the complex plane a:",
-      optionA: "Straight line",
+      optionA: "Circle of radius 3",
       optionB: "Single point",
       optionC: "Parabola",
-      optionD: "Circle of radius 3",
-      correctOption: "D",
+      optionD: "Straight line",
+      correctOption: "A",
       explanation: "|z - z0| = r is a circle of radius r centred at z0, here radius 3 at 2.",
       orderIndex: 7
     },
@@ -3944,11 +5467,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-sequences-series-q01",
       topicId: "jee-mathematics-sequences-series",
       text: "The 10th term of the AP 2, 5, 8, ... is:",
-      optionA: "29",
-      optionB: "27",
+      optionA: "27",
+      optionB: "29",
       optionC: "30",
       optionD: "32",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "a_n = a + (n-1)d = 2 + 9(3) = 29.",
       orderIndex: 0
     },
@@ -3968,11 +5491,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-sequences-series-q03",
       topicId: "jee-mathematics-sequences-series",
       text: "The sum of an infinite GP with first term 1 and ratio 1/2 is:",
-      optionA: "2",
+      optionA: "Infinite",
       optionB: "1",
       optionC: "1.5",
-      optionD: "Infinite",
-      correctOption: "A",
+      optionD: "2",
+      correctOption: "D",
       explanation: "S = a/(1 - r) = 1/(1 - 0.5) = 2.",
       orderIndex: 2
     },
@@ -3980,11 +5503,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-sequences-series-q04",
       topicId: "jee-mathematics-sequences-series",
       text: "The geometric mean of 4 and 9 is:",
-      optionA: "6",
+      optionA: "13",
       optionB: "6.5",
-      optionC: "13",
+      optionC: "6",
       optionD: "36",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "GM = sqrt(4 x 9) = sqrt(36) = 6.",
       orderIndex: 3
     },
@@ -4006,9 +5529,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The 5th term of the GP 3, 6, 12, ... is:",
       optionA: "24",
       optionB: "96",
-      optionC: "48",
-      optionD: "36",
-      correctOption: "C",
+      optionC: "36",
+      optionD: "48",
+      correctOption: "D",
       explanation: "a_n = a r^(n-1) = 3 x 2^4 = 48.",
       orderIndex: 5
     },
@@ -4017,10 +5540,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-sequences-series",
       text: "The sum of squares of the first n natural numbers is:",
       optionA: "n(n+1)/2",
-      optionB: "[n(n+1)/2]²",
-      optionC: "n(n+1)(2n+1)/6",
+      optionB: "n(n+1)(2n+1)/6",
+      optionC: "[n(n+1)/2]²",
       optionD: "n²",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Sum of squares is n(n+1)(2n+1)/6.",
       orderIndex: 6
     },
@@ -4041,10 +5564,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-permutations-combinations",
       text: "The value of 5! (5 factorial) is:",
       optionA: "25",
-      optionB: "120",
+      optionB: "720",
       optionC: "60",
-      optionD: "720",
-      correctOption: "B",
+      optionD: "120",
+      correctOption: "D",
       explanation: "5! = 5 x 4 x 3 x 2 x 1 = 120.",
       orderIndex: 0
     },
@@ -4054,9 +5577,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The number of ways to choose 2 items from 5 distinct items is:",
       optionA: "5",
       optionB: "25",
-      optionC: "20",
-      optionD: "10",
-      correctOption: "D",
+      optionC: "10",
+      optionD: "20",
+      correctOption: "C",
       explanation: "5C2 = 10.",
       orderIndex: 1
     },
@@ -4064,11 +5587,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-permutations-combinations-q03",
       topicId: "jee-mathematics-permutations-combinations",
       text: "The number of arrangements (permutations) of 3 items chosen from 5 is:",
-      optionA: "60",
-      optionB: "15",
+      optionA: "15",
+      optionB: "60",
       optionC: "120",
       optionD: "10",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "5P3 = 5!/(2!) = 60.",
       orderIndex: 2
     },
@@ -4076,11 +5599,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-permutations-combinations-q04",
       topicId: "jee-mathematics-permutations-combinations",
       text: "The number of circular permutations of 5 distinct objects is:",
-      optionA: "24",
+      optionA: "5",
       optionB: "120",
-      optionC: "5",
+      optionC: "24",
       optionD: "60",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "Circular permutations of n objects equal (n-1)! = 4! = 24.",
       orderIndex: 3
     },
@@ -4100,11 +5623,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-permutations-combinations-q06",
       topicId: "jee-mathematics-permutations-combinations",
       text: "The number of ways to arrange the letters of the word LEVEL is:",
-      optionA: "30",
+      optionA: "120",
       optionB: "60",
-      optionC: "120",
+      optionC: "30",
       optionD: "20",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "LEVEL has 5 letters with L and E repeated twice: 5!/(2! 2!) = 30.",
       orderIndex: 5
     },
@@ -4114,9 +5637,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The identity nCr equals:",
       optionA: "nC(n+r)",
       optionB: "nCr-1",
-      optionC: "nC(n-r)",
-      optionD: "n!/r!",
-      correctOption: "C",
+      optionC: "n!/r!",
+      optionD: "nC(n-r)",
+      correctOption: "D",
       explanation: "By symmetry, nCr = nC(n-r).",
       orderIndex: 6
     },
@@ -4137,10 +5660,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-binomial-theorem",
       text: "The number of terms in the expansion of (a + b) raised to 7 is:",
       optionA: "7",
-      optionB: "8",
+      optionB: "14",
       optionC: "9",
-      optionD: "14",
-      correctOption: "B",
+      optionD: "8",
+      correctOption: "D",
       explanation: "The expansion of (a + b)^n has n + 1 terms, here 8.",
       orderIndex: 0
     },
@@ -4160,11 +5683,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-binomial-theorem-q03",
       topicId: "jee-mathematics-binomial-theorem",
       text: "The coefficient of x² in the expansion of (1 + x) raised to 4 is:",
-      optionA: "6",
+      optionA: "12",
       optionB: "4",
       optionC: "8",
-      optionD: "12",
-      correctOption: "A",
+      optionD: "6",
+      correctOption: "D",
       explanation: "The coefficient is 4C2 = 6.",
       orderIndex: 2
     },
@@ -4172,11 +5695,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-binomial-theorem-q04",
       topicId: "jee-mathematics-binomial-theorem",
       text: "The middle term in the expansion of (a + b) raised to 6 is the term number:",
-      optionA: "3rd",
-      optionB: "4th",
+      optionA: "4th",
+      optionB: "3rd",
       optionC: "5th",
       optionD: "6th",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "For n = 6 (even), the single middle term is the (n/2 + 1) = 4th term.",
       orderIndex: 3
     },
@@ -4185,10 +5708,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-binomial-theorem",
       text: "The sum of the binomial coefficients in (1 + x) raised to 5 is:",
       optionA: "16",
-      optionB: "10",
-      optionC: "32",
+      optionB: "32",
+      optionC: "10",
       optionD: "25",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Putting x = 1 gives 2^5 = 32.",
       orderIndex: 4
     },
@@ -4198,9 +5721,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "For small x, the approximation (1 + x) raised to n is approximately:",
       optionA: "1 + x raised to n",
       optionB: "1 - nx",
-      optionC: "nx",
-      optionD: "1 + nx",
-      correctOption: "D",
+      optionC: "1 + nx",
+      optionD: "nx",
+      correctOption: "C",
       explanation: "For small x, (1 + x)^n is about 1 + nx.",
       orderIndex: 5
     },
@@ -4210,9 +5733,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The number of middle terms in the expansion of (a + b) raised to 9 is:",
       optionA: "1",
       optionB: "0",
-      optionC: "3",
-      optionD: "2",
-      correctOption: "D",
+      optionC: "2",
+      optionD: "3",
+      correctOption: "C",
       explanation: "When n is odd there are two middle terms.",
       orderIndex: 6
     },
@@ -4220,11 +5743,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-binomial-theorem-q08",
       topicId: "jee-mathematics-binomial-theorem",
       text: "Pascal's rule states nCr + nC(r-1) equals:",
-      optionA: "nC(r+1)",
-      optionB: "(n+1)Cr",
+      optionA: "(n+1)Cr",
+      optionB: "nC(r+1)",
       optionC: "(n-1)Cr",
       optionD: "2 nCr",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "Pascal's rule: nCr + nC(r-1) = (n+1)Cr.",
       orderIndex: 7
     },
@@ -4244,11 +5767,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-matrices-determinants-q02",
       topicId: "jee-mathematics-matrices-determinants",
       text: "A square matrix is invertible only if its determinant is:",
-      optionA: "Non-zero",
+      optionA: "Positive",
       optionB: "Zero",
-      optionC: "Positive",
+      optionC: "Non-zero",
       optionD: "An integer",
-      correctOption: "A",
+      correctOption: "C",
       explanation: "An inverse exists only when the determinant is non-zero.",
       orderIndex: 1
     },
@@ -4258,9 +5781,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Matrix multiplication is in general:",
       optionA: "Commutative",
       optionB: "Equal to addition",
-      optionC: "Always undefined",
-      optionD: "Not commutative",
-      correctOption: "D",
+      optionC: "Not commutative",
+      optionD: "Always undefined",
+      correctOption: "C",
       explanation: "In general AB is not equal to BA, so matrix multiplication is not commutative.",
       orderIndex: 2
     },
@@ -4281,10 +5804,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-matrices-determinants",
       text: "For a 3x3 matrix A, the determinant of kA equals:",
       optionA: "k det(A)",
-      optionB: "k² det(A)",
+      optionB: "k³ det(A)",
       optionC: "det(A)",
-      optionD: "k³ det(A)",
-      correctOption: "D",
+      optionD: "k² det(A)",
+      correctOption: "B",
       explanation: "For an n x n matrix, det(kA) = k^n det(A); here k³ det(A).",
       orderIndex: 4
     },
@@ -4293,10 +5816,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-matrices-determinants",
       text: "A matrix that equals its own transpose is called:",
       optionA: "Skew-symmetric",
-      optionB: "Symmetric",
-      optionC: "Singular",
+      optionB: "Singular",
+      optionC: "Symmetric",
       optionD: "Orthogonal",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "A matrix with transpose equal to itself is symmetric.",
       orderIndex: 5
     },
@@ -4305,10 +5828,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-matrices-determinants",
       text: "Cramer's rule can be used to solve a linear system only when the coefficient determinant is:",
       optionA: "Zero",
-      optionB: "Non-zero",
+      optionB: "Even",
       optionC: "Negative",
-      optionD: "Even",
-      correctOption: "B",
+      optionD: "Non-zero",
+      correctOption: "D",
       explanation: "Cramer's rule requires a non-zero coefficient determinant for a unique solution.",
       orderIndex: 6
     },
@@ -4329,10 +5852,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-straight-lines-circles",
       text: "The slope of the line passing through (1, 2) and (3, 6) is:",
       optionA: "1",
-      optionB: "3",
-      optionC: "2",
+      optionB: "2",
+      optionC: "3",
       optionD: "4",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "Slope = (6 - 2)/(3 - 1) = 4/2 = 2.",
       orderIndex: 0
     },
@@ -4342,9 +5865,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Two lines are perpendicular when the product of their slopes is:",
       optionA: "0",
       optionB: "1",
-      optionC: "Infinite",
-      optionD: "-1",
-      correctOption: "D",
+      optionC: "-1",
+      optionD: "Infinite",
+      correctOption: "C",
       explanation: "Perpendicular lines satisfy m1 times m2 = -1.",
       orderIndex: 1
     },
@@ -4352,11 +5875,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-straight-lines-circles-q03",
       topicId: "jee-mathematics-straight-lines-circles",
       text: "The radius of the circle x² + y² = 49 is:",
-      optionA: "14",
+      optionA: "7",
       optionB: "49",
-      optionC: "7",
+      optionC: "14",
       optionD: "24.5",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Comparing with x² + y² = r² gives r = sqrt(49) = 7.",
       orderIndex: 2
     },
@@ -4364,11 +5887,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-straight-lines-circles-q04",
       topicId: "jee-mathematics-straight-lines-circles",
       text: "The centre of the circle x² + y² + 2gx + 2fy + c = 0 is:",
-      optionA: "(-g, -f)",
-      optionB: "(g, f)",
+      optionA: "(g, f)",
+      optionB: "(-g, -f)",
       optionC: "(2g, 2f)",
       optionD: "(-2g, -2f)",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "The centre of the general circle is (-g, -f).",
       orderIndex: 3
     },
@@ -4377,10 +5900,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-straight-lines-circles",
       text: "Two parallel lines have slopes that are:",
       optionA: "Negative reciprocals",
-      optionB: "Equal",
+      optionB: "Opposite in sign",
       optionC: "Zero",
-      optionD: "Opposite in sign",
-      correctOption: "B",
+      optionD: "Equal",
+      correctOption: "D",
       explanation: "Parallel lines have equal slopes.",
       orderIndex: 4
     },
@@ -4413,10 +5936,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-straight-lines-circles",
       text: "The equation of a line with slope 2 and y-intercept 3 is:",
       optionA: "y = 3x + 2",
-      optionB: "y = 2x + 3",
-      optionC: "y = 2x - 3",
+      optionB: "y = 2x - 3",
+      optionC: "y = 2x + 3",
       optionD: "x = 2y + 3",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Using y = mx + c with m = 2 and c = 3 gives y = 2x + 3.",
       orderIndex: 7
     },
@@ -4425,10 +5948,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-limits-continuity",
       text: "The limit as x approaches 0 of sin(x)/x is:",
       optionA: "0",
-      optionB: "1",
-      optionC: "Infinite",
+      optionB: "Infinite",
+      optionC: "1",
       optionD: "Undefined",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "This is a standard limit equal to 1.",
       orderIndex: 0
     },
@@ -4438,9 +5961,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "A function f is continuous at x = a if the limit of f as x approaches a equals:",
       optionA: "0",
       optionB: "Infinity",
-      optionC: "f(a)",
-      optionD: "f prime of a",
-      correctOption: "C",
+      optionC: "f prime of a",
+      optionD: "f(a)",
+      correctOption: "D",
       explanation: "Continuity at a requires the limit to equal the function value f(a).",
       orderIndex: 1
     },
@@ -4448,11 +5971,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-limits-continuity-q03",
       topicId: "jee-mathematics-limits-continuity",
       text: "The function |x| at x = 0 is:",
-      optionA: "Differentiable",
+      optionA: "Continuous but not differentiable",
       optionB: "Undefined",
       optionC: "Discontinuous",
-      optionD: "Continuous but not differentiable",
-      correctOption: "D",
+      optionD: "Differentiable",
+      correctOption: "A",
       explanation: "|x| is continuous everywhere but has a corner at 0, so it is not differentiable there.",
       orderIndex: 2
     },
@@ -4486,9 +6009,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "Differentiability of a function at a point implies that it is:",
       optionA: "Discontinuous there",
       optionB: "Unbounded",
-      optionC: "Constant",
-      optionD: "Continuous there",
-      correctOption: "D",
+      optionC: "Continuous there",
+      optionD: "Constant",
+      correctOption: "C",
       explanation: "Differentiability implies continuity, though the converse is false.",
       orderIndex: 5
     },
@@ -4510,9 +6033,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "A limit of the indeterminate form 0/0 can often be evaluated using:",
       optionA: "The power rule",
       optionB: "Integration",
-      optionC: "L'Hopital's rule",
-      optionD: "The product rule",
-      correctOption: "C",
+      optionC: "The product rule",
+      optionD: "L'Hopital's rule",
+      correctOption: "D",
       explanation: "L'Hopital's rule resolves 0/0 and infinity/infinity forms by differentiating top and bottom.",
       orderIndex: 7
     },
@@ -4544,11 +6067,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-integration-q03",
       topicId: "jee-mathematics-integration",
       text: "The integration by parts formula is the integral of u dv equals:",
-      optionA: "uv minus the integral of v du",
+      optionA: "the integral of u times the integral of dv",
       optionB: "uv plus the integral of v du",
       optionC: "uv times the integral of du",
-      optionD: "the integral of u times the integral of dv",
-      correctOption: "A",
+      optionD: "uv minus the integral of v du",
+      correctOption: "D",
       explanation: "Integration by parts: integral of u dv = uv minus the integral of v du.",
       orderIndex: 2
     },
@@ -4580,11 +6103,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-integration-q06",
       topicId: "jee-mathematics-integration",
       text: "The integral of e^x with respect to x is:",
-      optionA: "x e^x + C",
+      optionA: "e^x + C",
       optionB: "ln(x) + C",
       optionC: "e^x / x + C",
-      optionD: "e^x + C",
-      correctOption: "D",
+      optionD: "x e^x + C",
+      correctOption: "A",
       explanation: "The integral of e^x is itself, e^x + C.",
       orderIndex: 5
     },
@@ -4604,11 +6127,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-integration-q08",
       topicId: "jee-mathematics-integration",
       text: "The recommended order for choosing u in integration by parts is given by:",
-      optionA: "ILATE",
-      optionB: "FOIL",
+      optionA: "FOIL",
+      optionB: "ILATE",
       optionC: "PEMDAS",
       optionD: "SOHCAHTOA",
-      correctOption: "A",
+      correctOption: "B",
       explanation: "ILATE orders functions (inverse, log, algebraic, trig, exponential) for choosing u.",
       orderIndex: 7
     },
@@ -4618,9 +6141,9 @@ P(A|B) = P(B|A)·P(A) / P(B)
       text: "The dot product of two perpendicular vectors is:",
       optionA: "Maximum",
       optionB: "Negative",
-      optionC: "Their product of magnitudes",
-      optionD: "Zero",
-      correctOption: "D",
+      optionC: "Zero",
+      optionD: "Their product of magnitudes",
+      correctOption: "C",
       explanation: "a dot b = |a||b|cos(90) = 0 for perpendicular vectors.",
       orderIndex: 0
     },
@@ -4628,11 +6151,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-vectors-3d-q02",
       topicId: "jee-mathematics-vectors-3d",
       text: "The cross product of two parallel vectors is:",
-      optionA: "Maximum",
-      optionB: "The zero vector",
+      optionA: "The zero vector",
+      optionB: "Maximum",
       optionC: "A scalar",
       optionD: "Their sum",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "a cross b = |a||b|sin(0) = 0 for parallel vectors.",
       orderIndex: 1
     },
@@ -4641,10 +6164,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-vectors-3d",
       text: "The magnitude of the vector (3, 0, 4) is:",
       optionA: "7",
-      optionB: "5",
+      optionB: "25",
       optionC: "12",
-      optionD: "25",
-      correctOption: "B",
+      optionD: "5",
+      correctOption: "D",
       explanation: "Magnitude = sqrt(9 + 0 + 16) = sqrt(25) = 5.",
       orderIndex: 2
     },
@@ -4665,10 +6188,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-vectors-3d",
       text: "Three vectors are coplanar when their scalar triple product is:",
       optionA: "Positive",
-      optionB: "Zero",
-      optionC: "Negative",
+      optionB: "Negative",
+      optionC: "Zero",
       optionD: "One",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "Coplanarity makes the scalar triple product (the volume) zero.",
       orderIndex: 4
     },
@@ -4677,10 +6200,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-vectors-3d",
       text: "The direction ratios of the normal to the plane 2x + 3y - z + 5 = 0 are:",
       optionA: "(1, 1, 1)",
-      optionB: "(2, 3, 5)",
+      optionB: "(2, 3, -1)",
       optionC: "(5, 3, -1)",
-      optionD: "(2, 3, -1)",
-      correctOption: "D",
+      optionD: "(2, 3, 5)",
+      correctOption: "B",
       explanation: "The coefficients of x, y, z give the normal's direction ratios (2, 3, -1).",
       orderIndex: 5
     },
@@ -4689,10 +6212,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-vectors-3d",
       text: "The cross product of two vectors yields a vector that is:",
       optionA: "Parallel to both",
-      optionB: "Perpendicular to both",
-      optionC: "In the same plane",
+      optionB: "In the same plane",
+      optionC: "Perpendicular to both",
       optionD: "Always zero",
-      correctOption: "B",
+      correctOption: "C",
       explanation: "The cross product is perpendicular to both original vectors.",
       orderIndex: 6
     },
@@ -4700,11 +6223,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-vectors-3d-q08",
       topicId: "jee-mathematics-vectors-3d",
       text: "The angle between two planes equals the angle between their:",
-      optionA: "Areas",
-      optionB: "Normals",
+      optionA: "Normals",
+      optionB: "Areas",
       optionC: "Intercepts",
       optionD: "Centroids",
-      correctOption: "B",
+      correctOption: "A",
       explanation: "The angle between two planes is the angle between their normal vectors.",
       orderIndex: 7
     },
@@ -4713,10 +6236,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-probability",
       text: "The probability of getting a head in a single toss of a fair coin is:",
       optionA: "0",
-      optionB: "0.25",
+      optionB: "0.5",
       optionC: "1",
-      optionD: "0.5",
-      correctOption: "D",
+      optionD: "0.25",
+      correctOption: "B",
       explanation: "A fair coin has two equally likely outcomes, so P(head) = 0.5.",
       orderIndex: 0
     },
@@ -4725,10 +6248,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-probability",
       text: "The probability of rolling a number greater than 4 on a fair die is:",
       optionA: "1/6",
-      optionB: "2/3",
+      optionB: "1/3",
       optionC: "1/2",
-      optionD: "1/3",
-      correctOption: "D",
+      optionD: "2/3",
+      correctOption: "B",
       explanation: "Favourable outcomes are 5 and 6, so probability = 2/6 = 1/3.",
       orderIndex: 1
     },
@@ -4737,10 +6260,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-probability",
       text: "For two independent events, P(A and B) equals:",
       optionA: "P(A) + P(B)",
-      optionB: "P(A)/P(B)",
+      optionB: "P(A) times P(B)",
       optionC: "P(A) - P(B)",
-      optionD: "P(A) times P(B)",
-      correctOption: "D",
+      optionD: "P(A)/P(B)",
+      correctOption: "B",
       explanation: "Independent events satisfy P(A and B) = P(A) times P(B).",
       orderIndex: 2
     },
@@ -4749,10 +6272,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-probability",
       text: "The sum of the probabilities of an event and its complement is:",
       optionA: "0",
-      optionB: "0.5",
-      optionC: "1",
+      optionB: "1",
+      optionC: "0.5",
       optionD: "2",
-      correctOption: "C",
+      correctOption: "B",
       explanation: "P(E) + P(E complement) = 1.",
       orderIndex: 3
     },
@@ -4760,11 +6283,11 @@ P(A|B) = P(B|A)·P(A) / P(B)
       id: "jee-mathematics-probability-q05",
       topicId: "jee-mathematics-probability",
       text: "For mutually exclusive events A and B, P(A or B) equals:",
-      optionA: "P(A) times P(B)",
+      optionA: "P(A) + P(B)",
       optionB: "P(A) + P(B) - P(A and B)",
-      optionC: "P(A) + P(B)",
+      optionC: "P(A) times P(B)",
       optionD: "1",
-      correctOption: "C",
+      correctOption: "A",
       explanation: "Mutually exclusive events cannot both occur, so P(A or B) = P(A) + P(B).",
       orderIndex: 4
     },
@@ -4773,10 +6296,10 @@ P(A|B) = P(B|A)·P(A) / P(B)
       topicId: "jee-mathematics-probability",
       text: "The conditional probability P(A given B) is defined as:",
       optionA: "P(B)/P(A)",
-      optionB: "P(A)/P(B)",
+      optionB: "P(A and B)/P(B)",
       optionC: "P(A and B) times P(B)",
-      optionD: "P(A and B)/P(B)",
-      correctOption: "D",
+      optionD: "P(A)/P(B)",
+      correctOption: "B",
       explanation: "P(A given B) = P(A and B)/P(B).",
       orderIndex: 5
     },
@@ -4802,6 +6325,3078 @@ P(A|B) = P(B|A)·P(A) / P(B)
       optionD: "Impossible",
       correctOption: "B",
       explanation: "Without replacement, the first draw changes the second's probability, so events are dependent.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-units-dimensions-q01",
+      topicId: "jee-physics-units-dimensions",
+      text: "What is the dimensional formula of force?",
+      optionA: "M L T^-1",
+      optionB: "M L^2 T^-2",
+      optionC: "M L T^-2",
+      optionD: "M L^-1 T^-2",
+      correctOption: "C",
+      explanation: "Force = mass times acceleration, giving M L T^-2.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-units-dimensions-q02",
+      topicId: "jee-physics-units-dimensions",
+      text: "Which quantity has the same dimensions as energy?",
+      optionA: "Work",
+      optionB: "Power",
+      optionC: "Force",
+      optionD: "Momentum",
+      correctOption: "A",
+      explanation: "Work and energy both have dimensions M L^2 T^-2.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-units-dimensions-q03",
+      topicId: "jee-physics-units-dimensions",
+      text: "The dimensional formula of pressure is:",
+      optionA: "M L T^-2",
+      optionB: "M L^-1 T^-2",
+      optionC: "M L^2 T^-2",
+      optionD: "M L^-2 T^-1",
+      correctOption: "B",
+      explanation: "Pressure is force per area: M L T^-2 divided by L^2 gives M L^-1 T^-2.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-units-dimensions-q04",
+      topicId: "jee-physics-units-dimensions",
+      text: "How many base quantities are there in the SI system?",
+      optionA: "Seven",
+      optionB: "Six",
+      optionC: "Five",
+      optionD: "Eight",
+      correctOption: "A",
+      explanation: "The SI system defines seven base quantities.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-units-dimensions-q05",
+      topicId: "jee-physics-units-dimensions",
+      text: "In the product Z = A^2 B / C, if each of A, B, C has 1 percent error, the maximum error in Z is:",
+      optionA: "2 percent",
+      optionB: "3 percent",
+      optionC: "4 percent",
+      optionD: "6 percent",
+      correctOption: "C",
+      explanation: "Fractional errors add as 2 times 1 plus 1 plus 1, giving 4 percent.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-units-dimensions-q06",
+      topicId: "jee-physics-units-dimensions",
+      text: "Which of the following is dimensionless?",
+      optionA: "Strain",
+      optionB: "Force",
+      optionC: "Velocity",
+      optionD: "Density",
+      correctOption: "A",
+      explanation: "Strain is a ratio of like lengths, so it has no dimensions.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-units-dimensions-q07",
+      topicId: "jee-physics-units-dimensions",
+      text: "The number of significant figures in 0.00450 is:",
+      optionA: "Two",
+      optionB: "Three",
+      optionC: "Four",
+      optionD: "Five",
+      correctOption: "B",
+      explanation: "Leading zeros do not count; the figures 4, 5 and trailing 0 give three.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-units-dimensions-q08",
+      topicId: "jee-physics-units-dimensions",
+      text: "The dimensional formula of power is:",
+      optionA: "M L T^-3",
+      optionB: "M L^2 T^-2",
+      optionC: "M L^2 T^-3",
+      optionD: "M L^2 T^-1",
+      correctOption: "C",
+      explanation: "Power is energy per time: M L^2 T^-2 divided by T gives M L^2 T^-3.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q01",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "The upthrust on a body submerged in a fluid equals the weight of:",
+      optionA: "The body",
+      optionB: "The remaining fluid",
+      optionC: "The container",
+      optionD: "The displaced fluid",
+      correctOption: "D",
+      explanation: "By Archimedes' principle, upthrust equals the weight of the fluid displaced.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q02",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "Bernoulli's theorem is a statement of conservation of:",
+      optionA: "Energy",
+      optionB: "Momentum",
+      optionC: "Mass",
+      optionD: "Charge",
+      correctOption: "A",
+      explanation: "Bernoulli's equation expresses conservation of energy per unit volume in a flowing fluid.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q03",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "The hydrostatic pressure at depth h in a liquid of density rho is given by:",
+      optionA: "rho times g divided by h",
+      optionB: "h divided by rho times g",
+      optionC: "rho times g times h",
+      optionD: "rho divided by g times h",
+      correctOption: "C",
+      explanation: "Gauge pressure increases linearly with depth as rho times g times h.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q04",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "The principle behind a hydraulic lift is:",
+      optionA: "Archimedes' principle",
+      optionB: "Bernoulli's theorem",
+      optionC: "Pascal's law",
+      optionD: "Stokes' law",
+      correctOption: "C",
+      explanation: "Pascal's law transmits applied pressure equally throughout a confined fluid.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q05",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "An object floats when its average density is:",
+      optionA: "Greater than the fluid",
+      optionB: "Equal to zero",
+      optionC: "Equal to gravity",
+      optionD: "Less than the fluid",
+      correctOption: "D",
+      explanation: "If the body density is less than the fluid density, the upthrust supports it and it floats.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q06",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "By the equation of continuity, when a pipe narrows the fluid speed:",
+      optionA: "Decreases",
+      optionB: "Increases",
+      optionC: "Stays constant",
+      optionD: "Becomes zero",
+      correctOption: "B",
+      explanation: "Since area times velocity is constant, a smaller area means a higher speed.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q07",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "The viscous drag on a small sphere moving slowly through a fluid is described by:",
+      optionA: "Pascal's law",
+      optionB: "Stokes' law",
+      optionC: "Boyle's law",
+      optionD: "Hooke's law",
+      correctOption: "B",
+      explanation: "Stokes' law gives the drag as 6 pi eta r v on a small sphere.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-fluid-mechanics-q08",
+      topicId: "jee-physics-fluid-mechanics",
+      text: "A body falling through a viscous fluid attains terminal velocity when:",
+      optionA: "Drag exceeds weight",
+      optionB: "Acceleration is maximum",
+      optionC: "Buoyancy is zero",
+      optionD: "Net force is zero",
+      correctOption: "D",
+      explanation: "Terminal velocity is reached when drag plus buoyancy balance weight, so net force is zero.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-thermal-properties-q01",
+      topicId: "jee-physics-thermal-properties",
+      text: "The coefficient of volume expansion equals how many times the linear coefficient?",
+      optionA: "One",
+      optionB: "Two",
+      optionC: "Four",
+      optionD: "Three",
+      correctOption: "D",
+      explanation: "Volume expansion gamma equals three times the linear coefficient alpha.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-thermal-properties-q02",
+      topicId: "jee-physics-thermal-properties",
+      text: "Heat absorbed during a phase change at constant temperature is called:",
+      optionA: "Specific heat",
+      optionB: "Latent heat",
+      optionC: "Thermal capacity",
+      optionD: "Calorific value",
+      correctOption: "B",
+      explanation: "Latent heat is the energy for a phase change at constant temperature.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-thermal-properties-q03",
+      topicId: "jee-physics-thermal-properties",
+      text: "The power radiated by a black body is proportional to which power of its absolute temperature?",
+      optionA: "First",
+      optionB: "Fourth",
+      optionC: "Third",
+      optionD: "Second",
+      correctOption: "B",
+      explanation: "By the Stefan-Boltzmann law, radiated power is proportional to T to the fourth.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-thermal-properties-q04",
+      topicId: "jee-physics-thermal-properties",
+      text: "Heat needed to raise 2 kg of water by 10 degrees C (c = 4200 J per kg K) is:",
+      optionA: "8400 J",
+      optionB: "42000 J",
+      optionC: "84000 J",
+      optionD: "21000 J",
+      correctOption: "C",
+      explanation: "Q = m c dT = 2 times 4200 times 10 = 84000 J.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-thermal-properties-q05",
+      topicId: "jee-physics-thermal-properties",
+      text: "Newton's law of cooling states the cooling rate is proportional to:",
+      optionA: "The body's volume",
+      optionB: "The temperature excess",
+      optionC: "The square of temperature",
+      optionD: "The surface colour",
+      correctOption: "B",
+      explanation: "For small differences, cooling rate is proportional to the excess temperature over surroundings.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-thermal-properties-q06",
+      topicId: "jee-physics-thermal-properties",
+      text: "Heat transfer through a solid metal rod occurs mainly by:",
+      optionA: "Conduction",
+      optionB: "Convection",
+      optionC: "Radiation",
+      optionD: "Advection",
+      correctOption: "A",
+      explanation: "In solids heat moves by conduction without bulk movement of matter.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-thermal-properties-q07",
+      topicId: "jee-physics-thermal-properties",
+      text: "In calorimetry, the basic principle assumes that heat lost equals:",
+      optionA: "Zero",
+      optionB: "Work done",
+      optionC: "Twice the heat gained",
+      optionD: "Heat gained",
+      correctOption: "D",
+      explanation: "With no loss to surroundings, heat lost by the hot body equals heat gained by the cold body.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-thermal-properties-q08",
+      topicId: "jee-physics-thermal-properties",
+      text: "As temperature rises, Wien's law says the wavelength of peak emission:",
+      optionA: "Increases",
+      optionB: "Stays the same",
+      optionC: "Decreases",
+      optionD: "Becomes infinite",
+      correctOption: "C",
+      explanation: "Wien's law states the peak wavelength is inversely proportional to temperature, so it decreases.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-kinetic-theory-q01",
+      topicId: "jee-physics-kinetic-theory",
+      text: "The average translational kinetic energy of a gas molecule depends only on:",
+      optionA: "Pressure",
+      optionB: "Temperature",
+      optionC: "Volume",
+      optionD: "Molar mass",
+      correctOption: "B",
+      explanation: "Average translational KE is (3/2) k T, depending only on temperature.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-kinetic-theory-q02",
+      topicId: "jee-physics-kinetic-theory",
+      text: "The rms speed of a gas is proportional to the square root of:",
+      optionA: "M divided by T",
+      optionB: "T divided by M",
+      optionC: "T times M",
+      optionD: "Pressure",
+      correctOption: "B",
+      explanation: "v_rms equals the square root of 3 R T over M, so it varies as the root of T over M.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-kinetic-theory-q03",
+      topicId: "jee-physics-kinetic-theory",
+      text: "The number of degrees of freedom of a monatomic ideal gas is:",
+      optionA: "Two",
+      optionB: "Five",
+      optionC: "Three",
+      optionD: "Six",
+      correctOption: "C",
+      explanation: "A monatomic gas has only three translational degrees of freedom.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-kinetic-theory-q04",
+      topicId: "jee-physics-kinetic-theory",
+      text: "The ratio Cp over Cv (gamma) for a diatomic gas is:",
+      optionA: "1.33",
+      optionB: "1.67",
+      optionC: "1.40",
+      optionD: "1.50",
+      correctOption: "C",
+      explanation: "With f = 5, gamma = 1 + 2/5 = 1.40 for a diatomic gas.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-kinetic-theory-q05",
+      topicId: "jee-physics-kinetic-theory",
+      text: "Which speed is the largest for a gas at a given temperature?",
+      optionA: "Most probable speed",
+      optionB: "Average speed",
+      optionC: "Root mean square speed",
+      optionD: "All are equal",
+      correctOption: "C",
+      explanation: "The speeds rank as most probable less than average less than rms.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-kinetic-theory-q06",
+      topicId: "jee-physics-kinetic-theory",
+      text: "If the absolute temperature of a gas is doubled, the rms speed becomes:",
+      optionA: "Root two times",
+      optionB: "Double",
+      optionC: "Half",
+      optionD: "Four times",
+      correctOption: "A",
+      explanation: "Since v_rms varies as the root of T, doubling T multiplies the speed by root two.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-kinetic-theory-q07",
+      topicId: "jee-physics-kinetic-theory",
+      text: "Pressure of an ideal gas in kinetic theory is given by:",
+      optionA: "Half rho times v_rms squared",
+      optionB: "rho times v_rms",
+      optionC: "One third rho times v_rms squared",
+      optionD: "rho times g times h",
+      correctOption: "C",
+      explanation: "Kinetic theory gives P equal to one third of rho times the mean square speed.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-kinetic-theory-q08",
+      topicId: "jee-physics-kinetic-theory",
+      text: "The mean free path of gas molecules increases when:",
+      optionA: "Pressure decreases",
+      optionB: "Pressure increases",
+      optionC: "Molecular size increases",
+      optionD: "Density increases",
+      correctOption: "A",
+      explanation: "Lower pressure means fewer molecules per volume, so the mean free path increases.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q01",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "Young's modulus is the ratio of:",
+      optionA: "Strain to stress",
+      optionB: "Force to area",
+      optionC: "Stress to strain",
+      optionD: "Length to force",
+      correctOption: "C",
+      explanation: "Young's modulus is longitudinal stress divided by longitudinal strain.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q02",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "The excess pressure inside a soap bubble of radius R is:",
+      optionA: "Two T over R",
+      optionB: "Four T over R",
+      optionC: "T over R",
+      optionD: "T over two R",
+      correctOption: "B",
+      explanation: "A soap bubble has two surfaces, so excess pressure is four T over R.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q03",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "Which modulus relates to a change in shape at constant volume?",
+      optionA: "Young's modulus",
+      optionB: "Shear modulus",
+      optionC: "Bulk modulus",
+      optionD: "Poisson's ratio",
+      correctOption: "B",
+      explanation: "Shear (rigidity) modulus governs shape change without volume change.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q04",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "Capillary rise of a liquid in a tube is inversely proportional to the tube's:",
+      optionA: "Length",
+      optionB: "Density squared",
+      optionC: "Temperature",
+      optionD: "Radius",
+      correctOption: "D",
+      explanation: "From the capillary formula, the rise h varies inversely with the tube radius.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q05",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "Within the elastic limit, stress is directly proportional to strain. This is:",
+      optionA: "Pascal's law",
+      optionB: "Bernoulli's theorem",
+      optionC: "Stokes' law",
+      optionD: "Hooke's law",
+      correctOption: "D",
+      explanation: "Hooke's law states stress is proportional to strain within the elastic limit.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q06",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "As temperature increases, the surface tension of a liquid generally:",
+      optionA: "Increases",
+      optionB: "Decreases",
+      optionC: "Stays constant",
+      optionD: "Becomes infinite",
+      correctOption: "B",
+      explanation: "Surface tension decreases as temperature rises and vanishes near the critical point.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q07",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "Comparing steel and rubber for the same stress, steel is said to be more elastic because it:",
+      optionA: "Stretches more",
+      optionB: "Returns with greater restoring stress",
+      optionC: "Is heavier",
+      optionD: "Has no elastic limit",
+      correctOption: "B",
+      explanation: "Steel resists deformation with a larger restoring stress, so it is more elastic than rubber.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-elasticity-surface-tension-q08",
+      topicId: "jee-physics-elasticity-surface-tension",
+      text: "Mercury in a glass capillary shows a depression because its angle of contact is:",
+      optionA: "Zero",
+      optionB: "Acute",
+      optionC: "Obtuse",
+      optionD: "Exactly ninety degrees",
+      correctOption: "C",
+      explanation: "Mercury wets glass poorly, giving an obtuse contact angle and a capillary depression.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q01",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "The centre of mass of a system can be accelerated only by:",
+      optionA: "Internal forces",
+      optionB: "External forces",
+      optionC: "Tension alone",
+      optionD: "No force",
+      correctOption: "B",
+      explanation: "Internal forces cancel in pairs, so only external forces move the centre of mass.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q02",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "In which collision is kinetic energy conserved?",
+      optionA: "Perfectly inelastic",
+      optionB: "Inelastic",
+      optionC: "Elastic",
+      optionD: "All collisions",
+      correctOption: "C",
+      explanation: "Kinetic energy is conserved only in a perfectly elastic collision.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q03",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "The coefficient of restitution for a perfectly inelastic collision is:",
+      optionA: "Infinite",
+      optionB: "One half",
+      optionC: "One",
+      optionD: "Zero",
+      correctOption: "D",
+      explanation: "In a perfectly inelastic collision the bodies stick, giving e equal to zero.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q04",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "In a 1D elastic collision between two equal masses with one at rest, after impact they:",
+      optionA: "Both stop",
+      optionB: "Move together",
+      optionC: "Reverse and speed up",
+      optionD: "Exchange velocities",
+      correctOption: "D",
+      explanation: "For equal masses in an elastic collision, the velocities are exchanged.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q05",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "Which quantity is conserved in every type of collision?",
+      optionA: "Kinetic energy",
+      optionB: "Linear momentum",
+      optionC: "Mechanical energy",
+      optionD: "Temperature",
+      correctOption: "B",
+      explanation: "Linear momentum is conserved in all collisions when no external force acts.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q06",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "Two masses 2 kg and 3 kg are at x = 0 and x = 5 m. The centre of mass is at:",
+      optionA: "2.0 m",
+      optionB: "2.5 m",
+      optionC: "3.5 m",
+      optionD: "3.0 m",
+      correctOption: "D",
+      explanation: "x_cm = (2 times 0 + 3 times 5) divided by 5 = 15/5 = 3 m.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q07",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "A shell explodes in mid-air. The centre of mass of the fragments:",
+      optionA: "Stops instantly",
+      optionB: "Moves straight up",
+      optionC: "Follows the original path",
+      optionD: "Reverses direction",
+      correctOption: "C",
+      explanation: "Explosion forces are internal, so the centre of mass keeps its original parabolic path.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-centre-of-mass-collisions-q08",
+      topicId: "jee-physics-centre-of-mass-collisions",
+      text: "The coefficient of restitution is the ratio of relative velocity of separation to that of:",
+      optionA: "Approach",
+      optionB: "The centre of mass",
+      optionC: "The heavier body",
+      optionD: "Sound",
+      correctOption: "A",
+      explanation: "e is defined as the ratio of separation speed to approach speed along the line of impact.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q01",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "Electromagnetic waves are:",
+      optionA: "Longitudinal",
+      optionB: "Transverse",
+      optionC: "Mechanical",
+      optionD: "Stationary only",
+      correctOption: "B",
+      explanation: "The E and B fields oscillate perpendicular to propagation, making EM waves transverse.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q02",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "In an electromagnetic wave the ratio E0 over B0 equals:",
+      optionA: "One",
+      optionB: "The speed of light",
+      optionC: "The permittivity",
+      optionD: "The frequency",
+      correctOption: "B",
+      explanation: "For an EM wave in vacuum, the field amplitude ratio E0 over B0 equals c.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q03",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "Which of these EM radiations has the highest frequency?",
+      optionA: "Radio waves",
+      optionB: "Visible light",
+      optionC: "X-rays",
+      optionD: "Gamma rays",
+      correctOption: "D",
+      explanation: "Gamma rays have the highest frequency and shortest wavelength in the spectrum.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q04",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "Maxwell introduced which term to make Ampere's law consistent?",
+      optionA: "Induced EMF",
+      optionB: "Displacement current",
+      optionC: "Eddy current",
+      optionD: "Drift current",
+      correctOption: "B",
+      explanation: "The displacement current term let Ampere's law hold across a charging capacitor.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q05",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "EM waves require which medium to travel?",
+      optionA: "Solid only",
+      optionB: "Liquid only",
+      optionC: "No medium",
+      optionD: "Gas only",
+      correctOption: "C",
+      explanation: "EM waves are self-sustaining and propagate through vacuum, needing no medium.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q06",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "Which radiation is used in a microwave oven?",
+      optionA: "X-rays",
+      optionB: "Gamma rays",
+      optionC: "Microwaves",
+      optionD: "Ultraviolet",
+      correctOption: "C",
+      explanation: "Microwaves heat food by exciting water molecules.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q07",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "The speed of EM waves in vacuum equals one over the square root of:",
+      optionA: "epsilon0 over mu0",
+      optionB: "mu0 plus epsilon0",
+      optionC: "mu0 over epsilon0",
+      optionD: "mu0 times epsilon0",
+      correctOption: "D",
+      explanation: "c equals one over the square root of mu0 times epsilon0.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-electromagnetic-waves-q08",
+      topicId: "jee-physics-electromagnetic-waves",
+      text: "EM waves carry both energy and:",
+      optionA: "Mass",
+      optionB: "Charge",
+      optionC: "Momentum",
+      optionD: "Current",
+      correctOption: "C",
+      explanation: "EM waves transport momentum and exert radiation pressure on surfaces.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-semiconductors-q01",
+      topicId: "jee-physics-semiconductors",
+      text: "Doping silicon with a pentavalent impurity gives a:",
+      optionA: "p-type semiconductor",
+      optionB: "Pure conductor",
+      optionC: "n-type semiconductor",
+      optionD: "Insulator",
+      correctOption: "C",
+      explanation: "A pentavalent dopant donates electrons, producing an n-type semiconductor.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-semiconductors-q02",
+      topicId: "jee-physics-semiconductors",
+      text: "In a p-type semiconductor the majority carriers are:",
+      optionA: "Electrons",
+      optionB: "Neutrons",
+      optionC: "Protons",
+      optionD: "Holes",
+      correctOption: "D",
+      explanation: "Trivalent doping creates holes, which are the majority carriers in p-type material.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-semiconductors-q03",
+      topicId: "jee-physics-semiconductors",
+      text: "A p-n junction diode conducts well when it is:",
+      optionA: "At absolute zero",
+      optionB: "Reverse biased",
+      optionC: "Unbiased",
+      optionD: "Forward biased",
+      correctOption: "D",
+      explanation: "Forward bias lowers the barrier, so the diode conducts current.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-semiconductors-q04",
+      topicId: "jee-physics-semiconductors",
+      text: "Which logic gate gives output 1 only when all inputs are 1?",
+      optionA: "OR",
+      optionB: "AND",
+      optionC: "NOT",
+      optionD: "NOR",
+      correctOption: "B",
+      explanation: "An AND gate outputs 1 only when every input is 1.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-semiconductors-q05",
+      topicId: "jee-physics-semiconductors",
+      text: "Which pair are called universal gates?",
+      optionA: "AND and OR",
+      optionB: "NOT and OR",
+      optionC: "AND and NOT",
+      optionD: "NAND and NOR",
+      correctOption: "D",
+      explanation: "NAND and NOR can each build any other gate, so they are universal.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-semiconductors-q06",
+      topicId: "jee-physics-semiconductors",
+      text: "As temperature rises, the conductivity of a pure semiconductor:",
+      optionA: "Increases",
+      optionB: "Decreases",
+      optionC: "Stays constant",
+      optionD: "Drops to zero",
+      correctOption: "A",
+      explanation: "Heating frees more charge carriers, so a semiconductor conducts better, unlike a metal.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-semiconductors-q07",
+      topicId: "jee-physics-semiconductors",
+      text: "The region of immobile charges at a p-n junction is called the:",
+      optionA: "Conduction band",
+      optionB: "Forbidden gap",
+      optionC: "Valence band",
+      optionD: "Depletion region",
+      correctOption: "D",
+      explanation: "Diffusion creates a charge-free depletion region with a built-in potential barrier.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-semiconductors-q08",
+      topicId: "jee-physics-semiconductors",
+      text: "A NOT gate is also known as a/an:",
+      optionA: "Buffer",
+      optionB: "Adder",
+      optionC: "Inverter",
+      optionD: "Comparator",
+      correctOption: "C",
+      explanation: "A NOT gate inverts its single input, so it is called an inverter.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-physics-communication-systems-q01",
+      topicId: "jee-physics-communication-systems",
+      text: "Why is a high-frequency carrier needed in communication?",
+      optionA: "To reduce noise only",
+      optionB: "To increase mass",
+      optionC: "To slow the signal",
+      optionD: "For efficient radiation by a small antenna",
+      correctOption: "D",
+      explanation: "High-frequency carriers radiate efficiently from practical antenna sizes.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-physics-communication-systems-q02",
+      topicId: "jee-physics-communication-systems",
+      text: "In amplitude modulation, which property of the carrier varies?",
+      optionA: "Frequency",
+      optionB: "Amplitude",
+      optionC: "Phase",
+      optionD: "Speed",
+      correctOption: "B",
+      explanation: "In AM the carrier amplitude varies in step with the message signal.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-physics-communication-systems-q03",
+      topicId: "jee-physics-communication-systems",
+      text: "Sky-wave propagation uses reflection from the:",
+      optionA: "Ionosphere",
+      optionB: "Ground",
+      optionC: "Ocean",
+      optionD: "Moon",
+      correctOption: "A",
+      explanation: "Sky waves are reflected back by the ionosphere for long-distance communication.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-physics-communication-systems-q04",
+      topicId: "jee-physics-communication-systems",
+      text: "To avoid distortion in AM, the modulation index must be kept:",
+      optionA: "Greater than two",
+      optionB: "Less than or equal to one",
+      optionC: "Equal to ten",
+      optionD: "Exactly zero",
+      correctOption: "B",
+      explanation: "Over-modulation (index above one) distorts the recovered signal, so it is kept at or below one.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-physics-communication-systems-q05",
+      topicId: "jee-physics-communication-systems",
+      text: "Which block of a communication system removes the carrier to recover the message?",
+      optionA: "Modulator",
+      optionB: "Transmitter",
+      optionC: "Amplifier",
+      optionD: "Demodulator",
+      correctOption: "D",
+      explanation: "The demodulator at the receiver extracts the original message from the modulated carrier.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-physics-communication-systems-q06",
+      topicId: "jee-physics-communication-systems",
+      text: "Line-of-sight communication above 40 MHz uses which propagation mode?",
+      optionA: "Ground wave",
+      optionB: "Sky wave",
+      optionC: "Space wave",
+      optionD: "Surface wave",
+      correctOption: "C",
+      explanation: "High-frequency signals travel as space waves directly between antennas in line of sight.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-physics-communication-systems-q07",
+      topicId: "jee-physics-communication-systems",
+      text: "The range of a TV tower of height h is approximately proportional to:",
+      optionA: "h",
+      optionB: "One over h",
+      optionC: "h squared",
+      optionD: "The square root of h",
+      correctOption: "D",
+      explanation: "Range equals the square root of 2 R h, so it varies as the square root of height.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-physics-communication-systems-q08",
+      topicId: "jee-physics-communication-systems",
+      text: "Compared with AM, frequency modulation generally requires:",
+      optionA: "Less bandwidth",
+      optionB: "More bandwidth",
+      optionC: "No bandwidth",
+      optionD: "Zero power",
+      correctOption: "B",
+      explanation: "FM occupies a wider band of frequencies than AM for the same signal.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q01",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "Oxidation is best defined as:",
+      optionA: "Gain of electrons",
+      optionB: "Loss of electrons",
+      optionC: "Gain of protons",
+      optionD: "Loss of neutrons",
+      correctOption: "B",
+      explanation: "Oxidation is the loss of electrons, raising the oxidation number.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q02",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "The oxidation number of oxygen in most compounds is:",
+      optionA: "Plus two",
+      optionB: "Plus one",
+      optionC: "Zero",
+      optionD: "Minus two",
+      correctOption: "D",
+      explanation: "Oxygen usually has an oxidation number of minus two.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q03",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "A reaction where the same element is both oxidised and reduced is called:",
+      optionA: "Combination",
+      optionB: "Disproportionation",
+      optionC: "Displacement",
+      optionD: "Neutralisation",
+      correctOption: "B",
+      explanation: "In disproportionation one element in an intermediate state is both oxidised and reduced.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q04",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "The oxidation state of sulphur in H2SO4 is:",
+      optionA: "Plus two",
+      optionB: "Plus four",
+      optionC: "Plus six",
+      optionD: "Minus two",
+      correctOption: "C",
+      explanation: "With H at plus one and O at minus two, sulphur balances at plus six.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q05",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "An oxidising agent is a species that:",
+      optionA: "Loses electrons",
+      optionB: "Gains electrons",
+      optionC: "Is itself oxidised",
+      optionD: "Has no charge",
+      correctOption: "B",
+      explanation: "An oxidising agent gains electrons and is itself reduced.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q06",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "The oxidation number of an element in its free state is:",
+      optionA: "Minus one",
+      optionB: "Plus one",
+      optionC: "Zero",
+      optionD: "Equal to its group number",
+      correctOption: "C",
+      explanation: "A free uncombined element always has an oxidation number of zero.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q07",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "In the half-reaction method in acidic medium, what is added to balance oxygen?",
+      optionA: "OH minus ions",
+      optionB: "Oxygen gas",
+      optionC: "Water molecules",
+      optionD: "Metal ions",
+      correctOption: "C",
+      explanation: "Water is added to balance oxygen and then H plus to balance hydrogen in acidic medium.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-redox-reactions-q08",
+      topicId: "jee-chemistry-redox-reactions",
+      text: "When zinc is added to copper sulphate solution, zinc is:",
+      optionA: "Reduced",
+      optionB: "Precipitated as metal",
+      optionC: "Unchanged",
+      optionD: "Oxidised",
+      correctOption: "D",
+      explanation: "Zinc loses electrons to copper ions, so zinc is oxidised and displaces copper.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-solutions-q01",
+      topicId: "jee-chemistry-solutions",
+      text: "Colligative properties depend on:",
+      optionA: "Number of solute particles",
+      optionB: "Nature of solute",
+      optionC: "Colour of solute",
+      optionD: "Density of solvent",
+      correctOption: "A",
+      explanation: "Colligative properties depend only on the number, not nature, of solute particles.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-solutions-q02",
+      topicId: "jee-chemistry-solutions",
+      text: "Adding a non-volatile solute to a solvent causes its vapour pressure to:",
+      optionA: "Decrease",
+      optionB: "Increase",
+      optionC: "Stay constant",
+      optionD: "Become zero",
+      correctOption: "A",
+      explanation: "By Raoult's law a non-volatile solute lowers the solvent's vapour pressure.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-solutions-q03",
+      topicId: "jee-chemistry-solutions",
+      text: "Molality is defined as moles of solute per:",
+      optionA: "Litre of solution",
+      optionB: "Litre of solvent",
+      optionC: "Mole of solution",
+      optionD: "Kilogram of solvent",
+      correctOption: "D",
+      explanation: "Molality is moles of solute per kilogram of solvent.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-solutions-q04",
+      topicId: "jee-chemistry-solutions",
+      text: "The van't Hoff factor for a solute that dissociates is:",
+      optionA: "Greater than one",
+      optionB: "Less than one",
+      optionC: "Exactly zero",
+      optionD: "Always one",
+      correctOption: "A",
+      explanation: "Dissociation produces more particles, so the van't Hoff factor exceeds one.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-solutions-q05",
+      topicId: "jee-chemistry-solutions",
+      text: "Which property is most suitable for finding the molar mass of a polymer?",
+      optionA: "Boiling point elevation",
+      optionB: "Osmotic pressure",
+      optionC: "Freezing point depression",
+      optionD: "Vapour pressure rise",
+      correctOption: "B",
+      explanation: "Osmotic pressure is measurable even at low concentration, ideal for large molecules.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-solutions-q06",
+      topicId: "jee-chemistry-solutions",
+      text: "An ideal solution obeys Raoult's law and shows mixing enthalpy of:",
+      optionA: "Large positive",
+      optionB: "Large negative",
+      optionC: "Zero",
+      optionD: "Infinite",
+      correctOption: "C",
+      explanation: "An ideal solution has zero enthalpy and volume change of mixing.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-solutions-q07",
+      topicId: "jee-chemistry-solutions",
+      text: "Spreading salt on icy roads works because it:",
+      optionA: "Lowers the freezing point",
+      optionB: "Raises the freezing point",
+      optionC: "Raises vapour pressure",
+      optionD: "Increases density",
+      correctOption: "A",
+      explanation: "Salt depresses the freezing point, so the ice melts at a lower temperature.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-solutions-q08",
+      topicId: "jee-chemistry-solutions",
+      text: "The osmotic pressure of a dilute solution is given by pi equals:",
+      optionA: "C R T",
+      optionB: "C over R T",
+      optionC: "R T over C",
+      optionD: "C plus R T",
+      correctOption: "A",
+      explanation: "For dilute solutions, osmotic pressure pi equals concentration times R times T.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q01",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "The order of a reaction is determined:",
+      optionA: "Experimentally",
+      optionB: "From the balanced equation",
+      optionC: "From molar masses",
+      optionD: "From temperature only",
+      correctOption: "A",
+      explanation: "Reaction order is found experimentally, not from the stoichiometric equation.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q02",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "The half-life of a first-order reaction is:",
+      optionA: "Independent of concentration",
+      optionB: "Proportional to concentration",
+      optionC: "Inversely proportional to rate constant squared",
+      optionD: "Always one second",
+      correctOption: "A",
+      explanation: "For first order, half-life equals 0.693 over k, independent of concentration.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q03",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "A catalyst increases reaction rate by:",
+      optionA: "Raising temperature",
+      optionB: "Increasing concentration",
+      optionC: "Shifting the equilibrium",
+      optionD: "Lowering the activation energy",
+      correctOption: "D",
+      explanation: "A catalyst provides an alternative path with lower activation energy.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q04",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "The Arrhenius equation relates the rate constant to:",
+      optionA: "Pressure",
+      optionB: "Volume",
+      optionC: "Temperature and activation energy",
+      optionD: "Colour",
+      correctOption: "C",
+      explanation: "The Arrhenius equation links k to temperature and activation energy.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q05",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "For a first-order reaction, a plot of ln of concentration against time is:",
+      optionA: "A straight line with slope minus k",
+      optionB: "A parabola",
+      optionC: "A hyperbola",
+      optionD: "A horizontal line",
+      correctOption: "A",
+      explanation: "First-order kinetics gives a straight line of slope minus k for ln of concentration versus time.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q06",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "The units of the rate constant for a first-order reaction are:",
+      optionA: "Per second",
+      optionB: "Mol per litre per second",
+      optionC: "Litre per mol per second",
+      optionD: "Dimensionless",
+      correctOption: "A",
+      explanation: "A first-order rate constant has units of inverse time, that is per second.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q07",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "Molecularity of an elementary reaction is:",
+      optionA: "Always fractional",
+      optionB: "Determined experimentally",
+      optionC: "A small whole number",
+      optionD: "Equal to the order always",
+      correctOption: "C",
+      explanation: "Molecularity counts species in an elementary step and is a small whole number.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-chemical-kinetics-q08",
+      topicId: "jee-chemistry-chemical-kinetics",
+      text: "Raising temperature speeds a reaction mainly because it increases the:",
+      optionA: "Activation energy",
+      optionB: "Order of reaction",
+      optionC: "Number of moles",
+      optionD: "Fraction of molecules above the activation energy",
+      correctOption: "D",
+      explanation: "Higher temperature raises the fraction of molecules with energy above the activation barrier.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q01",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "The accumulation of molecules at a surface is called:",
+      optionA: "Absorption",
+      optionB: "Sublimation",
+      optionC: "Diffusion",
+      optionD: "Adsorption",
+      correctOption: "D",
+      explanation: "Adsorption is the accumulation of a substance at a surface.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q02",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "Physisorption is characterised by:",
+      optionA: "Strong chemical bonds",
+      optionB: "Weak van der Waals forces",
+      optionC: "High specificity",
+      optionD: "Irreversibility",
+      correctOption: "B",
+      explanation: "Physisorption involves weak van der Waals forces and low enthalpy.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q03",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "The scattering of light by colloidal particles is called the:",
+      optionA: "Raman effect",
+      optionB: "Brownian effect",
+      optionC: "Doppler effect",
+      optionD: "Tyndall effect",
+      correctOption: "D",
+      explanation: "The Tyndall effect is light scattering by colloidal particles.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q04",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "Milk is an example of which type of colloid?",
+      optionA: "Emulsion",
+      optionB: "Aerosol",
+      optionC: "Sol",
+      optionD: "Gel",
+      correctOption: "A",
+      explanation: "Milk is an emulsion of liquid fat dispersed in water.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q05",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "According to the Freundlich isotherm, x over m is proportional to pressure raised to:",
+      optionA: "One",
+      optionB: "n",
+      optionC: "One over n",
+      optionD: "Two",
+      correctOption: "C",
+      explanation: "The Freundlich isotherm gives x over m proportional to P to the power one over n.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q06",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "Enzymes are best described as:",
+      optionA: "Inorganic catalysts",
+      optionB: "Highly specific biological catalysts",
+      optionC: "Non-catalytic proteins",
+      optionD: "Strong acids",
+      correctOption: "B",
+      explanation: "Enzymes are highly specific biological catalysts.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q07",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "According to the Hardy-Schulze rule, coagulating power increases with the ion's:",
+      optionA: "Charge",
+      optionB: "Mass only",
+      optionC: "Colour",
+      optionD: "Volume",
+      correctOption: "A",
+      explanation: "Higher ion charge gives greater coagulating power by the Hardy-Schulze rule.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-surface-chemistry-q08",
+      topicId: "jee-chemistry-surface-chemistry",
+      text: "A heterogeneous catalyst differs from reactants in its:",
+      optionA: "Colour",
+      optionB: "Physical phase",
+      optionC: "Mass",
+      optionD: "Charge",
+      correctOption: "B",
+      explanation: "A heterogeneous catalyst is in a different phase, usually a solid acting on gases or liquids.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-s-block-q01",
+      topicId: "jee-chemistry-s-block",
+      text: "Alkali metals belong to which group of the periodic table?",
+      optionA: "Group 1",
+      optionB: "Group 2",
+      optionC: "Group 17",
+      optionD: "Group 18",
+      correctOption: "A",
+      explanation: "Alkali metals are the Group 1 elements with one valence s electron.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-s-block-q02",
+      topicId: "jee-chemistry-s-block",
+      text: "The common oxidation state of alkaline earth metals is:",
+      optionA: "Plus two",
+      optionB: "Plus one",
+      optionC: "Plus three",
+      optionD: "Minus one",
+      correctOption: "A",
+      explanation: "Group 2 metals lose two electrons to show a plus two state.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-s-block-q03",
+      topicId: "jee-chemistry-s-block",
+      text: "Which element shows a diagonal relationship with magnesium?",
+      optionA: "Sodium",
+      optionB: "Potassium",
+      optionC: "Lithium",
+      optionD: "Calcium",
+      correctOption: "C",
+      explanation: "Lithium resembles magnesium through the diagonal relationship.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-s-block-q04",
+      topicId: "jee-chemistry-s-block",
+      text: "The flame colour imparted by sodium is:",
+      optionA: "Lilac",
+      optionB: "Brick red",
+      optionC: "Green",
+      optionD: "Golden yellow",
+      correctOption: "D",
+      explanation: "Sodium gives a characteristic golden yellow flame colour.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-s-block-q05",
+      topicId: "jee-chemistry-s-block",
+      text: "Down Group 1, the ionisation energy:",
+      optionA: "Increases",
+      optionB: "First rises then falls",
+      optionC: "Stays constant",
+      optionD: "Decreases",
+      correctOption: "D",
+      explanation: "Larger size and more shielding lower the ionisation energy down the group.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-s-block-q06",
+      topicId: "jee-chemistry-s-block",
+      text: "When sodium reacts with water it produces NaOH and:",
+      optionA: "Oxygen",
+      optionB: "Hydrogen",
+      optionC: "Chlorine",
+      optionD: "Nitrogen",
+      correctOption: "B",
+      explanation: "Sodium reacts with water to give sodium hydroxide and hydrogen gas.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-s-block-q07",
+      topicId: "jee-chemistry-s-block",
+      text: "The solubility of Group 2 hydroxides down the group:",
+      optionA: "Stays constant",
+      optionB: "Decreases",
+      optionC: "Increases",
+      optionD: "Becomes zero",
+      correctOption: "C",
+      explanation: "Group 2 hydroxide solubility increases down the group.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-s-block-q08",
+      topicId: "jee-chemistry-s-block",
+      text: "Washing soda is the common name for:",
+      optionA: "Sodium chloride",
+      optionB: "Sodium hydroxide",
+      optionC: "Sodium nitrate",
+      optionD: "Sodium carbonate",
+      correctOption: "D",
+      explanation: "Sodium carbonate decahydrate is known as washing soda.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-p-block-q01",
+      topicId: "jee-chemistry-p-block",
+      text: "The inert pair effect makes which oxidation state more stable for heavier p-block elements?",
+      optionA: "Higher state",
+      optionB: "Lower state",
+      optionC: "Zero state",
+      optionD: "Negative state",
+      correctOption: "B",
+      explanation: "The inert pair effect stabilises the lower oxidation state for heavier members.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-p-block-q02",
+      topicId: "jee-chemistry-p-block",
+      text: "Which is the most reactive halogen?",
+      optionA: "Chlorine",
+      optionB: "Fluorine",
+      optionC: "Bromine",
+      optionD: "Iodine",
+      correctOption: "B",
+      explanation: "Fluorine is the most reactive halogen and strongest oxidiser.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-p-block-q03",
+      topicId: "jee-chemistry-p-block",
+      text: "Nitrogen exists as a diatomic gas largely because of its strong:",
+      optionA: "Ionic bonds",
+      optionB: "Hydrogen bonds",
+      optionC: "Triple bond",
+      optionD: "Metallic bonds",
+      correctOption: "C",
+      explanation: "Nitrogen forms a very strong triple bond, making N2 a stable diatomic gas.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-p-block-q04",
+      topicId: "jee-chemistry-p-block",
+      text: "Aluminium oxide is classified as a/an:",
+      optionA: "Amphoteric oxide",
+      optionB: "Basic oxide",
+      optionC: "Acidic oxide",
+      optionD: "Neutral oxide",
+      correctOption: "A",
+      explanation: "Aluminium oxide is amphoteric, reacting with both acids and bases.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-p-block-q05",
+      topicId: "jee-chemistry-p-block",
+      text: "Which element shows the strongest tendency for catenation?",
+      optionA: "Silicon",
+      optionB: "Carbon",
+      optionC: "Nitrogen",
+      optionD: "Oxygen",
+      correctOption: "B",
+      explanation: "Carbon shows the strongest catenation, giving the vast field of organic chemistry.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-p-block-q06",
+      topicId: "jee-chemistry-p-block",
+      text: "Across a period in the p-block, non-metallic character generally:",
+      optionA: "Increases",
+      optionB: "Decreases",
+      optionC: "Stays constant",
+      optionD: "Disappears",
+      correctOption: "A",
+      explanation: "Non-metallic character rises across a period as effective nuclear charge increases.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-p-block-q07",
+      topicId: "jee-chemistry-p-block",
+      text: "Noble gases are largely unreactive because they have:",
+      optionA: "One valence electron",
+      optionB: "Completely filled valence shells",
+      optionC: "Half-filled p orbitals",
+      optionD: "High electron affinity",
+      correctOption: "B",
+      explanation: "Noble gases have completely filled valence shells, giving great stability.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-p-block-q08",
+      topicId: "jee-chemistry-p-block",
+      text: "The oxidising power of halogens follows the order:",
+      optionA: "F2 greater than Cl2 greater than Br2 greater than I2",
+      optionB: "I2 greater than Br2 greater than Cl2 greater than F2",
+      optionC: "Cl2 greater than F2 greater than Br2 greater than I2",
+      optionD: "Br2 greater than I2 greater than Cl2 greater than F2",
+      correctOption: "A",
+      explanation: "Oxidising power decreases down the group: F2 greater than Cl2 greater than Br2 greater than I2.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-d-f-block-q01",
+      topicId: "jee-chemistry-d-f-block",
+      text: "Transition metals show variable oxidation states because of involvement of:",
+      optionA: "Both (n-1)d and ns electrons",
+      optionB: "s orbitals only",
+      optionC: "p orbitals only",
+      optionD: "f orbitals only",
+      correctOption: "A",
+      explanation: "Both (n-1)d and ns electrons can take part, giving variable oxidation states.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-d-f-block-q02",
+      topicId: "jee-chemistry-d-f-block",
+      text: "Most transition metal compounds are coloured due to:",
+      optionA: "d-d transitions",
+      optionB: "s-p transitions",
+      optionC: "Nuclear reactions",
+      optionD: "Hydrogen bonding",
+      correctOption: "A",
+      explanation: "Colour arises from d-d electronic transitions in partially filled d orbitals.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-d-f-block-q03",
+      topicId: "jee-chemistry-d-f-block",
+      text: "The spin-only magnetic moment of an ion with two unpaired electrons is about:",
+      optionA: "1.73 BM",
+      optionB: "5.92 BM",
+      optionC: "3.87 BM",
+      optionD: "2.83 BM",
+      correctOption: "D",
+      explanation: "Using the square root of n times n plus two with n equal two gives about 2.83 BM.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-d-f-block-q04",
+      topicId: "jee-chemistry-d-f-block",
+      text: "The steady decrease in size across the lanthanides is called the:",
+      optionA: "Inert pair effect",
+      optionB: "Diagonal relationship",
+      optionC: "Lanthanide contraction",
+      optionD: "Shielding effect",
+      correctOption: "C",
+      explanation: "Poor 4f shielding causes the lanthanide contraction across the series.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-d-f-block-q05",
+      topicId: "jee-chemistry-d-f-block",
+      text: "Which ion is colourless?",
+      optionA: "Cu two plus",
+      optionB: "Fe three plus",
+      optionC: "Zn two plus",
+      optionD: "Mn two plus",
+      correctOption: "C",
+      explanation: "Zinc two plus has a fully filled d10 configuration, so it is colourless.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-d-f-block-q06",
+      topicId: "jee-chemistry-d-f-block",
+      text: "Potassium permanganate is a strong oxidiser with manganese in oxidation state:",
+      optionA: "Plus seven",
+      optionB: "Plus four",
+      optionC: "Plus six",
+      optionD: "Plus two",
+      correctOption: "A",
+      explanation: "In KMnO4 manganese is in the plus seven oxidation state.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-d-f-block-q07",
+      topicId: "jee-chemistry-d-f-block",
+      text: "Paramagnetism in transition metal ions is due to:",
+      optionA: "Paired electrons",
+      optionB: "Nuclear spin",
+      optionC: "Filled orbitals",
+      optionD: "Unpaired electrons",
+      correctOption: "D",
+      explanation: "Unpaired d electrons make many transition metal ions paramagnetic.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-d-f-block-q08",
+      topicId: "jee-chemistry-d-f-block",
+      text: "Compared with lanthanides, actinides show:",
+      optionA: "Fewer oxidation states",
+      optionB: "More oxidation states and radioactivity",
+      optionC: "No oxidation states",
+      optionD: "Only the plus two state",
+      correctOption: "B",
+      explanation: "Actinides are radioactive and display a wider range of oxidation states.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q01",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "Which carbon-halogen bond is the weakest and most reactive?",
+      optionA: "C-F",
+      optionB: "C-Cl",
+      optionC: "C-Br",
+      optionD: "C-I",
+      correctOption: "D",
+      explanation: "The C-I bond is the weakest, making iodoalkanes the most reactive.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q02",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "An SN2 reaction proceeds with:",
+      optionA: "Inversion of configuration",
+      optionB: "Retention of configuration",
+      optionC: "Racemisation",
+      optionD: "No change in geometry",
+      correctOption: "A",
+      explanation: "SN2 proceeds through backside attack, giving inversion (Walden inversion).",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q03",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "The intermediate in an SN1 reaction is a:",
+      optionA: "Carbanion",
+      optionB: "Carbocation",
+      optionC: "Free radical",
+      optionD: "Carbene",
+      correctOption: "B",
+      explanation: "SN1 proceeds through a planar carbocation intermediate.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q04",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "Which substrate reacts fastest by the SN1 mechanism?",
+      optionA: "Primary halide",
+      optionB: "Secondary halide",
+      optionC: "Tertiary halide",
+      optionD: "Methyl halide",
+      correctOption: "C",
+      explanation: "Tertiary halides form the most stable carbocation, favouring SN1.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q05",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "Aryl halides are less reactive to nucleophilic substitution because of:",
+      optionA: "Partial double-bond character of the C-X bond",
+      optionB: "Weak C-X bonds",
+      optionC: "Low molar mass",
+      optionD: "High temperature",
+      correctOption: "A",
+      explanation: "Resonance gives the C-X bond partial double-bond character, resisting substitution.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q06",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "By Saytzeff's rule, elimination favours the alkene that is:",
+      optionA: "More substituted",
+      optionB: "Less substituted",
+      optionC: "Always terminal",
+      optionD: "Always cis",
+      correctOption: "A",
+      explanation: "Saytzeff's rule favours the more substituted, more stable alkene.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q07",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "A Grignard reagent has the general formula:",
+      optionA: "R-O-R",
+      optionB: "R-CHO",
+      optionC: "R-OH",
+      optionD: "R-MgX",
+      correctOption: "D",
+      explanation: "A Grignard reagent is R-MgX, a powerful nucleophile made from a haloalkane.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-haloalkanes-haloarenes-q08",
+      topicId: "jee-chemistry-haloalkanes-haloarenes",
+      text: "The rate of an SN2 reaction depends on the concentration of:",
+      optionA: "Substrate only",
+      optionB: "Nucleophile only",
+      optionC: "Neither",
+      optionD: "Both substrate and nucleophile",
+      correctOption: "D",
+      explanation: "SN2 is bimolecular, so its rate depends on both substrate and nucleophile concentrations.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q01",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "Which is more acidic, phenol or ethanol?",
+      optionA: "Ethanol",
+      optionB: "Neither is acidic",
+      optionC: "Both equal",
+      optionD: "Phenol",
+      correctOption: "D",
+      explanation: "Phenol is more acidic because the phenoxide ion is resonance-stabilised.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q02",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "Oxidation of a primary alcohol first gives a/an:",
+      optionA: "Ketone",
+      optionB: "Ether",
+      optionC: "Ester",
+      optionD: "Aldehyde",
+      correctOption: "D",
+      explanation: "A primary alcohol oxidises to an aldehyde, then further to a carboxylic acid.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q03",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "The Lucas test distinguishes alcohols by their:",
+      optionA: "Colour",
+      optionB: "Boiling point",
+      optionC: "Reaction speed with HCl/ZnCl2",
+      optionD: "Density",
+      correctOption: "C",
+      explanation: "The Lucas test compares how fast alcohols react with HCl and zinc chloride.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q04",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "The Williamson synthesis is the best method to prepare:",
+      optionA: "Alcohols",
+      optionB: "Aldehydes",
+      optionC: "Ethers",
+      optionD: "Amines",
+      correctOption: "C",
+      explanation: "The Williamson synthesis makes ethers from an alkoxide and a haloalkane.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q05",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "Phenol gives which colour with neutral ferric chloride?",
+      optionA: "Violet",
+      optionB: "Yellow",
+      optionC: "Brown",
+      optionD: "Colourless",
+      correctOption: "A",
+      explanation: "Phenol forms a violet coloured complex with neutral ferric chloride.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q06",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "Which alcohol resists oxidation under mild conditions?",
+      optionA: "Primary",
+      optionB: "Secondary",
+      optionC: "All oxidise equally",
+      optionD: "Tertiary",
+      correctOption: "D",
+      explanation: "A tertiary alcohol has no hydrogen on the carbinol carbon, so it resists mild oxidation.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q07",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "Acid-catalysed dehydration of an alcohol gives a/an:",
+      optionA: "Alkene",
+      optionB: "Alkane",
+      optionC: "Acid",
+      optionD: "Ketone",
+      correctOption: "A",
+      explanation: "Dehydration removes water to form an alkene by an E1 pathway.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-alcohols-phenols-ethers-q08",
+      topicId: "jee-chemistry-alcohols-phenols-ethers",
+      text: "Ethers are generally cleaved by hot:",
+      optionA: "Water",
+      optionB: "Ethanol",
+      optionC: "Sodium hydroxide",
+      optionD: "Hydroiodic acid",
+      correctOption: "D",
+      explanation: "Ethers are fairly inert but are cleaved by hot hydroiodic acid.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q01",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "The carbonyl carbon undergoes which kind of reaction?",
+      optionA: "Nucleophilic addition",
+      optionB: "Electrophilic addition",
+      optionC: "Free-radical substitution",
+      optionD: "Elimination only",
+      correctOption: "A",
+      explanation: "The electrophilic carbonyl carbon undergoes nucleophilic addition.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q02",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "Tollens' reagent gives a silver mirror with:",
+      optionA: "Ketones",
+      optionB: "Ethers",
+      optionC: "Aldehydes",
+      optionD: "Alcohols",
+      correctOption: "C",
+      explanation: "Aldehydes reduce Tollens' reagent to a silver mirror; ketones do not.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q03",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "The aldol condensation requires the carbonyl compound to have a/an:",
+      optionA: "Alpha-hydrogen",
+      optionB: "Aromatic ring",
+      optionC: "Halogen",
+      optionD: "Nitro group",
+      correctOption: "A",
+      explanation: "An alpha-hydrogen is needed to form the enolate in an aldol reaction.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q04",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "The Cannizzaro reaction occurs with aldehydes that lack a/an:",
+      optionA: "Carbonyl group",
+      optionB: "Double bond",
+      optionC: "Methyl group",
+      optionD: "Alpha-hydrogen",
+      correctOption: "D",
+      explanation: "Aldehydes without an alpha-hydrogen undergo the Cannizzaro disproportionation.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q05",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "Which compound is the strongest acid?",
+      optionA: "Trichloroacetic acid",
+      optionB: "Acetic acid",
+      optionC: "Ethanol",
+      optionD: "Phenol",
+      correctOption: "A",
+      explanation: "Three electron-withdrawing chlorines make trichloroacetic acid the strongest here.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q06",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "A positive iodoform test indicates the presence of a:",
+      optionA: "Carboxylic acid",
+      optionB: "Simple ether",
+      optionC: "Primary amine",
+      optionD: "Methyl ketone",
+      correctOption: "D",
+      explanation: "Methyl ketones (and ethanal) give the yellow iodoform precipitate.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q07",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "Why are aldehydes more reactive than ketones toward nucleophiles?",
+      optionA: "Greater steric hindrance",
+      optionB: "Aromatic stabilisation",
+      optionC: "Higher molar mass",
+      optionD: "Less steric hindrance and less electron donation",
+      correctOption: "D",
+      explanation: "Aldehydes have less steric crowding and less alkyl donation, so they react faster.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-aldehydes-ketones-acids-q08",
+      topicId: "jee-chemistry-aldehydes-ketones-acids",
+      text: "The carboxylate ion is stabilised by:",
+      optionA: "Resonance over two oxygens",
+      optionB: "Hydrogen bonding only",
+      optionC: "A single localised charge",
+      optionD: "An aromatic ring",
+      correctOption: "A",
+      explanation: "The negative charge is delocalised over two equivalent oxygens by resonance.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-amines-q01",
+      topicId: "jee-chemistry-amines",
+      text: "Amines are basic because nitrogen has a:",
+      optionA: "Vacant orbital",
+      optionB: "Lone pair of electrons",
+      optionC: "Positive charge",
+      optionD: "Triple bond",
+      correctOption: "B",
+      explanation: "The lone pair on nitrogen accepts a proton, making amines basic.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-amines-q02",
+      topicId: "jee-chemistry-amines",
+      text: "Aniline is a weaker base than ammonia because the lone pair is:",
+      optionA: "Localised on nitrogen",
+      optionB: "Delocalised into the ring",
+      optionC: "Removed entirely",
+      optionD: "Paired with oxygen",
+      correctOption: "B",
+      explanation: "In aniline the lone pair is delocalised into the benzene ring, lowering basicity.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-amines-q03",
+      topicId: "jee-chemistry-amines",
+      text: "The carbylamine test is specific to which type of amine?",
+      optionA: "Quaternary",
+      optionB: "Secondary",
+      optionC: "Tertiary",
+      optionD: "Primary",
+      correctOption: "D",
+      explanation: "Only primary amines give the foul-smelling isocyanide in the carbylamine test.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-amines-q04",
+      topicId: "jee-chemistry-amines",
+      text: "Diazotisation of a primary aromatic amine is carried out at a temperature of:",
+      optionA: "60 degrees C",
+      optionB: "25 degrees C",
+      optionC: "0 to 5 degrees C",
+      optionD: "100 degrees C",
+      correctOption: "C",
+      explanation: "Diazonium salts are unstable, so diazotisation is done at 0 to 5 degrees C.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-amines-q05",
+      topicId: "jee-chemistry-amines",
+      text: "The Hinsberg reagent is used to:",
+      optionA: "Oxidise amines",
+      optionB: "Reduce nitro groups",
+      optionC: "Distinguish primary, secondary and tertiary amines",
+      optionD: "Form azo dyes",
+      correctOption: "C",
+      explanation: "Hinsberg's reagent distinguishes the three classes of amines by their products.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-amines-q06",
+      topicId: "jee-chemistry-amines",
+      text: "A secondary amine has the general structure:",
+      optionA: "R-NH2",
+      optionB: "R4-N plus",
+      optionC: "R3-N",
+      optionD: "R2-NH",
+      correctOption: "D",
+      explanation: "A secondary amine has two alkyl groups and one hydrogen on nitrogen, R2-NH.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-amines-q07",
+      topicId: "jee-chemistry-amines",
+      text: "Diazonium salts are useful chiefly because they undergo:",
+      optionA: "Only combustion",
+      optionB: "No reactions",
+      optionC: "Coupling and substitution reactions",
+      optionD: "Polymerisation only",
+      correctOption: "C",
+      explanation: "Diazonium salts couple to form dyes and undergo substitution to add many groups.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-amines-q08",
+      topicId: "jee-chemistry-amines",
+      text: "In aqueous solution, the basicity order of methylamine and ammonia is:",
+      optionA: "Ammonia greater than methylamine",
+      optionB: "They are equal",
+      optionC: "Methylamine greater than ammonia",
+      optionD: "Both are neutral",
+      correctOption: "C",
+      explanation: "The electron-donating methyl group makes methylamine more basic than ammonia.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q01",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "Glucose is classified as a/an:",
+      optionA: "Disaccharide",
+      optionB: "Amino acid",
+      optionC: "Polysaccharide",
+      optionD: "Aldohexose",
+      correctOption: "D",
+      explanation: "Glucose is an aldohexose, a six-carbon monosaccharide with an aldehyde group.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q02",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "Proteins are polymers of:",
+      optionA: "Glucose units",
+      optionB: "Nucleotides",
+      optionC: "Alpha-amino acids",
+      optionD: "Fatty acids",
+      correctOption: "C",
+      explanation: "Proteins are polymers of alpha-amino acids joined by peptide bonds.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q03",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "The bond linking amino acids in a protein is the:",
+      optionA: "Peptide bond",
+      optionB: "Glycosidic bond",
+      optionC: "Ester bond",
+      optionD: "Hydrogen bond",
+      correctOption: "A",
+      explanation: "Amino acids join by peptide (amide) bonds in proteins.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q04",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "Nylon-6,6 is an example of which polymer type?",
+      optionA: "Addition polymer",
+      optionB: "Condensation polymer",
+      optionC: "Natural polymer",
+      optionD: "Elastomer",
+      correctOption: "B",
+      explanation: "Nylon-6,6 forms by condensation, releasing water at each amide linkage.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q05",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "Which vitamin is water-soluble?",
+      optionA: "Vitamin A",
+      optionB: "Vitamin D",
+      optionC: "Vitamin K",
+      optionD: "Vitamin C",
+      correctOption: "D",
+      explanation: "Vitamin C is water-soluble, unlike the fat-soluble vitamins A, D, E and K.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q06",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "Natural rubber is a polymer of:",
+      optionA: "Ethene",
+      optionB: "Vinyl chloride",
+      optionC: "Styrene",
+      optionD: "Isoprene",
+      correctOption: "D",
+      explanation: "Natural rubber is a polymer of isoprene units.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q07",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "Denaturation of a protein destroys its higher structure but keeps the:",
+      optionA: "Catalytic activity",
+      optionB: "Quaternary structure",
+      optionC: "Primary sequence",
+      optionD: "Tertiary fold",
+      correctOption: "C",
+      explanation: "Denaturation unfolds the protein but leaves the primary amino acid sequence intact.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-biomolecules-polymers-q08",
+      topicId: "jee-chemistry-biomolecules-polymers",
+      text: "In DNA, adenine pairs with:",
+      optionA: "Guanine",
+      optionB: "Cytosine",
+      optionC: "Uracil",
+      optionD: "Thymine",
+      correctOption: "D",
+      explanation: "In DNA, adenine pairs with thymine through hydrogen bonds.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-metallurgy-q01",
+      topicId: "jee-chemistry-metallurgy",
+      text: "Froth flotation is used to concentrate which type of ore?",
+      optionA: "Oxide ores",
+      optionB: "Chloride ores",
+      optionC: "Carbonate ores",
+      optionD: "Sulphide ores",
+      correctOption: "D",
+      explanation: "Froth flotation concentrates sulphide ores using their preferential wetting by oil.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-metallurgy-q02",
+      topicId: "jee-chemistry-metallurgy",
+      text: "Heating a carbonate ore to give the oxide is called:",
+      optionA: "Roasting",
+      optionB: "Calcination",
+      optionC: "Smelting",
+      optionD: "Leaching",
+      correctOption: "B",
+      explanation: "Calcination heats a carbonate in limited air to drive off carbon dioxide.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-metallurgy-q03",
+      topicId: "jee-chemistry-metallurgy",
+      text: "Ellingham diagrams help choose a suitable:",
+      optionA: "Solvent",
+      optionB: "Reducing agent",
+      optionC: "Catalyst",
+      optionD: "Indicator",
+      correctOption: "B",
+      explanation: "Ellingham diagrams show which reducing agent works at a given temperature.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-metallurgy-q04",
+      topicId: "jee-chemistry-metallurgy",
+      text: "Aluminium is extracted commercially by:",
+      optionA: "Carbon reduction",
+      optionB: "Self-reduction",
+      optionC: "Roasting",
+      optionD: "Electrolysis of molten alumina",
+      correctOption: "D",
+      explanation: "Aluminium is obtained by electrolysis of molten alumina (Hall-Heroult process).",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-metallurgy-q05",
+      topicId: "jee-chemistry-metallurgy",
+      text: "Zone refining is especially suited to purify:",
+      optionA: "Sodium",
+      optionB: "Iron",
+      optionC: "Semiconductors like silicon",
+      optionD: "Copper sulphate",
+      correctOption: "C",
+      explanation: "Zone refining yields ultrapure semiconductors such as silicon and germanium.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-metallurgy-q06",
+      topicId: "jee-chemistry-metallurgy",
+      text: "Roasting of a sulphide ore in air produces the oxide and:",
+      optionA: "Carbon dioxide",
+      optionB: "Nitrogen",
+      optionC: "Water",
+      optionD: "Sulphur dioxide",
+      correctOption: "D",
+      explanation: "Roasting a sulphide in air gives the metal oxide and sulphur dioxide gas.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-metallurgy-q07",
+      topicId: "jee-chemistry-metallurgy",
+      text: "The Mond process refines which metal via a volatile carbonyl?",
+      optionA: "Iron",
+      optionB: "Lead",
+      optionC: "Zinc",
+      optionD: "Nickel",
+      correctOption: "D",
+      explanation: "The Mond process purifies nickel through its volatile carbonyl compound.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-metallurgy-q08",
+      topicId: "jee-chemistry-metallurgy",
+      text: "The unwanted earthy impurity present in an ore is called:",
+      optionA: "Gangue",
+      optionB: "Slag",
+      optionC: "Flux",
+      optionD: "Matte",
+      correctOption: "A",
+      explanation: "The unwanted rocky impurity in an ore is called the gangue.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q01",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "Which gas binds strongly to haemoglobin, reducing oxygen transport?",
+      optionA: "Carbon dioxide",
+      optionB: "Nitrogen",
+      optionC: "Carbon monoxide",
+      optionD: "Oxygen",
+      correctOption: "C",
+      explanation: "Carbon monoxide binds haemoglobin far more strongly than oxygen, causing poisoning.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q02",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "Acid rain is caused mainly by oxides of sulphur and:",
+      optionA: "Carbon",
+      optionB: "Sodium",
+      optionC: "Helium",
+      optionD: "Nitrogen",
+      correctOption: "D",
+      explanation: "Sulphur and nitrogen oxides form sulphuric and nitric acids, causing acid rain.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q03",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "The ozone layer is depleted mainly by:",
+      optionA: "Carbon dioxide",
+      optionB: "Chlorofluorocarbons",
+      optionC: "Methane",
+      optionD: "Water vapour",
+      correctOption: "B",
+      explanation: "CFCs release chlorine atoms that catalytically destroy stratospheric ozone.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q04",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "A high biochemical oxygen demand (BOD) in water indicates:",
+      optionA: "Clean water",
+      optionB: "High oxygen",
+      optionC: "Low microbial content",
+      optionD: "Heavy organic pollution",
+      correctOption: "D",
+      explanation: "High BOD means microbes consume much oxygen, signalling heavy organic pollution.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q05",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "Which gas is the main contributor to the greenhouse effect from fossil fuels?",
+      optionA: "Argon",
+      optionB: "Oxygen",
+      optionC: "Carbon dioxide",
+      optionD: "Hydrogen",
+      correctOption: "C",
+      explanation: "Carbon dioxide from burning fossil fuels is the leading greenhouse gas.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q06",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "Excess nutrients causing algal blooms in water lead to:",
+      optionA: "Distillation",
+      optionB: "Calcination",
+      optionC: "Sublimation",
+      optionD: "Eutrophication",
+      correctOption: "D",
+      explanation: "Nutrient runoff causes eutrophication, depleting dissolved oxygen in water.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q07",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "Green chemistry aims primarily to:",
+      optionA: "Maximise waste",
+      optionB: "Increase toxic byproducts",
+      optionC: "Prevent waste and use safer reagents",
+      optionD: "Raise energy use",
+      correctOption: "C",
+      explanation: "Green chemistry designs processes that prevent waste and use safer reagents.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-chemistry-environmental-chemistry-q08",
+      topicId: "jee-chemistry-environmental-chemistry",
+      text: "Low dissolved oxygen (DO) in a river is harmful because it:",
+      optionA: "Suffocates aquatic life",
+      optionB: "Helps aquatic life",
+      optionC: "Raises water clarity",
+      optionD: "Has no effect",
+      correctOption: "A",
+      explanation: "Low dissolved oxygen suffocates fish and other aquatic organisms.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q01",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "The number of subsets of a set with n elements is:",
+      optionA: "n squared",
+      optionB: "Two times n",
+      optionC: "n factorial",
+      optionD: "Two to the power n",
+      correctOption: "D",
+      explanation: "A set with n elements has two to the power n subsets.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q02",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "A function that is both one-one and onto is called:",
+      optionA: "Bijective",
+      optionB: "Surjective only",
+      optionC: "Injective only",
+      optionD: "Constant",
+      correctOption: "A",
+      explanation: "A function that is both one-one and onto is bijective.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q03",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "An equivalence relation must be reflexive, symmetric and:",
+      optionA: "Irreflexive",
+      optionB: "Antisymmetric",
+      optionC: "Transitive",
+      optionD: "Empty",
+      correctOption: "C",
+      explanation: "An equivalence relation is reflexive, symmetric and transitive.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q04",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "If n(A) = 3 and n(B) = 2, the number of functions from A to B is:",
+      optionA: "Eight",
+      optionB: "Six",
+      optionC: "Nine",
+      optionD: "Five",
+      correctOption: "A",
+      explanation: "The count is n(B) to the power n(A), that is two cubed equal to eight.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q05",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "For two sets, n(A union B) equals n(A) plus n(B) minus:",
+      optionA: "n(A intersection B)",
+      optionB: "n(A) times n(B)",
+      optionC: "Zero",
+      optionD: "n(A) minus n(B)",
+      correctOption: "A",
+      explanation: "By the inclusion-exclusion principle, subtract the intersection count.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q06",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "Composition of functions is generally:",
+      optionA: "Commutative",
+      optionB: "Always the identity",
+      optionC: "Not commutative",
+      optionD: "Undefined",
+      correctOption: "C",
+      explanation: "In general f composed with g differs from g composed with f.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q07",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "Which type of function has an inverse?",
+      optionA: "Bijective",
+      optionB: "Only onto",
+      optionC: "Only one-one",
+      optionD: "Constant",
+      correctOption: "A",
+      explanation: "Only a bijective function has a well-defined inverse.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-sets-relations-functions-q08",
+      topicId: "jee-mathematics-sets-relations-functions",
+      text: "A relation from set A to set B is a subset of:",
+      optionA: "A union B",
+      optionB: "A intersection B",
+      optionC: "The cartesian product A times B",
+      optionD: "A minus B",
+      correctOption: "C",
+      explanation: "A relation from A to B is defined as a subset of the cartesian product A times B.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q01",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "The value of sin squared x plus cos squared x is:",
+      optionA: "One",
+      optionB: "Zero",
+      optionC: "Two",
+      optionD: "Depends on x",
+      correctOption: "A",
+      explanation: "The Pythagorean identity gives sin squared x plus cos squared x equal to one.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q02",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "sin 2A equals:",
+      optionA: "Two cos squared A",
+      optionB: "cos squared A minus sin squared A",
+      optionC: "Two sin A cos A",
+      optionD: "One minus two sin squared A",
+      correctOption: "C",
+      explanation: "The double-angle identity gives sin 2A equal to two sin A cos A.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q03",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "The value of cos 60 degrees is:",
+      optionA: "One",
+      optionB: "Root three over two",
+      optionC: "One half",
+      optionD: "Zero",
+      correctOption: "C",
+      explanation: "The cosine of 60 degrees equals one half.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q04",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "The identity 1 plus tan squared x equals:",
+      optionA: "sec squared x",
+      optionB: "csc squared x",
+      optionC: "cot squared x",
+      optionD: "sin squared x",
+      correctOption: "A",
+      explanation: "One plus tan squared x equals sec squared x.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q05",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "The general solution of sin x equals zero is:",
+      optionA: "x equals n pi",
+      optionB: "x equals (2n plus 1) pi over 2",
+      optionC: "x equals 2 n pi",
+      optionD: "x equals n pi over 2",
+      correctOption: "A",
+      explanation: "Sine vanishes at integer multiples of pi, so x equals n pi.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q06",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "cos(A plus B) equals:",
+      optionA: "cos A cos B plus sin A sin B",
+      optionB: "cos A cos B minus sin A sin B",
+      optionC: "sin A cos B plus cos A sin B",
+      optionD: "cos A sin B minus sin A cos B",
+      correctOption: "B",
+      explanation: "The compound-angle formula gives cos A cos B minus sin A sin B.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q07",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "The value of tan 45 degrees is:",
+      optionA: "One",
+      optionB: "Zero",
+      optionC: "Root three",
+      optionD: "One over root three",
+      correctOption: "A",
+      explanation: "The tangent of 45 degrees equals one.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-trigonometric-identities-q08",
+      topicId: "jee-mathematics-trigonometric-identities",
+      text: "cos 2A may be written as:",
+      optionA: "Two sin A cos A",
+      optionB: "sin squared A minus cos squared A",
+      optionC: "One plus two sin squared A",
+      optionD: "Two cos squared A minus one",
+      correctOption: "D",
+      explanation: "One form of the double-angle identity is cos 2A equal to two cos squared A minus one.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q01",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The principal range of arcsin x is:",
+      optionA: "Zero to pi",
+      optionB: "Minus pi over two to pi over two",
+      optionC: "Zero to pi over two",
+      optionD: "Minus pi to pi",
+      correctOption: "B",
+      explanation: "The principal range of arcsin is from minus pi over two to pi over two.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q02",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The value of arcsin x plus arccos x is:",
+      optionA: "Zero",
+      optionB: "pi over two",
+      optionC: "pi",
+      optionD: "pi over four",
+      correctOption: "B",
+      explanation: "For all valid x, arcsin x plus arccos x equals pi over two.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q03",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The principal range of arccos x is:",
+      optionA: "Minus pi over two to pi over two",
+      optionB: "Minus pi to pi",
+      optionC: "Zero to pi over two",
+      optionD: "Zero to pi",
+      correctOption: "D",
+      explanation: "The principal range of arccos is from zero to pi.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q04",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The derivative of arctan x is:",
+      optionA: "One over the square root of (1 minus x squared)",
+      optionB: "One over (1 minus x squared)",
+      optionC: "Minus one over (1 plus x squared)",
+      optionD: "One over (1 plus x squared)",
+      correctOption: "D",
+      explanation: "The derivative of arctan x is one over (1 plus x squared).",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q05",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The value of arctan x plus arccot x is:",
+      optionA: "Zero",
+      optionB: "pi",
+      optionC: "pi over two",
+      optionD: "pi over four",
+      correctOption: "C",
+      explanation: "For all real x, arctan x plus arccot x equals pi over two.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q06",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The value of arcsin of one half is:",
+      optionA: "pi over six",
+      optionB: "pi over four",
+      optionC: "pi over three",
+      optionD: "pi over two",
+      correctOption: "A",
+      explanation: "Since sine of pi over six is one half, arcsin of one half is pi over six.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q07",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The function arcsin x is:",
+      optionA: "An even function",
+      optionB: "An odd function",
+      optionC: "Neither even nor odd",
+      optionD: "A constant",
+      correctOption: "B",
+      explanation: "Since arcsin of minus x equals minus arcsin x, the function is odd.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-inverse-trigonometry-q08",
+      topicId: "jee-mathematics-inverse-trigonometry",
+      text: "The expression arccos(minus x) equals:",
+      optionA: "pi minus arccos x",
+      optionB: "Minus arccos x",
+      optionC: "arccos x",
+      optionD: "pi over two minus arccos x",
+      correctOption: "A",
+      explanation: "By the identity, arccos of minus x equals pi minus arccos x.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-conic-sections-q01",
+      topicId: "jee-mathematics-conic-sections",
+      text: "The eccentricity of a parabola is:",
+      optionA: "One",
+      optionB: "Between zero and one",
+      optionC: "Zero",
+      optionD: "Greater than one",
+      correctOption: "A",
+      explanation: "A parabola has eccentricity exactly equal to one.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-conic-sections-q02",
+      topicId: "jee-mathematics-conic-sections",
+      text: "For the parabola y squared equals 4 a x, the focus is at:",
+      optionA: "(0, a)",
+      optionB: "(minus a, 0)",
+      optionC: "(a, 0)",
+      optionD: "(0, minus a)",
+      correctOption: "C",
+      explanation: "The focus of y squared equals 4 a x lies at the point (a, 0).",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-conic-sections-q03",
+      topicId: "jee-mathematics-conic-sections",
+      text: "For an ellipse, the sum of distances from any point to the two foci is:",
+      optionA: "Zero",
+      optionB: "Constant equal to 2a",
+      optionC: "Equal to the eccentricity",
+      optionD: "Variable",
+      correctOption: "B",
+      explanation: "An ellipse is the locus where the sum of focal distances is the constant 2a.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-conic-sections-q04",
+      topicId: "jee-mathematics-conic-sections",
+      text: "The eccentricity of a circle is:",
+      optionA: "Zero",
+      optionB: "One",
+      optionC: "Greater than one",
+      optionD: "One half",
+      correctOption: "A",
+      explanation: "A circle is a special conic with eccentricity zero.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-conic-sections-q05",
+      topicId: "jee-mathematics-conic-sections",
+      text: "The asymptotes of the hyperbola x squared over a squared minus y squared over b squared equal one are:",
+      optionA: "y equals plus or minus b over a times x",
+      optionB: "y equals plus or minus a over b times x",
+      optionC: "x equals zero",
+      optionD: "y equals zero",
+      correctOption: "A",
+      explanation: "The asymptotes are the lines y equals plus or minus b over a times x.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-conic-sections-q06",
+      topicId: "jee-mathematics-conic-sections",
+      text: "The length of the latus rectum of y squared equals 4 a x is:",
+      optionA: "4a",
+      optionB: "2a",
+      optionC: "a",
+      optionD: "a over two",
+      correctOption: "A",
+      explanation: "The latus rectum of y squared equals 4 a x has length 4a.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-conic-sections-q07",
+      topicId: "jee-mathematics-conic-sections",
+      text: "A conic with eccentricity greater than one is a/an:",
+      optionA: "Ellipse",
+      optionB: "Parabola",
+      optionC: "Circle",
+      optionD: "Hyperbola",
+      correctOption: "D",
+      explanation: "An eccentricity greater than one identifies a hyperbola.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-conic-sections-q08",
+      topicId: "jee-mathematics-conic-sections",
+      text: "For the ellipse x squared over a squared plus y squared over b squared equal one with a greater than b, b squared equals:",
+      optionA: "a squared plus e squared",
+      optionB: "a squared times (e squared minus 1)",
+      optionC: "a squared times e squared",
+      optionD: "a squared times (1 minus e squared)",
+      correctOption: "D",
+      explanation: "For an ellipse, b squared equals a squared times (1 minus e squared).",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-differential-equations-q01",
+      topicId: "jee-mathematics-differential-equations",
+      text: "The order of a differential equation is the:",
+      optionA: "Highest derivative present",
+      optionB: "Power of the highest derivative",
+      optionC: "Number of terms",
+      optionD: "Degree of the polynomial",
+      correctOption: "A",
+      explanation: "The order is the highest-order derivative appearing in the equation.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-differential-equations-q02",
+      topicId: "jee-mathematics-differential-equations",
+      text: "The integrating factor of dy/dx plus P y equals Q is:",
+      optionA: "The integral of Q dx",
+      optionB: "Exponential of the integral of P dx",
+      optionC: "P times Q",
+      optionD: "One over P",
+      correctOption: "B",
+      explanation: "The integrating factor is the exponential of the integral of P with respect to x.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-differential-equations-q03",
+      topicId: "jee-mathematics-differential-equations",
+      text: "To solve a homogeneous differential equation, the usual substitution is:",
+      optionA: "x equals y squared",
+      optionB: "y equals v x",
+      optionC: "y equals constant",
+      optionD: "x equals v over y",
+      correctOption: "B",
+      explanation: "Substituting y equals v x reduces a homogeneous equation to a separable one.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-differential-equations-q04",
+      topicId: "jee-mathematics-differential-equations",
+      text: "The general solution of an nth-order differential equation contains how many arbitrary constants?",
+      optionA: "One",
+      optionB: "Two",
+      optionC: "Zero",
+      optionD: "n",
+      correctOption: "D",
+      explanation: "A general solution of order n carries n arbitrary constants.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-differential-equations-q05",
+      topicId: "jee-mathematics-differential-equations",
+      text: "Which method solves dy/dx equals f(x) times g(y)?",
+      optionA: "Integrating factor",
+      optionB: "Substitution y equals v x",
+      optionC: "Variable separation",
+      optionD: "Partial fractions only",
+      correctOption: "C",
+      explanation: "Such an equation separates the variables onto opposite sides before integrating.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-differential-equations-q06",
+      topicId: "jee-mathematics-differential-equations",
+      text: "The degree of (dy/dx) squared plus y equals zero is:",
+      optionA: "One",
+      optionB: "Two",
+      optionC: "Three",
+      optionD: "Zero",
+      correctOption: "B",
+      explanation: "The highest derivative appears to the power two, so the degree is two.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-differential-equations-q07",
+      topicId: "jee-mathematics-differential-equations",
+      text: "A first-order linear differential equation has the form dy/dx plus P(x) y equals:",
+      optionA: "Zero always",
+      optionB: "A constant only",
+      optionC: "y squared",
+      optionD: "Q(x)",
+      correctOption: "D",
+      explanation: "The standard linear form is dy/dx plus P(x) y equals Q(x).",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-differential-equations-q08",
+      topicId: "jee-mathematics-differential-equations",
+      text: "The solution of dy/dx equals k y represents:",
+      optionA: "Linear growth",
+      optionB: "Exponential growth or decay",
+      optionC: "Constant value",
+      optionD: "Oscillation",
+      correctOption: "B",
+      explanation: "dy/dx equals k y integrates to an exponential, giving growth or decay.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q01",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "The slope of the tangent to a curve at a point equals the:",
+      optionA: "Value of the function",
+      optionB: "First derivative there",
+      optionC: "Second derivative there",
+      optionD: "Integral there",
+      correctOption: "B",
+      explanation: "The slope of the tangent at a point is the first derivative at that point.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q02",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "A function is increasing on an interval where its first derivative is:",
+      optionA: "Positive",
+      optionB: "Zero",
+      optionC: "Negative",
+      optionD: "Undefined",
+      correctOption: "A",
+      explanation: "A positive first derivative means the function is increasing.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q03",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "At a local minimum the second derivative is generally:",
+      optionA: "Negative",
+      optionB: "Infinite",
+      optionC: "Zero only",
+      optionD: "Positive",
+      correctOption: "D",
+      explanation: "A positive second derivative at a critical point indicates a local minimum.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q04",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "The slope of the normal to a curve is:",
+      optionA: "Equal to the tangent slope",
+      optionB: "Negative reciprocal of the tangent slope",
+      optionC: "Zero always",
+      optionD: "The second derivative",
+      correctOption: "B",
+      explanation: "The normal slope is the negative reciprocal of the tangent slope.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q05",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "At a point of inflection, the second derivative:",
+      optionA: "Is always positive",
+      optionB: "Is undefined always",
+      optionC: "Changes sign",
+      optionD: "Equals the first derivative",
+      correctOption: "C",
+      explanation: "At an inflection point the second derivative changes sign and concavity flips.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q06",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "Critical points of a function occur where the first derivative is:",
+      optionA: "Zero or undefined",
+      optionB: "Maximum",
+      optionC: "Always positive",
+      optionD: "Constant",
+      correctOption: "A",
+      explanation: "Critical points are where the first derivative is zero or fails to exist.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q07",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "For a small change, the approximate change in y is given by:",
+      optionA: "dx over f'(x)",
+      optionB: "f(x) times dx",
+      optionC: "f'(x) times dx",
+      optionD: "f''(x) times dx",
+      correctOption: "C",
+      explanation: "The linear approximation gives dy approximately equal to f'(x) times dx.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-application-of-derivatives-q08",
+      topicId: "jee-mathematics-application-of-derivatives",
+      text: "To find the absolute maximum on a closed interval, one must also check the:",
+      optionA: "Endpoints",
+      optionB: "Origin only",
+      optionC: "Asymptotes",
+      optionD: "Inflection points only",
+      correctOption: "A",
+      explanation: "The absolute extremum may occur at the endpoints, so they must be checked.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q01",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "The area under a non-negative curve y equals f(x) from a to b is given by:",
+      optionA: "The definite integral of f from a to b",
+      optionB: "The derivative of f",
+      optionC: "f(b) minus f(a)",
+      optionD: "The slope at b",
+      correctOption: "A",
+      explanation: "The area equals the definite integral of f(x) from a to b.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q02",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "The area enclosed by a circle of radius r is:",
+      optionA: "2 pi r",
+      optionB: "4 pi r squared",
+      optionC: "pi r",
+      optionD: "pi r squared",
+      correctOption: "D",
+      explanation: "The area of a circle of radius r is pi times r squared.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q03",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "The area between two curves uses the integral of:",
+      optionA: "The derivative of each",
+      optionB: "Their product",
+      optionC: "Their sum",
+      optionD: "Upper curve minus lower curve",
+      correctOption: "D",
+      explanation: "The area between curves is the integral of the upper minus the lower function.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q04",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "If a region lies below the x-axis, the definite integral over it is:",
+      optionA: "Positive",
+      optionB: "Negative",
+      optionC: "Zero",
+      optionD: "Infinite",
+      correctOption: "B",
+      explanation: "Below the x-axis the function is negative, so the integral there is negative.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q05",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "The area of an ellipse with semi-axes a and b is:",
+      optionA: "2 pi a b",
+      optionB: "pi (a plus b)",
+      optionC: "pi a b",
+      optionD: "pi a squared b",
+      correctOption: "C",
+      explanation: "The area of an ellipse is pi times a times b.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q06",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "The limits of integration for the area between two curves are found from their:",
+      optionA: "Points of intersection",
+      optionB: "Maximum values",
+      optionC: "Derivatives",
+      optionD: "Asymptotes",
+      correctOption: "A",
+      explanation: "The integration limits are the x-coordinates where the two curves intersect.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q07",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "When integrating with respect to y, the strip used is:",
+      optionA: "Vertical",
+      optionB: "Horizontal",
+      optionC: "Diagonal",
+      optionD: "Circular",
+      correctOption: "B",
+      explanation: "Integration with respect to y sums horizontal strips of width dy.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-area-under-curves-q08",
+      topicId: "jee-mathematics-area-under-curves",
+      text: "For a symmetric region, a useful shortcut is to integrate over half and then:",
+      optionA: "Subtract the result",
+      optionB: "Double the result",
+      optionC: "Square the result",
+      optionD: "Ignore symmetry",
+      correctOption: "B",
+      explanation: "Using symmetry, integrate over half the region and double the answer.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q01",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The most frequently occurring value in a data set is the:",
+      optionA: "Mean",
+      optionB: "Median",
+      optionC: "Mode",
+      optionD: "Range",
+      correctOption: "C",
+      explanation: "The mode is the value that occurs most often.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q02",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The standard deviation is the square root of the:",
+      optionA: "Mean",
+      optionB: "Mode",
+      optionC: "Median",
+      optionD: "Variance",
+      correctOption: "D",
+      explanation: "Standard deviation is the positive square root of the variance.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q03",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The contrapositive of the statement if p then q is:",
+      optionA: "If q then p",
+      optionB: "If not q then not p",
+      optionC: "If not p then not q",
+      optionD: "p and not q",
+      correctOption: "B",
+      explanation: "The contrapositive of if p then q is if not q then not p, which is equivalent.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q04",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The conjunction of two statements (p and q) is true only when:",
+      optionA: "At least one is true",
+      optionB: "Both are true",
+      optionC: "Both are false",
+      optionD: "They differ",
+      correctOption: "B",
+      explanation: "A conjunction is true only when both component statements are true.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q05",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The median of the data 3, 5, 7, 9 is:",
+      optionA: "Five",
+      optionB: "Seven",
+      optionC: "Six",
+      optionD: "Eight",
+      correctOption: "C",
+      explanation: "With an even count, the median is the average of 5 and 7, which is 6.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q06",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "A statement that is always true regardless of its components is called a:",
+      optionA: "Contradiction",
+      optionB: "Tautology",
+      optionC: "Converse",
+      optionD: "Negation",
+      correctOption: "B",
+      explanation: "A tautology is true for all truth values of its components.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q07",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The disjunction (p or q) is false only when:",
+      optionA: "Both are false",
+      optionB: "One is true",
+      optionC: "Both are true",
+      optionD: "They differ",
+      correctOption: "A",
+      explanation: "An inclusive or is false only when both statements are false.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-statistics-reasoning-q08",
+      topicId: "jee-mathematics-statistics-reasoning",
+      text: "The mean of the data 2, 4, 6, 8 is:",
+      optionA: "Four",
+      optionB: "Five",
+      optionC: "Six",
+      optionD: "Seven",
+      correctOption: "B",
+      explanation: "The sum 20 divided by 4 values gives a mean of 5.",
+      orderIndex: 7
+    },
+    {
+      id: "jee-mathematics-heights-distances-q01",
+      topicId: "jee-mathematics-heights-distances",
+      text: "The angle of elevation is measured from the horizontal to an object that is:",
+      optionA: "Below the observer",
+      optionB: "At eye level",
+      optionC: "Above the observer",
+      optionD: "Behind the observer",
+      correctOption: "C",
+      explanation: "The angle of elevation is measured upward to an object above the horizontal.",
+      orderIndex: 0
+    },
+    {
+      id: "jee-mathematics-heights-distances-q02",
+      topicId: "jee-mathematics-heights-distances",
+      text: "At an angle of elevation of 45 degrees, the height of an object equals its:",
+      optionA: "Horizontal distance",
+      optionB: "Half the distance",
+      optionC: "Twice the distance",
+      optionD: "Square of the distance",
+      correctOption: "A",
+      explanation: "Since tan 45 degrees is one, the height equals the horizontal distance.",
+      orderIndex: 1
+    },
+    {
+      id: "jee-mathematics-heights-distances-q03",
+      topicId: "jee-mathematics-heights-distances",
+      text: "The angle of elevation and the angle of depression for the same line of sight are:",
+      optionA: "Complementary",
+      optionB: "Equal",
+      optionC: "Supplementary",
+      optionD: "Always 90 degrees",
+      correctOption: "B",
+      explanation: "They are alternate angles for the same line of sight, so they are equal.",
+      orderIndex: 2
+    },
+    {
+      id: "jee-mathematics-heights-distances-q04",
+      topicId: "jee-mathematics-heights-distances",
+      text: "A tower casts a shadow equal to its height when the sun's elevation is:",
+      optionA: "30 degrees",
+      optionB: "90 degrees",
+      optionC: "60 degrees",
+      optionD: "45 degrees",
+      correctOption: "D",
+      explanation: "Equal height and shadow give tan equal to one, so the elevation is 45 degrees.",
+      orderIndex: 3
+    },
+    {
+      id: "jee-mathematics-heights-distances-q05",
+      topicId: "jee-mathematics-heights-distances",
+      text: "For a height h at horizontal distance d, the angle of elevation satisfies tan theta equals:",
+      optionA: "h over d",
+      optionB: "d over h",
+      optionC: "h times d",
+      optionD: "d minus h",
+      correctOption: "A",
+      explanation: "tan theta equals the opposite over adjacent, that is h over d.",
+      orderIndex: 4
+    },
+    {
+      id: "jee-mathematics-heights-distances-q06",
+      topicId: "jee-mathematics-heights-distances",
+      text: "The value of tan 60 degrees is:",
+      optionA: "One",
+      optionB: "One over root three",
+      optionC: "Root three",
+      optionD: "Two",
+      correctOption: "C",
+      explanation: "The tangent of 60 degrees equals root three.",
+      orderIndex: 5
+    },
+    {
+      id: "jee-mathematics-heights-distances-q07",
+      topicId: "jee-mathematics-heights-distances",
+      text: "A pole 10 m high subtends an elevation of 30 degrees. Its distance from the observer is about:",
+      optionA: "Ten root three m",
+      optionB: "Ten over root three m",
+      optionC: "10 m",
+      optionD: "20 m",
+      correctOption: "A",
+      explanation: "Distance equals height over tan 30 degrees, that is 10 times root three metres.",
+      orderIndex: 6
+    },
+    {
+      id: "jee-mathematics-heights-distances-q08",
+      topicId: "jee-mathematics-heights-distances",
+      text: "Observing a top from two points gives two equations mainly to eliminate the:",
+      optionA: "Height",
+      optionB: "Unknown distance",
+      optionC: "Angle",
+      optionD: "Time",
+      correctOption: "B",
+      explanation: "Two observations let you eliminate the unknown base distance and solve for height.",
       orderIndex: 7
     }
   ]

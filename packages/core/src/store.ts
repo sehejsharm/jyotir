@@ -70,6 +70,8 @@ export interface JyotirState {
   masteredCount(): number;
   /** UI consumed the unlock toasts. */
   clearNewlyUnlocked(): void;
+  /** Erase all local progress, reads and gamification stats. */
+  resetAll(): void;
 
   syncNow(supabase: SupabaseLike, userId: string): Promise<SyncResult>;
 }
@@ -253,6 +255,17 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
 
     clearNewlyUnlocked() {
       if (get().newlyUnlocked.length > 0) set({ newlyUnlocked: [] });
+    },
+
+    resetAll() {
+      set({
+        progress: {},
+        reads: {},
+        stats: initialGamification(),
+        newlyUnlocked: [],
+        drill: emptyDrill()
+      });
+      persist(adapter.clearAll());
     },
 
     async syncNow(supabase, userId) {

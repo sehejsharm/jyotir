@@ -6,10 +6,10 @@ import type { MetadataRoute } from "next";
  */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Jyotir — Drill. Read. Repeat.",
-    short_name: "Jyotir",
+    name: "Recall — Drill. Read. Repeat.",
+    short_name: "Recall",
     description:
-      "Frictionless MCQ drilling and 2-minute micro-notes for UPSC, JEE, NEET, SSC CGL and GATE. Spaced repetition, fully offline.",
+      "Frictionless MCQ drilling and 2-minute micro-notes for UPSC, JEE, NEET, SSC CGL, GATE, CFA and FRM. Spaced repetition, gamified, fully offline.",
     start_url: "/",
     display: "standalone",
     orientation: "portrait",

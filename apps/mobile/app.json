@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "Jyotir",
+    "name": "Recall",
     "slug": "jyotir",
     "version": "0.1.0",
-    "scheme": "jyotir",
+    "scheme": "recall",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#000000",

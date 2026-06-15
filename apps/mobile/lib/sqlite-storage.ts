@@ -156,4 +156,8 @@ export class SqliteStorageAdapter implements StorageAdapter {
       materialIds
     );
   }
+
+  async clearAll(): Promise<void> {
+    this.db.execSync("DELETE FROM progress; DELETE FROM reads; DELETE FROM stats;");
+  }
 }

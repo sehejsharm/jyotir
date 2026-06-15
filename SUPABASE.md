@@ -15,8 +15,11 @@ Takes ~10 minutes on the free tier.
 
 **One paste (recommended):** open **SQL Editor → New query**, paste the entire
 contents of [`supabase/setup.sql`](supabase/setup.sql) and click **Run**. That
-single file creates every table, RLS policy, trigger and view, then inserts all
-5 exams, 23 micro-notes and 184 questions. Run it once on a fresh project.
+single file runs every migration (content schema + the social/leaderboard
+schema) and inserts all exams, micro-notes and questions. It is fully
+idempotent — **re-run it after any content or schema update** (you'll see
+harmless `NOTICE … skipping` lines). It also creates the leaderboard,
+exam-requests and contact tables used by the in-app social features.
 
 <details>
 <summary>Or run the two files separately</summary>

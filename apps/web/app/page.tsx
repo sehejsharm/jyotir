@@ -6,10 +6,10 @@ import { ReviewBanner } from "@/components/ReviewBanner";
 export default function ExamPickerPage() {
   const exams = repo.exams();
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-xl flex-col px-5 py-14">
+    <main className="mx-auto flex min-h-screen w-full max-w-xl flex-col px-5 pb-24 pt-14">
       <header className="mb-8 flex items-start justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Jyotir</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Recall</h1>
           <p className="mt-1.5 text-sm text-muted">
             Drill. Read. Repeat. Nothing else.
           </p>
