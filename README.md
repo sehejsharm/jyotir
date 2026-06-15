@@ -1,37 +1,39 @@
-# Jyotir
+# Recall
 
-Hyper-minimalist MCQ drilling + micro-learning for India's top 5 competitive
-exams — **UPSC CSE, JEE, NEET UG, SSC CGL, GATE**. Active recall, SM-2 spaced
-repetition, and 2-minute high-yield micro-notes. No feeds. No PDFs. No bloat.
+Hyper-minimalist MCQ drilling + micro-learning for competitive exams. Active
+recall, SM-2 spaced repetition, 2-minute high-yield micro-notes, and a
+gamified streak/XP loop. Dark-mode-first, fully offline. **Drill. Read. Repeat.**
 
-## The two core mechanics
+**Exams:** UPSC CSE · JEE · NEET UG · SSC CGL · GATE · CFA · FRM.
+
+## The core mechanics
 
 **1 — The Drill Loop.** Question + 4 options → make a *mental* choice → tap
 anywhere to reveal the answer and a 1-line explanation → "Knew It" / "Got It
-Wrong" (buttons, ←/→ keys on web, swipe on mobile) feeds SM-2 → next card
-renders synchronously from the in-memory queue. **0ms between cards.**
+Wrong" (buttons, ←/→ keys, or swipe) feeds SM-2 → the next card renders
+synchronously from the in-memory queue. **0ms between cards.**
 
 **2 — Read to Drill.** Every topic pairs one Markdown micro-note (≤2-min read)
-with its question bank. The sticky CTA at the bottom of every note —
-**"Drill This Topic Now (X Cards Due)"** — flips the topic view from Study to
-Drill instantly: notes and the next 30 due cards are already local.
+with its question bank. The sticky **"Drill This Topic Now (X Cards Due)"** CTA
+flips Study → Drill instantly.
 
-**Daily Review.** The home screen surfaces a single **"Start Daily Review
-(N due)"** entry — a due-only queue spanning *every* exam, so you can open the
-app, clear what's scheduled, and leave. It reaches inbox-zero ("all caught
-up") rather than padding with new cards.
+**3 — Daily Review.** The home screen leads with a due-only queue across *all*
+exams, so you open the app, clear what's scheduled, and reach inbox-zero.
+
+**4 — Gamification.** XP per grade (with a combo bonus), levels/ranks
+(Novice → Legend), daily streaks, 12 achievements, and an anonymized global
+**leaderboard**. A `/stats` screen tracks it all.
 
 ## Monorepo layout
 
 ```
-apps/web        Next.js 16 (App Router) · Tailwind · localStorage adapter
-apps/mobile     Expo SDK 56 · expo-router · NativeWind · expo-sqlite · expo-haptics
-packages/core   Platform-agnostic engine: types, SM-2, scheduler, Zustand
-                store factory, StorageAdapter + sync engine (offline-first LWW)
-packages/content  Bundled mock content: 5 exams, 18 subjects, 23 topics,
-                  23 micro-notes, 184 questions (validated at module load)
-supabase/       SQL migrations (schema + RLS + triggers) and generated seed
-prisma/         Prisma mirror of the SQL schema for type-safe server access
+apps/web        Next.js 16 · Tailwind · localStorage · Supabase auth + sync
+apps/mobile     Expo SDK 56 · expo-router · NativeWind · expo-sqlite · haptics
+packages/core   Engine: types, SM-2, scheduler, gamification, Zustand store,
+                StorageAdapter, offline-first last-write-wins sync
+packages/content  Bundled content: 7 exams of validated micro-notes + MCQs
+supabase/       SQL migrations (content + social/leaderboard) + generated seed
+prisma/         Prisma mirror of the content schema
 scripts/        seed generator, content codemods
 ```
 
@@ -39,41 +41,40 @@ scripts/        seed generator, content codemods
 
 ```bash
 pnpm install
-pnpm test                 # core engine tests (SM-2, scheduler, drill store)
+pnpm test                 # core engine + web render tests
 pnpm dev:web              # Next.js on http://localhost:3000
-pnpm dev:mobile           # Expo dev server (press i / a, scan QR)
+pnpm dev:mobile           # Expo (press i / a, or scan the QR)
 ```
 
 The apps run fully **offline and anonymous by default** — content is bundled,
-progress persists locally (localStorage on web, SQLite on mobile).
+progress + XP + streaks persist locally (localStorage on web, SQLite on mobile).
 
-## Deploy
+## Deploy & backend
 
-- **Web → Vercel:** see [`DEPLOY.md`](DEPLOY.md). One import, set Root Directory
+- **Web → Vercel:** [`DEPLOY.md`](DEPLOY.md). Import the repo, set Root Directory
   to `apps/web`, deploy. Installable as a mobile PWA.
-- **Mobile → Expo:** `pnpm --filter @jyotir/mobile exec eas build` (or run in
-  Expo Go via `pnpm dev:mobile`).
-
-## Supabase (optional, for auth + cross-device sync)
-
-Full click-by-click setup in [`SUPABASE.md`](SUPABASE.md). In short: run
-`supabase/migrations/0001_init.sql` then `supabase/seed.sql` in the SQL editor,
-enable email auth, and add `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
-
-Once configured, the **Account** page offers magic-link sign-in and
-`SyncProvider` syncs automatically on load, tab focus and reconnect. Rows with
-`synced=false` are pushed (upsert on `user_id,question_id`), then remote rows
-are merged last-write-wins on `updated_at` — a DB trigger enforces LWW on the
-server too, so a stale device can never clobber newer progress.
+- **Supabase (optional, for accounts + sync + leaderboard):** [`SUPABASE.md`](SUPABASE.md).
+  Paste [`supabase/setup.sql`](supabase/setup.sql) into the SQL editor (idempotent —
+  re-run after any content/schema update), enable email auth, add the
+  `NEXT_PUBLIC_SUPABASE_*` env vars.
 
 ## Architecture notes
 
-- **Ids are stable text slugs** (`upsc-polity-fundamental-rights-q01`)
-  everywhere — bundle, SQLite, Postgres — so sync needs no id mapping.
-- **SM-2**: binary input maps to q=4 ("Knew It") / q=2 ("Got It Wrong");
-  EF floor 1.3; lapses reset reps and re-queue once within the session.
-- **Zero-spinner contract**: `startDrill()` builds the whole queue in memory;
-  `grade()` is a synchronous state transition — persistence happens after the
-  next card is already on screen.
-- The spec's `User_Progress.interval` column is named `interval_days`
-  (`INTERVAL` is a reserved type in Postgres; the unit is also explicit).
+- **Stable text ids** (`upsc-polity-fundamental-rights-q01`) everywhere — bundle,
+  SQLite, Postgres — so sync is a pure upsert with no id mapping.
+- **SM-2:** binary input maps to q=4 / q=2; EF floor 1.3; lapses re-queue once
+  per session. **Zero-spinner:** `startDrill()` builds the whole queue in memory;
+  `grade()` is synchronous; persistence happens after the next card is on screen.
+- **Leaderboard** is anonymized: a SECURITY DEFINER function exposes only
+  `handle/xp/level`, never display names — your real name stays on your device.
+- **Sync** is offline-first last-write-wins on `updated_at`, enforced by a DB
+  trigger too, so a stale device can't clobber newer progress.
+
+## Content generation
+
+Each exam is a `defineBundle(...)` that validates referential integrity and id
+uniqueness at module load. Regenerate the SQL after editing content:
+
+```bash
+pnpm seed:generate        # emits supabase/seed.sql and supabase/setup.sql
+```

@@ -8,7 +8,7 @@
  * offline progress sync a pure upsert with no id mapping.
  */
 
-export type ExamSlug = "upsc" | "jee" | "neet" | "ssc-cgl" | "gate";
+export type ExamSlug = "upsc" | "jee" | "neet" | "ssc-cgl" | "gate" | "cfa" | "frm";
 
 export interface Exam {
   id: string;

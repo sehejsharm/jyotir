@@ -15,7 +15,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "packages", "content", "src");
-const FILES = ["upsc.ts", "jee.ts", "neet.ts", "ssc-cgl.ts", "gate.ts"];
+const FILES = ["upsc.ts", "jee.ts", "neet.ts", "ssc-cgl.ts", "gate.ts", "cfa.ts", "frm.ts"];
 const KEYS = ["A", "B", "C", "D"] as const;
 type Key = (typeof KEYS)[number];
 
