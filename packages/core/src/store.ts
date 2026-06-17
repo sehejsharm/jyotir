@@ -5,6 +5,7 @@ import {
   dayKey,
   evaluateAchievements,
   initialGamification,
+  normalizeGamification,
   type GamificationState
 } from "./gamification";
 import { buildQueue, buildReviewQueue, dueCount, topicCounts, DEFAULT_QUEUE_LIMIT } from "./scheduler";
@@ -126,7 +127,7 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
         adapter.loadReadHistory(),
         adapter.loadStats()
       ]);
-      set({ progress, reads, stats: stats ?? initialGamification(), ready: true });
+      set({ progress, reads, stats: normalizeGamification(stats), ready: true });
     },
 
     startDrill(topicId, limit = DEFAULT_QUEUE_LIMIT) {
@@ -191,6 +192,11 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
 
       // --- gamification ---
       const outcome = applyGradeToStats(stats, knewIt, combo, dayKey());
+      // Attribute this card's XP to its exam (per-exam leaderboards).
+      const examId = repo.examIdForTopic(card.question.topicId);
+      const examXp = examId
+        ? { ...outcome.state.examXp, [examId]: (outcome.state.examXp[examId] ?? 0) + outcome.xpAwarded }
+        : outcome.state.examXp;
       const sessionSize = sessionStats.knew + sessionStats.wrong;
       const unlocked = evaluateAchievements({
         state: outcome.state,
@@ -199,9 +205,13 @@ export function createJyotirStore(deps: StoreDeps): JyotirStore {
         sessionSize,
         sessionAccuracy: sessionSize > 0 ? (sessionStats.knew / sessionSize) * 100 : 0
       });
-      const nextStats: GamificationState = unlocked.length
-        ? { ...outcome.state, achievements: [...outcome.state.achievements, ...unlocked] }
-        : outcome.state;
+      const nextStats: GamificationState = {
+        ...outcome.state,
+        examXp,
+        achievements: unlocked.length
+          ? [...outcome.state.achievements, ...unlocked]
+          : outcome.state.achievements
+      };
 
       set({
         progress: nextProgress,

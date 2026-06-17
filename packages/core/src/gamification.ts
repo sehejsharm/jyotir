@@ -18,6 +18,8 @@ export interface GamificationState {
   bestCombo: number;
   /** Unlocked achievement ids. */
   achievements: string[];
+  /** XP earned per exam (examId -> xp), backing per-exam leaderboards. */
+  examXp: Record<string, number>;
   updatedAt: string;
 }
 
@@ -30,8 +32,14 @@ export function initialGamification(now: Date = new Date()): GamificationState {
     lastDrillDay: null,
     bestCombo: 0,
     achievements: [],
+    examXp: {},
     updatedAt: now.toISOString()
   };
+}
+
+/** Backfills fields missing from older persisted state (forward-compatible load). */
+export function normalizeGamification(s: Partial<GamificationState> | null): GamificationState {
+  return { ...initialGamification(), ...(s ?? {}), examXp: { ...(s?.examXp ?? {}) } };
 }
 
 // ------------------------------- XP -----------------------------------

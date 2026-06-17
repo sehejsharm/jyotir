@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { levelForXp, rankName } from "@jyotir/core";
+import { repo } from "@/lib/content";
 import { getSupabase } from "@/lib/supabase";
 import { fetchLeaderboard, fetchMyRank, type LeaderboardRow } from "@/lib/leaderboard";
 import { loadSettings } from "@/lib/settings";
@@ -12,6 +13,8 @@ import { UsersIcon } from "@/components/icons";
 export default function LeaderboardPage() {
   const supabase = getSupabase();
   const localXp = useJyotir((s) => s.stats.xp);
+  const exams = useMemo(() => repo.exams(), []);
+  const [scope, setScope] = useState<string>(""); // "" = overall, else examId
   const [rows, setRows] = useState<LeaderboardRow[] | null>(null);
   const [me, setMe] = useState<LeaderboardRow | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -20,11 +23,14 @@ export default function LeaderboardPage() {
   useEffect(() => {
     if (!supabase) return;
     let on = true;
+    setRows(null);
+    setError(null);
     (async () => {
       try {
+        const examId = scope || undefined;
         const [board, rank] = await Promise.all([
-          fetchLeaderboard(supabase, 100),
-          fetchMyRank(supabase).catch(() => null)
+          fetchLeaderboard(supabase, examId, 100),
+          fetchMyRank(supabase, examId).catch(() => null)
         ]);
         if (on) {
           setRows(board);
@@ -37,24 +43,47 @@ export default function LeaderboardPage() {
     return () => {
       on = false;
     };
-  }, [supabase]);
+  }, [supabase, scope]);
 
   return (
     <main className="mx-auto flex min-h-screen w-full max-w-xl flex-col px-5 pb-24 pt-12">
-      <header className="mb-6">
+      <header className="mb-4">
         <div className="flex items-center gap-2">
           <UsersIcon className="h-5 w-5 text-correct" />
-          <h1 className="text-2xl font-bold tracking-tight">Global Ranks</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Ranks</h1>
         </div>
         <p className="mt-1 text-xs text-muted">
-          Anonymized by XP. You appear as <span className="text-correct">{myHandle}</span>.
+          Anonymized by XP. You are <span className="text-correct">{myHandle}</span>.
         </p>
       </header>
 
+      {/* Scope selector: Overall + per exam */}
+      <div className="mb-5 -mx-5 flex gap-2 overflow-x-auto px-5 pb-1">
+        <button
+          onClick={() => setScope("")}
+          className={`shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+            scope === "" ? "border-correct bg-correct-dim/40 text-correct-bright" : "border-edge text-muted"
+          }`}
+        >
+          Overall
+        </button>
+        {exams.map((e) => (
+          <button
+            key={e.id}
+            onClick={() => setScope(e.id)}
+            className={`shrink-0 rounded-full border px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+              scope === e.id ? "border-correct bg-correct-dim/40 text-correct-bright" : "border-edge text-muted"
+            }`}
+          >
+            {e.name.split(" ")[0]}
+          </button>
+        ))}
+      </div>
+
       {!supabase ? (
         <div className="rounded-2xl border border-edge bg-surface px-5 py-6 text-sm text-muted">
-          Sign in (Account) with cloud sync configured to join the global leaderboard. Your
-          local XP is <span className="font-semibold text-ink">{localXp}</span>.
+          Sign in (Account) with cloud sync configured to join the leaderboards. Your local XP is{" "}
+          <span className="font-semibold text-ink">{localXp}</span>.
         </div>
       ) : error ? (
         <div className="rounded-2xl border border-wrong/40 bg-wrong-dim/30 px-5 py-4 text-sm text-wrong-bright">
@@ -64,7 +93,7 @@ export default function LeaderboardPage() {
         <div className="h-40 animate-pulse rounded-2xl border border-edge bg-surface" />
       ) : rows.length === 0 ? (
         <div className="rounded-2xl border border-edge bg-surface px-5 py-6 text-sm text-muted">
-          No players yet. Drill some cards and sign in to claim the top spot.
+          {scope ? "No one has drilled this exam yet — claim the top spot." : "No players yet. Drill and sign in to lead."}
         </div>
       ) : (
         <>

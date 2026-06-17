@@ -54,6 +54,10 @@ describe("drill loop", () => {
     expect(store.getState().drill.phase).toBe("question");
     expect(store.getState().drill.index).toBe(1);
     expect(store.getState().progress["q1"]?.repetitions).toBe(1);
+    // XP is attributed to the card's exam (per-exam leaderboards).
+    const s = store.getState().stats;
+    expect(s.examXp["upsc"]).toBeGreaterThan(0);
+    expect(s.examXp["upsc"]).toBe(s.xp);
   });
 
   it("ignores grade before reveal (tap-anywhere contract)", () => {

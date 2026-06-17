@@ -6,12 +6,28 @@ import {
   initialGamification,
   levelForXp,
   levelProgress,
+  normalizeGamification,
   rankName,
   registerDrillDay,
   xpForGrade,
   xpForLevel,
   type GamificationState
 } from "../src/gamification";
+
+describe("normalizeGamification", () => {
+  it("backfills missing fields from older persisted state", () => {
+    const old = { xp: 120, cardsGraded: 10 } as Partial<GamificationState>;
+    const s = normalizeGamification(old);
+    expect(s.xp).toBe(120);
+    expect(s.cardsGraded).toBe(10);
+    expect(s.examXp).toEqual({}); // new field defaulted
+    expect(s.achievements).toEqual([]);
+  });
+
+  it("returns a fresh state for null", () => {
+    expect(normalizeGamification(null).xp).toBe(0);
+  });
+});
 
 describe("xp + levels", () => {
   it("awards base XP plus a capped combo bonus for Knew It", () => {

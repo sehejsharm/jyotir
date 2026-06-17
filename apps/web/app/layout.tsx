@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { StoreProvider } from "@/lib/store-provider";
 import { SyncProvider } from "@/lib/sync-provider";
 import { Splash } from "@/components/Splash";
+import { Onboarding } from "@/components/Onboarding";
 import { BottomNav } from "@/components/BottomNav";
 import "./globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StoreProvider>
           <SyncProvider>
             <Splash />
+            <Onboarding />
             {children}
             <BottomNav />
           </SyncProvider>

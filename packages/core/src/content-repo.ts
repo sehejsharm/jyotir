@@ -18,6 +18,8 @@ export interface ContentRepo {
   questionsByTopic(topicId: string): Question[];
   /** Every question across every exam — backs the cross-exam review queue. */
   allQuestions(): Question[];
+  /** The exam a topic belongs to (for per-exam XP attribution). */
+  examIdForTopic(topicId: string): string | undefined;
 }
 
 export interface ContentSource {
@@ -57,6 +59,15 @@ export function createContentRepo(source: ContentSource): ContentRepo {
   }
   for (const list of questionsByTopic.values()) list.sort((a, b) => a.orderIndex - b.orderIndex);
 
+  // topicId -> examId, for attributing XP to an exam during a drill.
+  const examIdBySubject = new Map<string, string>();
+  for (const s of source.subjects) examIdBySubject.set(s.id, s.examId);
+  const examIdByTopic = new Map<string, string>();
+  for (const t of source.topics) {
+    const examId = examIdBySubject.get(t.subjectId);
+    if (examId) examIdByTopic.set(t.id, examId);
+  }
+
   return {
     exams: () => exams,
     examBySlug: (slug) => exams.find((e) => e.slug === slug),
@@ -69,6 +80,7 @@ export function createContentRepo(source: ContentSource): ContentRepo {
     topicById: (topicId) => topicById.get(topicId),
     materialByTopic: (topicId) => materialByTopic.get(topicId),
     questionsByTopic: (topicId) => questionsByTopic.get(topicId) ?? [],
-    allQuestions: () => source.questions
+    allQuestions: () => source.questions,
+    examIdForTopic: (topicId) => examIdByTopic.get(topicId)
   };
 }

@@ -6,19 +6,18 @@ import type { SupabaseLike } from "@jyotir/core";
 import { getSupabase } from "@/lib/supabase";
 import { useJyotirStore } from "@/lib/store-provider";
 
-/**
- * Minimal account surface: passwordless email magic-link sign-in, signed-in
- * state, sign-out, and a manual "Sync now". Progress works fully without an
- * account — signing in only adds cross-device sync.
- */
+type Mode = "login" | "signup" | "magic";
+
 export default function AccountPage() {
   const supabase = getSupabase();
   const store = useJyotirStore();
+  const [mode, setMode] = useState<Mode>("login");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [userEmail, setUserEmail] = useState<string | null>(null);
-  const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [status, setStatus] = useState<string | null>(null);
 
   useEffect(() => {
     if (!supabase) return;
@@ -30,7 +29,7 @@ export default function AccountPage() {
   }, [supabase]);
 
   const Shell = ({ children }: { children: React.ReactNode }) => (
-    <main className="mx-auto flex min-h-screen w-full max-w-xl flex-col px-5 py-14">
+    <main className="mx-auto flex min-h-screen w-full max-w-xl flex-col px-5 pb-24 pt-14">
       <Link href="/" className="text-xs text-muted hover:text-ink">
         ← Home
       </Link>
@@ -45,8 +44,8 @@ export default function AccountPage() {
         <div className="rounded-2xl border border-edge bg-surface px-5 py-6">
           <p className="text-sm font-semibold">Cloud sync isn&apos;t configured</p>
           <p className="mt-2 text-sm leading-relaxed text-muted">
-            Your progress is saved locally on this device. To enable accounts and
-            cross-device sync, add your Supabase keys (see <code className="text-correct-bright">SUPABASE.md</code>).
+            Your progress is saved locally on this device. To enable accounts, cross-device sync
+            and leaderboards, add your Supabase keys (see <code className="text-correct-bright">SUPABASE.md</code>).
           </p>
         </div>
       </Shell>
@@ -59,20 +58,22 @@ export default function AccountPage() {
         <div className="rounded-2xl border border-edge bg-surface px-5 py-6">
           <p className="text-xs text-muted">Signed in as</p>
           <p className="mt-1 font-semibold">{userEmail}</p>
-          <p className="mt-2 text-xs text-correct">Progress syncs across your devices.</p>
+          <p className="mt-2 text-xs text-correct">Progress and ranks sync across your devices.</p>
         </div>
         <div className="mt-3 flex flex-col gap-2.5">
           <button
             onClick={async () => {
-              setStatus("Syncing…");
+              setNotice("Syncing…");
               try {
                 const { data } = await supabase.auth.getUser();
                 if (data.user) {
-                  const r = await store.getState().syncNow(supabase as unknown as SupabaseLike, data.user.id);
-                  setStatus(`Synced · pushed ${r.pushedProgress}, pulled ${r.pulledProgress}`);
+                  const r = await store
+                    .getState()
+                    .syncNow(supabase as unknown as SupabaseLike, data.user.id);
+                  setNotice(`Synced · pushed ${r.pushedProgress}, pulled ${r.pulledProgress}`);
                 }
               } catch (e) {
-                setStatus(`Sync failed: ${(e as Error).message}`);
+                setNotice(`Sync failed: ${(e as Error).message}`);
               }
             }}
             className="rounded-xl bg-ink py-3.5 font-bold text-black active:scale-[0.98]"
@@ -86,54 +87,100 @@ export default function AccountPage() {
             Sign out
           </button>
         </div>
-        {status && <p className="mt-3 text-center text-xs text-muted">{status}</p>}
+        {notice && <p className="mt-3 text-center text-xs text-muted">{notice}</p>}
       </Shell>
     );
   }
 
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
+    setError(null);
+    setNotice(null);
+    try {
+      if (mode === "magic") {
+        const { error: err } = await supabase.auth.signInWithOtp({
+          email,
+          options: { emailRedirectTo: `${window.location.origin}/account` }
+        });
+        if (err) throw err;
+        setNotice(`Check ${email} for your sign-in link.`);
+      } else if (mode === "signup") {
+        const { data, error: err } = await supabase.auth.signUp({ email, password });
+        if (err) throw err;
+        if (!data.session) setNotice(`Almost there — check ${email} to confirm your account.`);
+      } else {
+        const { error: err } = await supabase.auth.signInWithPassword({ email, password });
+        if (err) throw err;
+      }
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
+
   return (
     <Shell>
-      <div className="rounded-2xl border border-edge bg-surface px-5 py-6">
-        <p className="text-sm font-semibold">Sign in to sync across devices</p>
-        <p className="mt-1.5 text-sm text-muted">
-          We&apos;ll email you a magic link — no password.
-        </p>
-        {sent ? (
-          <p className="mt-4 rounded-xl border border-correct/40 bg-correct-dim/40 px-4 py-3 text-sm text-correct-bright">
-            Check {email} for your sign-in link.
-          </p>
-        ) : (
-          <form
-            className="mt-4 flex flex-col gap-2.5"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              setError(null);
-              const { error: err } = await supabase.auth.signInWithOtp({
-                email,
-                options: { emailRedirectTo: `${window.location.origin}/account` }
-              });
-              if (err) setError(err.message);
-              else setSent(true);
-            }}
-          >
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
-              className="rounded-xl border border-edge bg-oled px-4 py-3 text-sm text-ink outline-none focus:border-correct/50"
-            />
-            <button
-              type="submit"
-              className="rounded-xl bg-correct py-3.5 font-bold text-black active:scale-[0.98]"
-            >
-              Send magic link
-            </button>
-          </form>
-        )}
-        {error && <p className="mt-3 text-sm text-wrong-bright">{error}</p>}
+      <div className="mb-5 grid grid-cols-2 rounded-xl border border-edge bg-surface p-1">
+        <button
+          onClick={() => setMode("login")}
+          className={`rounded-lg py-2 text-sm font-semibold transition-colors ${
+            mode === "login" ? "bg-raised text-ink" : "text-muted"
+          }`}
+        >
+          Log in
+        </button>
+        <button
+          onClick={() => setMode("signup")}
+          className={`rounded-lg py-2 text-sm font-semibold transition-colors ${
+            mode === "signup" ? "bg-raised text-ink" : "text-muted"
+          }`}
+        >
+          Sign up
+        </button>
       </div>
+
+      <form onSubmit={submit} className="flex flex-col gap-2.5">
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="you@example.com"
+          autoComplete="email"
+          className="rounded-xl border border-edge bg-surface px-4 py-3 text-sm outline-none focus:border-correct/50"
+        />
+        {mode !== "magic" && (
+          <input
+            type="password"
+            required
+            minLength={6}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password (6+ characters)"
+            autoComplete={mode === "signup" ? "new-password" : "current-password"}
+            className="rounded-xl border border-edge bg-surface px-4 py-3 text-sm outline-none focus:border-correct/50"
+          />
+        )}
+        <button
+          type="submit"
+          disabled={busy}
+          className="mt-1 rounded-xl bg-correct py-3.5 font-bold text-black active:scale-[0.98] disabled:opacity-60"
+        >
+          {busy ? "…" : mode === "signup" ? "Create account" : mode === "magic" ? "Send magic link" : "Log in"}
+        </button>
+      </form>
+
+      <button
+        onClick={() => setMode((m) => (m === "magic" ? "login" : "magic"))}
+        className="mt-4 text-center text-xs text-muted hover:text-ink"
+      >
+        {mode === "magic" ? "Use email + password instead" : "Or sign in with a magic link (no password)"}
+      </button>
+
+      {notice && <p className="mt-4 rounded-xl border border-correct/40 bg-correct-dim/30 px-4 py-3 text-sm text-correct-bright">{notice}</p>}
+      {error && <p className="mt-4 text-sm text-wrong-bright">{error}</p>}
     </Shell>
   );
 }

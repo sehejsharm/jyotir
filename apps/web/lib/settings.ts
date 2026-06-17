@@ -11,6 +11,8 @@ export interface Settings {
   dailyGoal: number;
   reduceMotion: boolean;
   leaderboardOptIn: boolean;
+  /** Whether the first-run tour has been seen. */
+  onboarded: boolean;
 }
 
 const KEY = "recall.settings.v1";
@@ -28,7 +30,8 @@ export function defaultSettings(): Settings {
     handle: randomHandle(),
     dailyGoal: 20,
     reduceMotion: false,
-    leaderboardOptIn: true
+    leaderboardOptIn: true,
+    onboarded: false
   };
 }
 
