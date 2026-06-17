@@ -1,4 +1,10 @@
 import { defineBundle } from "./builder";
+import type { Question } from "@jyotir/core";
+import { expansionTopics as frmExp1Topics, expansionMaterials as frmExp1Materials, expansionQuestions as frmExp1Questions } from "./frm-exp-1";
+import { expansionTopics as frmExp2Topics, expansionMaterials as frmExp2Materials, expansionQuestions as frmExp2Questions } from "./frm-exp-2";
+import { expansionTopics as frmExp3Topics, expansionMaterials as frmExp3Materials, expansionQuestions as frmExp3Questions } from "./frm-exp-3";
+import { expansionTopics as frmExp4Topics, expansionMaterials as frmExp4Materials, expansionQuestions as frmExp4Questions } from "./frm-exp-4";
+import { expansionTopics as frmExp5Topics, expansionMaterials as frmExp5Materials, expansionQuestions as frmExp5Questions } from "./frm-exp-5";
 
 export const frm = defineBundle({
   exam: {
@@ -90,7 +96,12 @@ export const frm = defineBundle({
       name: "Basel III/IV & Emerging Risks",
       slug: "basel-iii-iv-emerging-risks",
       orderIndex: 0
-    }
+    },
+    ...frmExp1Topics,
+    ...frmExp2Topics,
+    ...frmExp3Topics,
+    ...frmExp4Topics,
+    ...frmExp5Topics
   ],
   materials: [
     {
@@ -493,7 +504,12 @@ Leverage ratio = Tier 1 capital / Total exposure >= 3%
 - Remember that FRTB shifts the regulatory measure from VaR to Expected Shortfall at a 97.5% confidence level, while the output floor curbs internal-model relief.`,
       estimatedReadTime: 2,
       orderIndex: 0
-    }
+    },
+    ...frmExp1Materials,
+    ...frmExp2Materials,
+    ...frmExp3Materials,
+    ...frmExp4Materials,
+    ...frmExp5Materials
   ],
   questions: [
     {
@@ -1455,6 +1471,11 @@ Leverage ratio = Tier 1 capital / Total exposure >= 3%
       correctOption: "A",
       explanation: "Complex and AI-driven models raise model risk, demanding stronger validation and governance.",
       orderIndex: 7
-    }
+    },
+    ...(frmExp1Questions as Question[]),
+    ...(frmExp2Questions as Question[]),
+    ...(frmExp3Questions as Question[]),
+    ...(frmExp4Questions as Question[]),
+    ...(frmExp5Questions as Question[])
   ]
 });

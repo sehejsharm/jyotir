@@ -1,4 +1,10 @@
 import { defineBundle } from "./builder";
+import type { Question } from "@jyotir/core";
+import { expansionTopics as cfaExp1Topics, expansionMaterials as cfaExp1Materials, expansionQuestions as cfaExp1Questions } from "./cfa-exp-1";
+import { expansionTopics as cfaExp2Topics, expansionMaterials as cfaExp2Materials, expansionQuestions as cfaExp2Questions } from "./cfa-exp-2";
+import { expansionTopics as cfaExp3Topics, expansionMaterials as cfaExp3Materials, expansionQuestions as cfaExp3Questions } from "./cfa-exp-3";
+import { expansionTopics as cfaExp4Topics, expansionMaterials as cfaExp4Materials, expansionQuestions as cfaExp4Questions } from "./cfa-exp-4";
+import { expansionTopics as cfaExp5Topics, expansionMaterials as cfaExp5Materials, expansionQuestions as cfaExp5Questions } from "./cfa-exp-5";
 
 export const cfa = defineBundle({
   exam: {
@@ -90,7 +96,12 @@ export const cfa = defineBundle({
       name: "Portfolio Risk, Return & CAPM",
       slug: "portfolio-risk-return-capm",
       orderIndex: 0
-    }
+    },
+    ...cfaExp1Topics,
+    ...cfaExp2Topics,
+    ...cfaExp3Topics,
+    ...cfaExp4Topics,
+    ...cfaExp5Topics
   ],
   materials: [
     {
@@ -482,7 +493,12 @@ E(R) = Rf + beta * (Rm - Rf)
 - Only systematic risk is priced; a stock with high total volatility but low beta still has a modest required return under CAPM.`,
       estimatedReadTime: 2,
       orderIndex: 0
-    }
+    },
+    ...cfaExp1Materials,
+    ...cfaExp2Materials,
+    ...cfaExp3Materials,
+    ...cfaExp4Materials,
+    ...cfaExp5Materials
   ],
   questions: [
     {
@@ -1444,6 +1460,11 @@ E(R) = Rf + beta * (Rm - Rf)
       correctOption: "A",
       explanation: "CAPM prices only systematic risk, so a low-beta stock has a modest required return despite high volatility.",
       orderIndex: 7
-    }
+    },
+    ...(cfaExp1Questions as Question[]),
+    ...(cfaExp2Questions as Question[]),
+    ...(cfaExp3Questions as Question[]),
+    ...(cfaExp4Questions as Question[]),
+    ...(cfaExp5Questions as Question[])
   ]
 });
